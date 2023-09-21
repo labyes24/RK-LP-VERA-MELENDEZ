@@ -26,4 +26,9 @@ export const defaultTheme = {
     background:
       'linear-gradient(270deg, #031E4C 0.05%, #062E60 30.9%, #1164A2 94.23%)',
   },
+
+  FONTS: {
+    Primary: "'Roboto', sans-serif",
+    Secondary: "'Nunito', sans-serif",
+  },
 }

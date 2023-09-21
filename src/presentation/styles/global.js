@@ -10,5 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${props => props.theme.GRADIENTS.background};
     color: ${({ theme }) => theme.COLORS.white};
+    font-family: ${props => props.theme.FONTS.Primary};
   }
 `
