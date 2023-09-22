@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  position: fixed;
-  padding-inline: 1.6rem;
+  position: absolute;
+  inset: 0;
   height: 100vh;
   width: 100vw;
+  padding-inline: 1.6rem;
 
   display: flex;
   justify-content: center;
@@ -16,7 +17,6 @@ export const Container = styled.div`
 `
 
 export const Modal = styled.div`
-  max-width: 825px;
   padding: 2.4rem;
 
   background-color: #fdfdfd; /* form/background */
