@@ -1,23 +1,25 @@
+import * as S from './styles'
+
 export function Modal() {
   return (
-    <div className="container">
-      <div className="modal">
-        <div className="title-group">
-          <h3>Duplex em condomínio</h3>
+    <S.Container>
+      <S.Modal>
+        <S.TitleGroup>
+          <S.Title>Duplex em condomínio</S.Title>
 
           <i className="ph ph-x">Close</i>
-        </div>
+        </S.TitleGroup>
 
-        <p>
+        <S.Description>
           Por gentileza, preencha os campos abaixo, entrarei em contato o mais
           breve possível.
-        </p>
+        </S.Description>
 
-        <form>
+        <S.Form>
           <label htmlFor="name">Nome:</label>
           <input id="name" placeholder="Seu nome" minLength="2" required />
 
-          <div className="input-group">
+          <S.InputGroup className="input-group">
             <div>
               <label htmlFor="email">E-mail:</label>
               <input type="email" id="email" placeholder="Seu melhor e-mail" />
@@ -33,11 +35,11 @@ export function Modal() {
                 required
               />
             </div>
-          </div>
+          </S.InputGroup>
 
           <button type="submit">Envie seu contato</button>
-        </form>
-      </div>
-    </div>
+        </S.Form>
+      </S.Modal>
+    </S.Container>
   )
 }
