@@ -24,6 +24,10 @@ export const Modal = styled.div`
   box-shadow: #64646f33 0 7px 29px 0;
 
   animation: appear 0.2s;
+
+  @media screen and (min-width: 524px) {
+    padding: 2.4rem 3.2rem;
+  }
 `
 
 export const TitleGroup = styled.div`
@@ -40,6 +44,10 @@ export const Title = styled.h3`
   font-weight: 700;
   font-family: Roboto, sans-serif;
   color: #091030; /* form/input-border */
+
+  @media screen and (min-width: 524px) {
+    font-size: 3.6rem;
+  }
 `
 
 export const Description = styled.p`
@@ -47,7 +55,12 @@ export const Description = styled.p`
 
   line-height: 140%;
   font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
   color: #091030; /* form/input-border */
+
+  @media screen and (min-width: 524px) {
+    font-size: 1.6rem;
+  }
 `
 export const Form = styled.form`
   display: flex;
@@ -79,6 +92,7 @@ export const Form = styled.form`
     &::placeholder {
       color: #888ca6; /* form/secondary-text-color */
       font-size: 1.6rem;
+      font-family: 'Nunito', sans-serif;
     }
   }
 
@@ -98,6 +112,10 @@ export const Form = styled.form`
       cursor: pointer;
       background-color: #10184df5;
     }
+
+    @media screen and (min-width: 524px) {
+      font-size: 2rem;
+    }
   }
 `
 
@@ -112,5 +130,9 @@ export const InputGroup = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
+  }
+
+  @media screen and (min-width: 524px) {
+    flex-direction: row;
   }
 `

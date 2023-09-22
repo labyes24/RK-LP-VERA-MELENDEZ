@@ -19,7 +19,7 @@ export function Modal() {
           <label htmlFor="name">Nome:</label>
           <input id="name" placeholder="Seu nome" minLength="2" required />
 
-          <S.InputGroup className="input-group">
+          <S.InputGroup>
             <div>
               <label htmlFor="email">E-mail:</label>
               <input type="email" id="email" placeholder="Seu melhor e-mail" />
