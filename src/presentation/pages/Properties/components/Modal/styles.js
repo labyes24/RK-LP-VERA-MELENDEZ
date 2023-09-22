@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Modal = styled.div`
   padding: 2.4rem;
 
-  background-color: #fdfdfd; /* form/background */
+  background-color: ${({ theme }) => theme.COLORS.white}; /* form/background */
   border-radius: 8px;
   box-shadow: #64646f33 0 7px 29px 0;
 
@@ -42,8 +42,8 @@ export const Title = styled.h3`
 
   font-size: 2.2rem;
   font-weight: 700;
-  font-family: Roboto, sans-serif;
-  color: #091030; /* form/input-border */
+  font-family: ${({ theme }) => theme.FONTS.Primary}, sans-serif;
+  color: ${({ theme }) => theme.COLORS['blue-sky-700']}; /* form/input-border */
 
   @media screen and (min-width: 524px) {
     font-size: 3.6rem;
@@ -55,8 +55,8 @@ export const Description = styled.p`
 
   line-height: 140%;
   font-size: 1.2rem;
-  font-family: 'Nunito', sans-serif;
-  color: #091030; /* form/input-border */
+  font-family: ${({ theme }) => theme.FONTS.Secondary}, sans-serif;
+  color: ${({ theme }) => theme.COLORS['blue-sky-700']}; /* form/input-border */
 
   @media screen and (min-width: 524px) {
     font-size: 1.6rem;
@@ -70,47 +70,51 @@ export const Form = styled.form`
     width: fit-content;
     margin-bottom: 0.4rem;
 
-    color: #091030; /* form/input-border */
+    color: ${({ theme }) =>
+      theme.COLORS['blue-sky-700']}; /* form/input-border */
     font-size: 1.6rem;
-    font-family: Roboto, sans-serif;
+    font-family: ${({ theme }) => theme.FONTS.Primary}, sans-serif;
   }
 
   input {
     padding: 1rem;
 
-    background-color: #f3f4f6; /* form/input-background */
-    border: 1px solid #091030; /* form/input-border */
+    background-color: ${({ theme }) =>
+      theme.COLORS['zinc-50']}; /* form/input-background */
+    border: 1px solid ${({ theme }) => theme.COLORS['blue-sky-700']}; /* form/input-border */
     border-radius: 5px;
     outline: none;
 
     &[id='name']:invalid:focus,
     &[id='phone']:invalid:focus {
       outline: none;
-      border: 1px solid #ff5353; /* form/input-border-error */
+      border: 1px solid ${({ theme }) => theme.COLORS.tomate}; /* form/input-border-error */
     }
 
     &::placeholder {
-      color: #888ca6; /* form/secondary-text-color */
+      color: ${({ theme }) =>
+        theme.COLORS['zinc-200']}; /* form/secondary-text-color */
       font-size: 1.6rem;
-      font-family: 'Nunito', sans-serif;
+      font-family: ${({ theme }) => theme.FONTS.Secondary}, sans-serif;
     }
   }
 
   button[type='submit'] {
     padding: 1.6rem 3.2rem;
 
-    background-color: #10184d; /*form/button-background-color */
+    background-color: ${({ theme }) =>
+      theme.COLORS['blue-sky-600']}; /*form/button-background-color */
     border: none;
     border-radius: 8px;
 
-    color: #fdfdfd; /* form/background */
+    color: ${({ theme }) => theme.COLORS.white}; /* form/background */
     font-size: 1.6rem;
     font-weight: 700;
-    font-family: Roboto, sans-serif;
+    font-family: ${({ theme }) => theme.FONTS.Primary}, sans-serif;
 
     &:hover {
       cursor: pointer;
-      background-color: #10184df5;
+      filter: brightness(1.3);
     }
 
     @media screen and (min-width: 524px) {
