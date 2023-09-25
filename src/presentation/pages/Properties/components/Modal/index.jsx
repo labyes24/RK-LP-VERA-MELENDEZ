@@ -1,13 +1,15 @@
 import * as S from './styles'
 
-export function Modal() {
-  return (
+export function Modal({ isOpen, toggleFn }) {
+  return isOpen ? (
     <S.Container>
       <S.Modal>
         <S.TitleGroup>
           <S.Title>Duplex em condomínio</S.Title>
 
-          <i className="ph ph-x">Close</i>
+          <button onClick={toggleFn}>
+            <i className="ph ph-x">Close</i>
+          </button>
         </S.TitleGroup>
 
         <S.Description>
@@ -41,5 +43,5 @@ export function Modal() {
         </S.Form>
       </S.Modal>
     </S.Container>
-  )
+  ) : null
 }
