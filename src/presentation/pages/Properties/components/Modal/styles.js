@@ -17,6 +17,13 @@ export const Container = styled.div`
 `
 
 export const Modal = styled.div`
+  @keyframes appear {
+    from {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
+
   padding: 2.4rem;
 
   background-color: ${({ theme }) => theme.COLORS.white}; /* form/background */
