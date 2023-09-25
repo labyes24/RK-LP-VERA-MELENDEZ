@@ -33,7 +33,7 @@ export function Modal({ isOpen, toggleFn }) {
                 id="phone"
                 placeholder="(xx)xxxxx-xxxx"
                 pattern="^[0-9]+$"
-                maxLength="15"
+                maxLength="9"
                 required
               />
             </div>
