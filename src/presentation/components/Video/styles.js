@@ -1,19 +1,16 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 950px;
+  margin: 0 2rem;
   text-align: center;
-  position: relative;
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+  }
 `
 
 export const StyledVideo = styled.video`
   width: 100%;
-  max-height: 400px;
-  background-color: #000;
-`
-
-export const FallbackText = styled.p`
-  font-size: 16px;
-  color: #ff0000;
+  max-height: 500px;
+  background-color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 `
