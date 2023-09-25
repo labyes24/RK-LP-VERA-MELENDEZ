@@ -93,6 +93,7 @@ export const Form = styled.form`
     outline: none;
 
     &[id='name']:invalid:focus,
+    &[id='email']:invalid:focus,
     &[id='phone']:invalid:focus {
       outline: none;
       border: 1px solid ${({ theme }) => theme.COLORS.tomate}; /* form/input-border-error */
