@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
-import { Container, StyledVideo } from './styles'
+import { Container, StyledVideo, MessageError } from './styles'
+
+import VideoCameraSlash from '../../assets/VideoCameraSlash.svg'
+
+// import video from '../../assets/VideoCameraSlash.svg'
 
 import video from '../../assets/video-sample.mp4'
 
@@ -21,7 +25,10 @@ export function Video({ src = video, ...rest }) {
           <source src={src} type="video/mp4" />
         </StyledVideo>
       ) : (
-        <p>Erro ao carregar o vídeo.</p>
+        <MessageError>
+          <img src={VideoCameraSlash} alt="Ícone da imagem" />
+          <span> Não foi possível carregar o vídeo.</span>
+        </MessageError>
       )}
     </Container>
   )
