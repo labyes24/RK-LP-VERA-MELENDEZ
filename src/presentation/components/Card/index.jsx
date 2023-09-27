@@ -1,4 +1,3 @@
-import propTypes from 'prop-types'
 import { CardContainer } from './styles'
 
 /**
@@ -15,9 +14,4 @@ export function Card({ quote, author = undefined }) {
       {author && <cite>{author}</cite>}
     </CardContainer>
   )
-}
-
-Card.propTypes = {
-  quote: propTypes.string.isRequired,
-  author: propTypes.string,
 }
