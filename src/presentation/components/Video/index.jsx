@@ -26,7 +26,7 @@ export function Video({ src = video, ...rest }) {
         </StyledVideo>
       ) : (
         <MessageError>
-          <img src={VideoCameraSlash} alt="Ícone da imagem" />
+          <img src={VideoCameraSlash} alt="Ícone da câmera cortada" />
           <span> Não foi possível carregar o vídeo.</span>
         </MessageError>
       )}
