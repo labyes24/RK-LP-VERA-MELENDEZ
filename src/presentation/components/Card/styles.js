@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
+  border: 1px solid green; // TODO: remove this border
+
   background-color: ${({ theme }) => theme.COLORS['zinc-500']};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
