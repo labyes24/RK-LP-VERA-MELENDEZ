@@ -1,12 +1,28 @@
+import { useState } from 'react'
+
 import { Container, StyledVideo } from './styles'
+
 import video from '../../assets/video-sample.mp4'
 
-export function Video() {
+export function Video({ src = video, ...rest }) {
+  const [videoError, setVideoError] = useState(false)
+
   return (
     <Container>
-      <StyledVideo controls autoPlay muted loop>
-        <source src={video} type="video/mp4" />
-      </StyledVideo>
+      {!videoError ? (
+        <StyledVideo
+          controls
+          autoPlay
+          muted
+          loop
+          onError={() => setVideoError(true)}
+          {...rest}
+        >
+          <source src={src} type="video/mp4" />
+        </StyledVideo>
+      ) : (
+        <p>Erro ao carregar o vídeo.</p>
+      )}
     </Container>
   )
 }

@@ -1,16 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  max-width: 950px;
-  margin: 0 2rem;
+  max-width: 95rem;
+  margin: 0 auto;
   text-align: center;
-  @media (min-width: 1024px) {
-    margin: 0 auto;
-  }
 `
 
 export const StyledVideo = styled.video`
   width: 100%;
-  max-height: 500px;
+  max-height: 50rem;
   background-color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 `
