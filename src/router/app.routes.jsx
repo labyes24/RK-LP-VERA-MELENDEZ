@@ -3,12 +3,13 @@ import { SpinnerTest } from '../presentation/components/Spinner/test'
 import { BrokerImageTest } from '../presentation/components/BrokerImage/test'
 
 import { ModalTest } from '../presentation/pages/Properties/components/Modal/test'
+import { VideoTest } from '../presentation/components/Video/test'
 
 export function RoutesApp() {
   return (
     <Routes>
       <Route path="/" element={<h1>RK Landing Page</h1>} />
-      <Route path="/Video" element={<h2>Video</h2>} />
+      <Route path="/Video" element={<VideoTest />} />
       <Route path="/RealEstateBrokerImage" element={<BrokerImageTest />} />
       <Route
         path="/RealEstateBrokerDescription"

@@ -4,9 +4,9 @@ import { Container, StyledVideo, MessageError } from './styles'
 
 import VideoCameraSlash from '../../assets/VideoCameraSlash.svg'
 
-// import video from '../../assets/VideoCameraSlash.svg'
-
 import video from '../../assets/video-sample.mp4'
+
+// import video from '../../assets/VideoCameraSlash.svg' // caso de teste
 
 export function Video({ src = video, ...rest }) {
   const [videoError, setVideoError] = useState(false)
@@ -31,5 +31,5 @@ export function Video({ src = video, ...rest }) {
         </MessageError>
       )}
     </Container>
-  )
+  )  
 }
