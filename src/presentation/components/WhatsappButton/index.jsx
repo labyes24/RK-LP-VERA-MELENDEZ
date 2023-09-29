@@ -1,4 +1,4 @@
-import './style.css'
+import { Container } from './style.js'
 
 const URL = 'https://wa.me'
 
@@ -12,7 +12,7 @@ export function WhatsappButton({ number, message }) {
   }
 
   return (
-    <>
+    <Container>
       <a href={Url} target="_blank" rel="noopener noreferrer">
         <svg
           width="81"
@@ -74,6 +74,6 @@ export function WhatsappButton({ number, message }) {
           </defs>
         </svg>
       </a>
-    </>
+    </Container>
   )
 }
