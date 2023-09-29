@@ -15,28 +15,26 @@ export const Container = styled.button`
 
     > svg {
       > g {
-        > :nth-child(1) {
+        :nth-child(1) {
           fill: ${({ theme }) => theme.COLORS.white};
         }
 
-        > :nth-child(2) {
+        :nth-child(2) {
           fill: ${({ theme }) => theme.COLORS['blue-sky-500']};
         }
 
-        > :nth-child(3) {
+        :nth-child(3) {
           fill: ${({ theme }) => theme.COLORS.white};
         }
       }
     }
-  }
 
-  a:hover {
-    transform: scale(1.1);
-    filter: brightness(150%);
-  }
+    &:hover {
+      transform: scale(1.1);
+      filter: brightness(150%);
+    }
 
-  @media (max-width: 768px) {
-    > a {
+    @media (max-width: 768px) {
       > svg {
         width: 5.8rem;
         height: 5.8rem;
