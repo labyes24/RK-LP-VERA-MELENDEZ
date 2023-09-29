@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  position: relative;
   padding: 7.6rem 3.5rem 4.5rem 3.5rem;
 
   display: flex;
@@ -10,13 +9,36 @@ export const Container = styled.div`
   border-radius: 1.6rem;
   background-color: ${({ theme }) => theme.COLORS['zinc-500']};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.4rem 4.8rem 2.4rem 3.5rem;
+
+    article {
+      margin: 0 0 0 0;
+      max-width: 640px;
+    }
+  }
 `
 
 export const ImageContainer = styled.div`
-  position: absolute;
-  top: -5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 390px;
+
+  img {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    img {
+      top: 21%;
+      left: 40%;
+    }
+  }
 `
 
 export const TitleGroup = styled.div`
@@ -31,6 +53,19 @@ export const TitleGroup = styled.div`
 
   span {
     font-weight: 300;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 1.6rem;
+    gap: 8.4rem;
+
+    h4 {
+      font-size: 3.6rem;
+    }
+
+    span {
+      font-size: 1.6rem;
+    }
   }
 `
 
@@ -48,6 +83,20 @@ export const CopyGroup = styled.div`
 
   strong {
     font-weight: 700;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+
+    strong,
+    p {
+      font-size: 1.6rem;
+    }
+
+    strong,
+    :nth-child(2) {
+      margin-bottom: 2.2rem;
+    }
   }
 `
 
@@ -67,5 +116,18 @@ export const LinksCard = styled.div`
     gap: 0.5rem;
     text-decoration: none;
     color: ${({ theme }) => theme.COLORS.white};
+    word-break: break-all;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0.8rem 1.6rem;
+    gap: 1.6rem;
+    margin-left: 0.8rem;
+    height: fit-content;
+    align-self: end;
+
+    a {
+      word-break: normal;
+    }
   }
 `

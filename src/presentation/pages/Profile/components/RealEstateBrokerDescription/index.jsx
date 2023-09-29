@@ -32,15 +32,20 @@ export function RealEstateBrokerDescription() {
             Investir em imóveis é investir em conhecimento, no seu tempo e na
             sua família.
           </strong>
+
           <p>
             Apresento-me como seu corretor de imóveis, especializado em oferecer
             mais do que propriedades, vendo informações estratégicas e
             oportunidades de investimento sólido no dinâmico mercado
-            imobiliário. Estou aqui para ser seu guia confiável nessa jornada,
-            proporcionando acesso aos insights valiosos sobre tendências do
-            mercado, recomendações personalizadas para investimentos sólidos e
-            orientação em cada etapa, desde pesquisa até a negociação de sucesso
-            para as partes envolvidas.
+            imobiliário.
+          </p>
+
+          <p>
+            Estou aqui para ser seu guia confiável nessa jornada, proporcionando
+            acesso aos insights valiosos sobre tendências do mercado,
+            recomendações personalizadas para investimentos sólidos e orientação
+            em cada etapa, desde pesquisa até a negociação de sucesso para as
+            partes envolvidas.
           </p>
         </CopyGroup>
       </article>
