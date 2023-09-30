@@ -4,15 +4,25 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  margin: 20rem auto 20rem;
   align-items: center;
   justify-content: center;
-  margin: auto;
 `
 
 export const Button = styled.button`
-  width: 10rem;
-  height: 6rem;
   display: flex;
-  align-items: center;
+  width: 21rem;
+  height: 3rem;
+  padding: 8px 88px;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: ${({ theme }) => theme.COLORS.white};
+  font-family: ${({ theme }) => theme.FONTS.Primary};
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.4rem;
+  background: ${({ theme }) => theme.COLORS['blue-sky-600']};
 `

@@ -1,15 +1,7 @@
 import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 
-export const Container = styled.div`
-  padding: 1rem;
-  background-color: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: fill;
-`
-export const spin = keyframes`
+const spin = keyframes`
   0% {
    transform: rotate(0deg);
   }
@@ -20,13 +12,19 @@ export const spin = keyframes`
 `
 
 export const Loader = styled.div`
-  border: 5px solid ${({ theme }) => theme.COLORS['blue-sky']};
-  border-top: 5px solid ${({ theme }) => theme.COLORS['blue-sky-500']};
+  border: 8px solid ${({ theme }) => theme.COLORS['blue-sky']};
+  border-top-color: ${({ theme }) => theme.COLORS['blue-sky-500']};
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 10rem;
+  animation: ${spin} 1s linear infinite;
+  aspect-ratio: 1/1;
+`
+export const SmallLoader = styled.div`
+  border: 2px solid ${({ theme }) => theme.COLORS['blue-sky']};
+  border-top-color: ${({ theme }) => theme.COLORS['blue-sky-500']};
+  border-radius: 50%;
+  width: 2rem;
   animation: ${spin} 1s linear infinite;
   text-align: center;
   aspect-ratio: 1/1;
-  object-fit: fill;
 `

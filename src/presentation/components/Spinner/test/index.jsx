@@ -1,24 +1,23 @@
 import { Spinner } from '../index'
 import { Container, Button } from './styles'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export function SpinnerTest() {
   const [loading, setLoading] = useState(false)
-  const renderBtn = <Button onClick={handleLoading}>Carregar</Button>
-
-  function handleLoading() {
-    setLoading(true)
-  }
-
-  return (
-    <Container>
-      {loading ? (
-        <Button onClick={() => setLoading(false)}>
-          <Spinner />
-        </Button>
-      ) : (
-        renderBtn
-      )}
-    </Container>
+  const [isLoading, setIsLoading] = useState(true)
+  const renderBtn = (
+    <Button onClick={() => setLoading(true)}>
+      {loading ? <Spinner size={'small'} /> : 'Carregar'}
+    </Button>
   )
+
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 5000)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 5000)
+  })
+
+  return <Container>{isLoading ? <Spinner /> : renderBtn}</Container>
 }

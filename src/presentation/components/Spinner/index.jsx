@@ -1,9 +1,5 @@
-import { Container, Loader } from './styles'
+import { Loader, SmallLoader } from './styles'
 
-export function Spinner() {
-  return (
-    <Container>
-      <Loader></Loader>
-    </Container>
-  )
+export function Spinner({ size }) {
+  return size === 'small' ? <SmallLoader /> : <Loader />
 }
