@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
   gap: 1rem;
   width: 17.5rem;
   min-width: 16rem;
-  min-height: 14rem;
+  height: 14rem;
 
   display: flex;
   flex-direction: column;
@@ -32,6 +32,7 @@ export const CardContainer = styled.div`
     font-style: normal;
     font-size: 1.2rem;
     line-height: 1;
+    text-align: center;
   }
 
   @media (min-width: 768px) {
@@ -40,7 +41,7 @@ export const CardContainer = styled.div`
     border-radius: 8px;
     width: 28rem;
     min-width: 22rem;
-    min-height: 19rem;
+    height: 19rem;
 
     > blockquote {
       font-size: 1.2rem;
