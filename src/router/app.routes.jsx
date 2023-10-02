@@ -4,6 +4,7 @@ import { BrokerImageTest } from '../presentation/components/BrokerImage/test'
 
 import { ModalTest } from '../presentation/pages/Properties/components/Modal/test'
 import { VideoTest } from '../presentation/components/Video/test'
+import { WhatsappButtonTest } from '../presentation/components/WhatsappButton/test/index'
 
 export function RoutesApp() {
   return (
@@ -19,6 +20,7 @@ export function RoutesApp() {
       <Route path="/Card" element={<h2>Card</h2>} />
       <Route path="/WhatsappButton" element={<h2>WhatsappButton</h2>} />
       <Route path="/Modal" element={<ModalTest />} />
+      <Route path="/WhatsappButton" element={<WhatsappButtonTest />} />
       <Route path="*" element={<h2>Rota inexistente</h2>} />
     </Routes>
   )
