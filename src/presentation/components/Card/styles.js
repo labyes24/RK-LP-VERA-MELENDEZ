@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
   padding: 2rem 0.8rem;
   gap: 1rem;
   width: 17.5rem;
+  min-width: 16rem;
   min-height: 14rem;
 
   display: flex;
@@ -38,6 +39,7 @@ export const CardContainer = styled.div`
     gap: 2.4rem;
     border-radius: 8px;
     width: 28rem;
+    min-width: 22rem;
     min-height: 19rem;
 
     > blockquote {
