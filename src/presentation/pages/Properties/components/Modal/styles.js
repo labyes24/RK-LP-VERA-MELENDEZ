@@ -16,7 +16,7 @@ export const Container = styled.div`
   transition: 0.3s background-color;
 `
 
-export const Modal = styled.div`
+export const StyledModal = styled.div`
   @keyframes appear {
     from {
       transform: translateY(-10vh);

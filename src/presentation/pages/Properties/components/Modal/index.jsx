@@ -1,27 +1,35 @@
-import * as S from './styles'
+import {
+  Container,
+  StyledModal,
+  TitleGroup,
+  Title,
+  Description,
+  Form,
+  InputGroup,
+} from './styles'
 
 export function Modal({ isOpen, toggleFn }) {
   return isOpen ? (
-    <S.Container>
-      <S.Modal>
-        <S.TitleGroup>
-          <S.Title>Duplex em condomínio</S.Title>
+    <Container>
+      <StyledModal>
+        <TitleGroup>
+          <Title>Duplex em condomínio</Title>
 
           <button onClick={toggleFn}>
             <i className="ph ph-x">Close</i>
           </button>
-        </S.TitleGroup>
+        </TitleGroup>
 
-        <S.Description>
+        <Description>
           Por gentileza, preencha os campos abaixo, entrarei em contato o mais
           breve possível.
-        </S.Description>
+        </Description>
 
-        <S.Form>
+        <Form>
           <label htmlFor="name">Nome:</label>
           <input id="name" placeholder="Seu nome" minLength="2" required />
 
-          <S.InputGroup>
+          <InputGroup>
             <div>
               <label htmlFor="email">E-mail:</label>
               <input type="email" id="email" placeholder="Seu melhor e-mail" />
@@ -37,11 +45,11 @@ export function Modal({ isOpen, toggleFn }) {
                 required
               />
             </div>
-          </S.InputGroup>
+          </InputGroup>
 
           <button type="submit">Envie seu contato</button>
-        </S.Form>
-      </S.Modal>
-    </S.Container>
+        </Form>
+      </StyledModal>
+    </Container>
   ) : null
 }
