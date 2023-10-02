@@ -2,14 +2,14 @@ import { Container } from './style'
 import { WhatsappButton } from '../../WhatsappButton'
 
 const personData = {
-  number: '19983251470',
+  number: '19996546371',
   message: 'Olá, gostaria de saber mais sobre o imóvel.',
 }
 
 export function WhatsappButtonTest() {
   return (
     <Container>
-      <WhatsappButton personData={personData} />
+      <WhatsappButton message={personData.message} number={personData.number} />
     </Container>
   )
 }

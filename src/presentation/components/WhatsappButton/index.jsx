@@ -2,9 +2,7 @@ import { Container } from './style.js'
 
 const URL = 'https://wa.me'
 
-export function WhatsappButton({ personData }) {
-  let { number, message } = personData
-
+export function WhatsappButton({ number, message = null }) {
   number = number?.replace(/[^\w\s]/gi, '').replace(/ /g, '')
 
   let Url = `${URL}/55${number}`
