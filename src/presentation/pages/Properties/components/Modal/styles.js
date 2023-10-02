@@ -42,6 +42,10 @@ export const TitleGroup = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 1.6rem;
+
+  img {
+    cursor: pointer;
+  }
 `
 
 export const Title = styled.h3`

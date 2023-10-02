@@ -8,6 +8,8 @@ import {
   InputGroup,
 } from './styles'
 
+import closeIcon from '../../../../assets/x-close-icon.svg'
+
 export function Modal({ isOpen, toggleFn }) {
   return isOpen ? (
     <Container>
@@ -15,9 +17,11 @@ export function Modal({ isOpen, toggleFn }) {
         <TitleGroup>
           <Title>Duplex em condomínio</Title>
 
-          <button onClick={toggleFn}>
-            <i className="ph ph-x">Close</i>
-          </button>
+          <img
+            src={closeIcon}
+            alt="Ícone de X para fechar o modal"
+            onClick={toggleFn}
+          />
         </TitleGroup>
 
         <Description>
