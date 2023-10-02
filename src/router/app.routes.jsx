@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import { SpinnerTest } from '../presentation/components/Spinner/test'
 
+import { ModalTest } from '../presentation/pages/Properties/components/Modal/test'
+
 export function RoutesApp() {
   return (
     <Routes>
@@ -17,6 +19,7 @@ export function RoutesApp() {
       <Route path="/Spinner" element={<SpinnerTest />} />
       <Route path="/Card" element={<h2>Card</h2>} />
       <Route path="/WhatsappButton" element={<h2>WhatsappButton</h2>} />
+      <Route path="/Modal" element={<ModalTest />} />
       <Route path="*" element={<h2>Rota inexistente</h2>} />
     </Routes>
   )
