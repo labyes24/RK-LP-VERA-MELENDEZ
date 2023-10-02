@@ -11,14 +11,20 @@ export function CardTest() {
     {
       id: 'q2',
       quote:
-        'Life is like riding a bicycle. To keep your balance, you must keep moving.',
-      author: 'Albert Einstein',
+        'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
+      author: 'Paola Oliveira,  Atriz',
     },
     {
       id: 'q3',
       quote:
-        'Life is like riding a bicycle. To keep your balance, you must keep moving.',
-      author: 'Albert Einstein',
+        'Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido.',
+      author: 'Manoel de Barros, Poeta',
+    },
+    {
+      id: 'q4',
+      quote:
+        'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
+      author: 'Madam CJ Walker, empresária',
     },
   ]
 
