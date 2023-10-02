@@ -18,7 +18,6 @@ export function RoutesApp() {
       />
       <Route path="/Spinner" element={<SpinnerTest />} />
       <Route path="/Card" element={<CardTest />} />
-      <Route path="/WhatsappButton" element={<h2>WhatsappButton</h2>} />
       <Route path="/Modal" element={<ModalTest />} />
       <Route path="/WhatsappButton" element={<WhatsappButtonTest />} />
       <Route path="*" element={<h2>Rota inexistente</h2>} />
