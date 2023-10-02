@@ -6,6 +6,8 @@ import { VideoTest } from '../presentation/components/Video/test'
 import { WhatsappButtonTest } from '../presentation/components/WhatsappButton/test/index'
 import { CardTest } from '../presentation/components/Card/test'
 
+import { RealEstateBrokerDescriptionTest } from '../presentation/pages/Profile/components/RealEstateBrokerDescription/test'
+
 export function RoutesApp() {
   return (
     <Routes>
@@ -14,7 +16,7 @@ export function RoutesApp() {
       <Route path="/RealEstateBrokerImage" element={<BrokerImageTest />} />
       <Route
         path="/RealEstateBrokerDescription"
-        element={<h2>RealEstateBrokerDescription</h2>}
+        element={<RealEstateBrokerDescriptionTest />}
       />
       <Route path="/Spinner" element={<SpinnerTest />} />
       <Route path="/Card" element={<CardTest />} />
