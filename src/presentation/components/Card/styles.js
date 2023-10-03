@@ -16,6 +16,8 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+  flex: 1 1 16rem;
+
   > blockquote {
     font-family: ${({ theme }) => theme.FONTS.Secondary};
     color: ${({ theme }) => theme.COLORS.white};
@@ -33,6 +35,10 @@ export const CardContainer = styled.div`
     font-size: 1.2rem;
     line-height: 1;
     text-align: center;
+  }
+
+  @media (min-width: 410px) {
+    flex: initial;
   }
 
   @media (min-width: 768px) {
