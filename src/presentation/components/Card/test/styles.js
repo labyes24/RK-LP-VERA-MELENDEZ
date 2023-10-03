@@ -9,7 +9,11 @@ export const CardTestContainer = styled.div`
   gap: 1rem;
 
   .row-group-scroll {
-    min-width: 42rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 110rem;
+
+    width: calc(100% - 0.5rem);
     min-height: 20rem;
 
     display: flex;
@@ -65,13 +69,16 @@ export const CardTestContainer = styled.div`
   }
 
   .row-group-wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 115rem;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
 
-    max-width: 102rem;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     padding-bottom: 1rem;
