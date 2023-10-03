@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { SpinnerTest } from '../presentation/components/Spinner/test'
+import { BrokerImageTest } from '../presentation/components/BrokerImage/test'
 
 import { ModalTest } from '../presentation/pages/Properties/components/Modal/test'
 
@@ -8,10 +9,7 @@ export function RoutesApp() {
     <Routes>
       <Route path="/" element={<h1>RK Landing Page</h1>} />
       <Route path="/Video" element={<h2>Video</h2>} />
-      <Route
-        path="/RealEstateBrokerImage"
-        element={<h2>RealEstateBrokerImage</h2>}
-      />
+      <Route path="/RealEstateBrokerImage" element={<BrokerImageTest />} />
       <Route
         path="/RealEstateBrokerDescription"
         element={<h2>RealEstateBrokerDescription</h2>}
