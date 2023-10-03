@@ -1,3 +1,5 @@
+import { BrokerImage } from '../../../../components/BrokerImage'
+
 import {
   Container,
   CopyGroup,
@@ -6,7 +8,6 @@ import {
   TitleGroup,
 } from './styles'
 
-import realEstateBrokerImage from '../../../../assets/realEstateBroker-image.svg'
 import emailIcon from '../../../../assets/email-icon.svg'
 import whatsappIcon from '../../../../assets/whatsapp-icon.svg'
 import mapPinIcon from '../../../../assets/map-pin-icon.svg'
@@ -15,10 +16,7 @@ export function RealEstateBrokerDescription() {
   return (
     <Container>
       <ImageContainer>
-        <img
-          src={realEstateBrokerImage}
-          alt="Imagem do corretor de imóveis Winnetou Soares Martins"
-        />
+        <BrokerImage removeelipses={false} />
       </ImageContainer>
 
       <article>

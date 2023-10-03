@@ -25,18 +25,36 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   width: 390px;
 
-  img {
+  > div {
     position: absolute;
-    top: -5%;
-    left: 50%;
+    top: 30%;
+    left: 43%;
     transform: translate(-50%, -50%);
+
+    .Images {
+      position: relative;
+
+      img:nth-child(1),
+      img:nth-child(2) {
+        position: absolute;
+        top: -28rem;
+        width: 16.7rem;
+        transform: translateX(-30%);
+      }
+    }
   }
 
   @media screen and (min-width: 1440px) {
     position: relative;
-    img {
-      top: 21%;
-      left: 40%;
+
+    .Images {
+      img:nth-child(1),
+      img:nth-child(2) {
+        top: -8rem !important;
+        left: 1rem;
+        transform: translate(-50%, -50%);
+        scale: 2.5;
+      }
     }
   }
 `
