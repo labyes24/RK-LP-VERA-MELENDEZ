@@ -8,7 +8,7 @@ export const CardTestContainer = styled.div`
   padding: 1.5rem;
   gap: 1rem;
 
-  .row-group {
+  .row-group-scroll {
     min-width: 42rem;
     min-height: 20rem;
 
@@ -62,5 +62,18 @@ export const CardTestContainer = styled.div`
     &::-webkit-scrollbar-thumb:active {
       background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
     }
+  }
+
+  .row-group-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    max-width: 102rem;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-bottom: 1rem;
   }
 `

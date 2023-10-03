@@ -43,9 +43,17 @@ export function CardTest() {
 
   return (
     <CardTestContainer>
-      <h2>Quotes</h2>
+      <h2>Quotes scroll</h2>
 
-      <div className="row-group">
+      <div className="row-group-scroll">
+        {quotes.map(quote => (
+          <Card key={quote.id} {...quote} />
+        ))}
+      </div>
+
+      <h2>Quotes wrap</h2>
+
+      <div className="row-group-wrap">
         {quotes.map(quote => (
           <Card key={quote.id} {...quote} />
         ))}
@@ -53,7 +61,7 @@ export function CardTest() {
 
       <h2>Tips</h2>
 
-      <div className="row-group">
+      <div className="row-group-scroll">
         {tips.map(tip => (
           <Card key={tip.id} {...tip} />
         ))}
