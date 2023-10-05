@@ -17,43 +17,50 @@ export const Container = styled.div`
 
     article {
       margin: 0 0 0 0;
-      max-width: 640px;
+      max-width: 64rem;
     }
   }
 `
 
 export const ImageContainer = styled.div`
-  width: 390px;
+  position: relative;
+  width: 100%;
 
   > div {
     position: absolute;
-    top: 30%;
-    left: 43%;
+    top: -10rem;
+    left: 50%;
     transform: translate(-50%, -50%);
 
     .Images {
-      position: relative;
-
       img:nth-child(1),
       img:nth-child(2) {
-        position: absolute;
-        top: -28rem;
         width: 16.7rem;
-        transform: translateX(-30%);
+      }
+
+      img:nth-child(1) {
+        z-index: 2;
+      }
+
+      img:nth-child(2) {
+        z-index: 1;
       }
     }
   }
 
   @media screen and (min-width: 1440px) {
-    position: relative;
+    width: 40rem;
+
+    > div {
+      top: 30%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
 
     .Images {
       img:nth-child(1),
       img:nth-child(2) {
-        top: -8rem !important;
-        left: 1rem;
-        transform: translate(-50%, -50%);
-        scale: 2.5;
+        width: 42.7rem !important;
       }
     }
   }
@@ -95,7 +102,7 @@ export const CopyGroup = styled.div`
   strong,
   p {
     line-height: 140%;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: ${({ theme }) => theme.FONTS.Secondary};
   }
 
