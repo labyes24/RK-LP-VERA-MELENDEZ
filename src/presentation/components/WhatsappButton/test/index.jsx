@@ -9,7 +9,10 @@ const personData = {
 export function WhatsappButtonTest() {
   return (
     <Container>
-      <WhatsappButton message={personData.message} number={personData.number} />
+      <WhatsappButton
+        message={personData.message}
+        phoneNumber={personData.number}
+      />
     </Container>
   )
 }
