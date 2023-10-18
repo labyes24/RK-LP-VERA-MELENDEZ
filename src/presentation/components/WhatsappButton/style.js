@@ -35,7 +35,7 @@ export const Container = styled.button`
     }
 
     @media (max-width: 768px) {
-      > svg {
+      > img {
         width: 5.8rem;
         height: 5.8rem;
       }
