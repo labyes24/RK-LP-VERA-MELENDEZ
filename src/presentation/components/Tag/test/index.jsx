@@ -1,5 +1,5 @@
 import { Container, TagsWrapper } from './styles'
-import { Tag } from '../../Tags'
+import { Tag } from '../../Tag'
 import garageIcon from '../../../assets/garage-icon.svg'
 import roomIcon from '../../../assets/room-icon.svg'
 import squareIcon from '../../../assets/square-icon.svg'
