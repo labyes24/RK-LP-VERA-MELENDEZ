@@ -41,11 +41,13 @@ export function Modal({ isOpen, toggleFn }) {
 
             <div>
               <label htmlFor="phone">Telefone:</label>
+
               <input
                 id="phone"
                 placeholder="(xx)xxxxx-xxxx"
-                pattern="^[0-9]+$"
-                maxLength="9"
+                pattern="^[0-9+ ]+$"
+                minLength="9"
+                maxLength="17"
                 required
               />
             </div>
