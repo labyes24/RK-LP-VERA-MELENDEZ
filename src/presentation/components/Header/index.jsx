@@ -2,6 +2,18 @@ import { Container, Logo, ToggleHamburger, Links, Link } from './styles'
 
 import logoRKI from '../../assets/logoRKI.svg'
 
+function Hamburger({ isOpen, onClick }) {
+  return (
+    <ToggleHamburger onClick={onClick}>
+      <input type="checkbox" id="checkbox" />
+      <label htmlFor="checkbox" className="toggle">
+        <span />
+        <span />
+        <span />
+      </label>
+    </ToggleHamburger>
+  )
+}
 /**
  * Renders a header component  - with a quote and an optional author.
  *
