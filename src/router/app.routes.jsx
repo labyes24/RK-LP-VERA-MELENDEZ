@@ -8,6 +8,7 @@ import { ModalTest } from '../presentation/pages/Properties/components/Modal/tes
 import { VideoTest } from '../presentation/components/Video/test'
 import { WhatsappButtonTest } from '../presentation/components/WhatsappButton/test/index'
 import { CardTest } from '../presentation/components/Card/test'
+import { TagsTest } from '../presentation/components/Tags/test'
 import { RealEstateBrokerDescriptionTest } from '../presentation/pages/Profile/components/RealEstateBrokerDescription/test'
 
 export function RoutesApp() {
@@ -38,6 +39,8 @@ export function RoutesApp() {
       <Route path="/Card" element={<CardTest />} />
       <Route path="/Modal" element={<ModalTest />} />
       <Route path="/WhatsappButton" element={<WhatsappButtonTest />} />
+      <Route path="/Tags" element={<TagsTest />} />
+      <Route path="*" element={<h2>Rota inexistente</h2>} />
     </Routes>
   )
 }
