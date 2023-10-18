@@ -16,6 +16,14 @@ export const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.GRADIENTS.background};
     color: ${({ theme }) => theme.COLORS.white};
     font-family: ${props => props.theme.FONTS.Primary};
-    font-size: 1.6rem
+    font-size: 1.6rem;
+
+    min-height: 99vh;
+  }
+
+  #root {
+    display: flex;
+    justify-content: center;
+    min-height: 99vh;
   }
 `
