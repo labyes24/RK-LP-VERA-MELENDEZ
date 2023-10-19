@@ -32,7 +32,7 @@ export function Header() {
     <Container>
       <Logo src={logoRKI} alt="Logo da RK Imóveis" />
       <Hamburger checked={openMenuHambuger} onChange={handleOpenMenuHambuger} />
-      <Links>
+      <Links $openMenu={openMenuHambuger}>
         <Link>
           <a href="">perfil</a>
         </Link>
