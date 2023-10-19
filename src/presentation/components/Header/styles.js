@@ -6,15 +6,18 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 3rem 0;
 `
 
 export const Logo = styled.img`
-  width: 8rem;
+  width: 6rem;
+  @media (min-width: 1024px) {
+    width: 8rem;
+  }
 `
-
 export const ToggleHamburger = styled.div`
+  z-index: 1;
+
   input {
     display: none;
   }
@@ -71,12 +74,38 @@ export const ToggleHamburger = styled.div`
     transform: rotate(-45deg);
     transition-duration: 0.5s;
   }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `
 
 export const Links = styled.ul`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 3.2rem;
+  padding: 13rem 11.2rem 0 3rem;
+
+  background-color: ${({ theme }) => theme.COLORS['blue-titan']};
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+
+  transform: ${({ $openMenu }) =>
+    $openMenu ? 'translateX(0)' : 'translateX(100%)'};
+  transition: all 0.3s ease;
+
+  @media (min-width: 1024px) {
+    position: unset;
+    transform: unset;
+
+    flex-direction: row;
+    padding: 0 0 0 0;
+
+    background-color: transparent;
+  }
 `
 
 export const Link = styled.li`
@@ -91,12 +120,12 @@ export const Link = styled.li`
     text-transform: uppercase;
 
     line-height: normal;
-    color: ${({ theme }) => theme.COLORS['zinc-100']};
+    color: ${({ theme }) => theme.COLORS['blue-sky-600']};
     transition: color 0.3s ease;
 
     &:hover {
       cursor: pointer;
-      color: ${({ theme }) => theme.COLORS.white};
+      color: ${({ theme }) => theme.COLORS['blue-sky-700']};
     }
 
     &::before {
@@ -110,7 +139,20 @@ export const Link = styled.li`
     }
 
     &:hover::before {
-      border-bottom: 2px solid ${({ theme }) => theme.COLORS.white};
+      border-bottom: 2px solid ${({ theme }) => theme.COLORS['blue-sky-700']};
+    }
+  }
+  @media (min-width: 1024px) {
+    > a {
+      color: ${({ theme }) => theme.COLORS['zinc-100']};
+
+      &:hover {
+        color: ${({ theme }) => theme.COLORS.white};
+      }
+
+      &:hover::before {
+        border-bottom: 2px solid ${({ theme }) => theme.COLORS.white};
+      }
     }
   }
 `
