@@ -25,5 +25,6 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     min-height: 99vh;
+    overflow-x: hidden;
   }
 `
