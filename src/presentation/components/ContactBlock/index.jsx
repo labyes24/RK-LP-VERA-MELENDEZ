@@ -34,7 +34,7 @@ export function ContactBlock({ objectProps }) {
         <ContactItem
           icon={mapIcon}
           content={`
-          ${contactInfo.address.street}, 
+            ${contactInfo.address.street}, 
             ${contactInfo.address.number} - 
             ${contactInfo.address.district} 
             ${contactInfo.address.city}
