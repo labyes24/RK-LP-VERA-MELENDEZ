@@ -1,12 +1,13 @@
 import { Container, Logo, ToggleHamburger, Links, Link } from './styles'
+import { useState } from 'react'
 
 import logoRKI from '../../assets/logoRKI.svg'
 
-function Hamburger({ isOpen, onClick }) {
+function Hamburger({ ...rest }) {
   return (
-    <ToggleHamburger onClick={onClick}>
-      <input type="checkbox" id="checkbox" />
-      <label htmlFor="checkbox" className="toggle">
+    <ToggleHamburger>
+      <input id="checkbox" type="checkbox" {...rest} />
+      <label htmlFor="checkbox">
         <span />
         <span />
         <span />
@@ -14,6 +15,7 @@ function Hamburger({ isOpen, onClick }) {
     </ToggleHamburger>
   )
 }
+
 /**
  * Renders a header component  - with a quote and an optional author.
  *
@@ -21,11 +23,15 @@ function Hamburger({ isOpen, onClick }) {
  * @param {string | undefined} author - .
  * @return {JSX.Element} The rendered header component.
  */
-export function Header({ ...rest }) {
+export function Header() {
+  const [openMenuHambuger, setOpenMenuHambuger] = useState(false)
+  function handleOpenMenuHambuger() {
+    return setOpenMenuHambuger(!openMenuHambuger)
+  }
   return (
     <Container>
       <Logo src={logoRKI} alt="Logo da RK Imóveis" />
-      {/* <Hamburger /> */}
+      <Hamburger checked={openMenuHambuger} onChange={handleOpenMenuHambuger} />
       <Links>
         <Link>
           <a href="">perfil</a>
