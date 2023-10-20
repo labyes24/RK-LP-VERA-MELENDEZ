@@ -11,12 +11,23 @@ export const Container = styled.div`
   main {
     width: 45rem;
     height: 54rem;
+    padding: 2rem;
+
     display: flex;
     flex-direction: column;
+    flex: 0 1 1;
     gap: 2.5rem;
-    padding: 2rem;
+
     border-radius: 1rem;
     background-color: ${({ theme }) => theme.COLORS['blue-titan']};
+
+    @media (min-width: 320px) {
+      width: 33rem;
+    }
+
+    @media (min-width: 768px) {
+      width: 40rem;
+    }
   }
 
   h2 {

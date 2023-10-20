@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.span`
-  width: 10.6rem;
+  max-width: 10.6rem;
   height: 3.2rem;
   padding: 0.4rem;
 
@@ -9,6 +9,7 @@ export const Container = styled.span`
   gap: 0.8rem;
   align-items: center;
   justify-content: center;
+  flex: 1 0 0;
 
   border: 1px solid ${({ theme }) => theme.COLORS['zinc-150']};
   border-radius: 0.4rem;
