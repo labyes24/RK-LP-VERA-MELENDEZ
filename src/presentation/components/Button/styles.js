@@ -11,10 +11,10 @@ export const StyledButton = styled.button`
   border: none;
   color: ${({ theme }) => theme.COLORS.white};
   font-family: ${({ theme }) => theme.FONTS.Primary};
-  font-size: 3.6rem;
+  font-size: ${({ $size }) => ($size === 'large' ? '3.6rem' : '1.8rem')};
   font-style: normal;
   font-weight: 700;
-  border-radius: 1rem;
+  border-radius: ${({ $size }) => ($size === 'large' ? '1rem' : '0.4rem')};
   background-color: ${({ theme }) => theme.COLORS['blue-sky-600']};
 
   cursor: pointer;
@@ -24,5 +24,3 @@ export const StyledButton = styled.button`
     background-color: ${({ theme }) => theme.COLORS['blue-sky-700']};
   }
 `
-
-/* passar border-radius e font-size por props  */
