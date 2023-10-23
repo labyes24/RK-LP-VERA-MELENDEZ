@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  padding: 2.4rem;
+  padding: ${({ $size }) => ($size === 'large' ? '2.4rem' : '1.6rem 2.4rem')};
   gap: 1rem;
 
   border: none;
@@ -22,5 +22,12 @@ export const StyledButton = styled.button`
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: ${({ $size }) =>
+      $size === 'large' ? '1.6rem 2.4rem' : '0.8rem 2.4rem'};
+
+    font-size: ${({ $size }) => ($size === 'large' ? '2.4rem' : '1.6rem')};
   }
 `
