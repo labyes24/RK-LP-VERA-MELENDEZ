@@ -10,7 +10,7 @@ O componente `Footer` é uma parte importante de qualquer aplicação web, pois 
 
 ## Descrição
 
-O componente `Footer` exibe um rodapé simples que inclui o ano atual e um link para a página do GitHub da equipe "Lab Yes!".
+O componente `Footer` exibe um rodapé simples que inclui o ano atual e um link para a página do linkedIn da equipe "Lab Yes!".
 
 ## Uso
 
@@ -18,4 +18,4 @@ Para utilizar o componente `Footer`, você pode importá-lo e inseri-lo em sua a
 
 ## Comportamento
 
-O componente renderiza o ano atual e um link para o GitHub da equipe "Lab Yes!".
+O componente renderiza o ano atual e um link para o LinkedIn da equipe "Lab Yes!".

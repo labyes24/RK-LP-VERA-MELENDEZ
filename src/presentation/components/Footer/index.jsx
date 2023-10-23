@@ -9,7 +9,7 @@ export function Footer() {
         &copy; {year}{' '}
         <b>
           <a
-            href="https://github.com/lab-yes"
+            href="https://www.linkedin.com/company/lab-yes/"
             target="_blank"
             rel="noopener noreferrer"
           >
