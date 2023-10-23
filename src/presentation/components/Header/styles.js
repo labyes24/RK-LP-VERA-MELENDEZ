@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0;
+
   &::before {
     position: absolute;
     content: '';
@@ -22,12 +23,13 @@ export const Container = styled.div`
 
     transition: all 0.5s ease;
   }
+`
 export const Logo = styled(NavLink)`
   z-index: 3;
   img {
-  width: 6rem;
-  @media (min-width: 1024px) {
-    width: 8rem;
+    width: 6rem;
+    @media (min-width: 1024px) {
+      width: 8rem;
     }
   }
 `
@@ -95,16 +97,16 @@ export const ToggleHamburger = styled.div`
     display: none;
   }
 `
-
 export const Links = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
-  padding: 13rem 11.2rem 0 3rem;
+
+  padding: 13rem 0rem;
 
   background-color: ${({ theme }) => theme.COLORS['blue-titan']};
 
   position: absolute;
+  width: 25rem;
   right: 0;
   top: 0;
   bottom: 0;
@@ -118,25 +120,50 @@ export const Links = styled.ul`
     position: unset;
     transform: unset;
 
-    flex-direction: row;
-    padding: 0 0 0 0;
+    width: fit-content;
+    gap: 3.2rem;
 
+    flex-direction: row;
+
+    padding: 0 0;
     background-color: transparent;
   }
 `
-
-export const Link = styled.li`
+export const LinkWrapper = styled.li`
   list-style: none;
+  padding: 1.6rem 3rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background-color: ${({ theme }) => theme.COLORS['blue-sky-600']};
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 0.08;
+  }
+
   > a {
     position: relative;
     text-decoration: none;
     font-size: 2.4rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 100%;
     text-transform: uppercase;
 
-    line-height: normal;
     color: ${({ theme }) => theme.COLORS['blue-sky-600']};
     transition: color 0.3s ease;
 
@@ -154,12 +181,13 @@ export const Link = styled.li`
       border-bottom: 2px solid transparent;
       transition: border-bottom 0.3s ease;
     }
-
-    &:hover::before {
-      border-bottom: 2px solid ${({ theme }) => theme.COLORS['blue-sky-700']};
-    }
+  }
+  &:hover a::before {
+    border-bottom: 2px solid ${({ theme }) => theme.COLORS['blue-sky-700']};
   }
   @media (min-width: 1024px) {
+    padding: 0 0;
+
     > a {
       color: ${({ theme }) => theme.COLORS['zinc-100']};
 
