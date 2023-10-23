@@ -36,20 +36,20 @@ export function Header() {
   }
   return (
     <Container $opened={openMenuHambuger}>
-      <Logo>
+      <Logo to="/home">
         <img src={logoRKI} alt="Logo da RK Imóveis" />
       </Logo>
       <Hamburger $opened={openMenuHambuger} onChange={handleOpenMenuHambuger} />
 
       <Links $opened={openMenuHambuger}>
         <LinkWrapper>
-          <NavLink to="">perfil</NavLink>
+          <NavLink to="/profile">perfil</NavLink>
         </LinkWrapper>
         <LinkWrapper>
-          <NavLink to="">imóveis</NavLink>
+          <NavLink to="/properties">imóveis</NavLink>
         </LinkWrapper>
         <LinkWrapper>
-          <NavLink to="">contato</NavLink>
+          <NavLink to="/contact">contato</NavLink>
         </LinkWrapper>
       </Links>
     </Container>
