@@ -7,6 +7,21 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0;
+  &::before {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    opacity: ${({ $opened }) => ($opened ? 0.7 : 0)};
+
+    transition: all 0.5s ease;
+  }
 export const Logo = styled(NavLink)`
   z-index: 3;
   img {
