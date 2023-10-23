@@ -4,6 +4,7 @@ export const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 
   padding: ${({ $size }) =>
     $size === 'large' ? '1.6rem 2.4rem' : '0.8rem 2.4rem'};
