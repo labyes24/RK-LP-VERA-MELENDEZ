@@ -8,6 +8,10 @@ export function ButtonTest() {
       <Button>Botão</Button>
 
       <Button size="large">Botão Grande</Button>
+
+      <Button isLoading size="large">
+        Botão Grande
+      </Button>
     </Container>
   )
 }
