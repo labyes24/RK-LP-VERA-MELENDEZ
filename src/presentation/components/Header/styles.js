@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { NavLink } from 'react-router-dom'
 export const Container = styled.div`
   height: fit-content;
   width: 100%;
@@ -7,12 +7,13 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0;
-`
-
-export const Logo = styled.img`
+export const Logo = styled(NavLink)`
+  z-index: 3;
+  img {
   width: 6rem;
   @media (min-width: 1024px) {
     width: 8rem;
+    }
   }
 `
 export const ToggleHamburger = styled.div`

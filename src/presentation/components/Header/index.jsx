@@ -30,6 +30,9 @@ export function Header() {
   }
   return (
     <Container $opened={openMenuHambuger}>
+      <Logo>
+        <img src={logoRKI} alt="Logo da RK Imóveis" />
+      </Logo>
       <Hamburger $opened={openMenuHambuger} onChange={handleOpenMenuHambuger} />
       <Links $opened={openMenuHambuger}>
       </Links>
