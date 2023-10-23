@@ -148,12 +148,10 @@ export const LinkWrapper = styled.li`
     z-index: -1;
     transition: all 0.5s;
   }
-
   &:hover {
     cursor: pointer;
   }
   &:hover::before {
-    left: 0;
     right: 0;
     opacity: 0.08;
   }
@@ -187,6 +185,17 @@ export const LinkWrapper = styled.li`
   &:hover a::before {
     border-bottom: 2px solid ${({ theme }) => theme.COLORS['blue-sky-700']};
   }
+
+  a.active {
+    font-weight: bold;
+    ${({ theme }) => theme.COLORS['blue-sky-700']}
+  }
+
+  &:has(a.active)::before {
+    right: 0;
+    opacity: 0.08;
+  }
+
   @media (min-width: 1024px) {
     padding: 0 0;
 
@@ -200,6 +209,10 @@ export const LinkWrapper = styled.li`
       &:hover::before {
         border-bottom: 2px solid ${({ theme }) => theme.COLORS.white};
       }
+    }
+
+    a.active {
+      color: ${({ theme }) => theme.COLORS.white};
     }
   }
 `
