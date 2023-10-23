@@ -19,8 +19,6 @@ export function RoutesApp() {
       </Route>
 
       {/* Test Routes */}
-      <Route path="/Header" element={<div>Header</div>} />
-      <Route path="/" element={<h1>RK Landing Page</h1>} />
       <Route path="/Header" element={<HeaderTest />} />
       <Route path="/Video" element={<VideoTest />} />
       <Route path="/RealEstateBrokerImage" element={<BrokerImageTest />} />
