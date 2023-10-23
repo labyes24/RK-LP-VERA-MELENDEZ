@@ -29,19 +29,9 @@ export function Header() {
     return setOpenMenuHambuger(!openMenuHambuger)
   }
   return (
-    <Container>
-      <Logo src={logoRKI} alt="Logo da RK Imóveis" />
-      <Hamburger checked={openMenuHambuger} onChange={handleOpenMenuHambuger} />
-      <Links $openMenu={openMenuHambuger}>
-        <Link>
-          <a href="">perfil</a>
-        </Link>
-        <Link>
-          <a href="">imóveis</a>
-        </Link>
-        <Link>
-          <a href="">contato</a>
-        </Link>
+    <Container $opened={openMenuHambuger}>
+      <Hamburger $opened={openMenuHambuger} onChange={handleOpenMenuHambuger} />
+      <Links $opened={openMenuHambuger}>
       </Links>
     </Container>
   )

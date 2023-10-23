@@ -93,8 +93,8 @@ export const Links = styled.ul`
   bottom: 0;
   z-index: 0;
 
-  transform: ${({ $openMenu }) =>
-    $openMenu ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ $opened }) =>
+    $opened ? 'translateX(0)' : 'translateX(100%)'};
   transition: all 0.3s ease;
 
   @media (min-width: 1024px) {
