@@ -1,5 +1,6 @@
-import { Container, Logo, ToggleHamburger, Links, Link } from './styles'
+import { Container, Logo, ToggleHamburger, Links, LinkWrapper } from './styles'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import logoRKI from '../../assets/logoRKI.svg'
 
@@ -24,10 +25,8 @@ function Hamburger({ $opened, ...rest }) {
 }
 
 /**
- * Renders a header component  - with a quote and an optional author.
+ * Render a header component.
  *
- * @param {string} quote - .
- * @param {string | undefined} author - .
  * @return {JSX.Element} The rendered header component.
  */
 export function Header() {
@@ -41,7 +40,17 @@ export function Header() {
         <img src={logoRKI} alt="Logo da RK Imóveis" />
       </Logo>
       <Hamburger $opened={openMenuHambuger} onChange={handleOpenMenuHambuger} />
+
       <Links $opened={openMenuHambuger}>
+        <LinkWrapper>
+          <NavLink to="">perfil</NavLink>
+        </LinkWrapper>
+        <LinkWrapper>
+          <NavLink to="">imóveis</NavLink>
+        </LinkWrapper>
+        <LinkWrapper>
+          <NavLink to="">contato</NavLink>
+        </LinkWrapper>
       </Links>
     </Container>
   )
