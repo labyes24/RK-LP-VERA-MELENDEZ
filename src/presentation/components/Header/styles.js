@@ -141,7 +141,7 @@ export const LinkWrapper = styled.li`
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 100%;
+    right: 0;
     left: 0;
     background-color: ${({ theme }) => theme.COLORS['blue-sky-600']};
     opacity: 0;
