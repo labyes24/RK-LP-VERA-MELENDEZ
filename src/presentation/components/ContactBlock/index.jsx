@@ -4,55 +4,59 @@ import mapIcon from '../../assets/contactMap.png'
 import emailIcon from '../../assets/envelopeEmail.png'
 import whatsappIcon from '../../assets/contactWhatsappIcon.svg'
 
-function ContactItem({ icon, content, descriptionImg }) {
-  return (
-    <li>
-      <img src={icon} alt={descriptionImg} />
-      {content}
-    </li>
-  )
-}
-
-/**
- * Component for displaying contact information, such as address, email, and phone number.
- *
- * @param {Object} props - The component's properties.
- * @param {Array} props.objectProps - An array containing contact information.
- * @returns {JSX.Element|null} A JSX element displaying the contact information or null if no information is available.
- */
-
-export function ContactBlock({ objectProps }) {
-  const contactInfo = objectProps[0]
-
-  if (!contactInfo) {
-    return null
-  }
-
+export function ContactBlock({ address, email, phoneNumber }) {
   return (
     <Container>
       <ul>
-        <ContactItem
-          icon={mapIcon}
-          content={`
-            ${contactInfo.address.street}, 
-            ${contactInfo.address.number} - 
-            ${contactInfo.address.district} 
-            ${contactInfo.address.city}
-          `}
-          descriptionImg={'Icone de um mapa desenhado'}
-        />
+        {address && (
+          <li>
+            <img src={mapIcon} alt="Icone de um mapa desenhado." />
+            <p>
+              <a
+                href={
+                  'https://www.google.com.br/maps/place/R.+das+Gaivotas,+1709+-+Ingleses+Norte,+Florian%C3%B3polis+-+SC,+88058-500/@-27.4231078,-48.4046376,17z/data=!3m1!4b1!4m6!3m5!1s0x9527420b0fdb2cb9:0xc0cb19ae8e111a32!8m2!3d-27.4231126!4d-48.4020627!16s%2Fg%2F11c5j12tcd?entry=ttu'
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {address}
+              </a>
+            </p>
+          </li>
+        )}
 
-        <ContactItem
-          icon={emailIcon}
-          content={contactInfo.email}
-          descriptionImg={'Icone de um envelope de e-mail desenhado'}
-        />
+        {email && (
+          <li>
+            <img src={emailIcon} alt="Icone de um envelope desenhado." />
+            <p>
+              <a
+                href={`mailto:${email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {email}
+              </a>
+            </p>
+          </li>
+        )}
 
-        <ContactItem
-          icon={whatsappIcon}
-          content={contactInfo.phoneNumber}
-          descriptionImg={'Icone do aplicativo Whatsapp desenhado'}
-        />
+        {phoneNumber && (
+          <li>
+            <img
+              src={whatsappIcon}
+              alt="Icone do aplicativo Whatsapp desenhado."
+            />
+            <p>
+              <a
+                href={`tel:${phoneNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {phoneNumber}
+              </a>
+            </p>
+          </li>
+        )}
       </ul>
     </Container>
   )

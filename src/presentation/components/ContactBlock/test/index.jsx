@@ -1,30 +1,20 @@
 import { Container } from './styles'
 import { ContactBlock } from '../index'
 
-const ADDRESS_OBJECT = {
-  street: 'Rua das Gaivotas',
-  number: '1709',
-  district: 'Ingleses',
-  city: 'Florianópolis',
+const ContactData = {
+  address: 'Rua das Gaivotas, 1709 - Ingleses Florianópolis - SC',
+  email: 'winnetou@rkimoveis.com.br',
+  phoneNumber: '(48) 98826-2951',
 }
-
-const TEST_OBJECT = [
-  {
-    address: ADDRESS_OBJECT,
-    email: 'winnetou@rkimoveis.com.br',
-    phoneNumber: '(48) 98826-2951',
-  },
-  {
-    address: ADDRESS_OBJECT,
-    email: 'labyes@email.com',
-    phoneNumber: '(00) 00000-0000',
-  },
-]
 
 export function ContactBlockTest() {
   return (
     <Container>
-      <ContactBlock objectProps={TEST_OBJECT} />
+      <ContactBlock
+        address={ContactData.address}
+        email={ContactData.email}
+        phoneNumber={ContactData.phoneNumber}
+      />
     </Container>
   )
 }

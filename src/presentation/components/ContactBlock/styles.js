@@ -31,6 +31,15 @@ export const Container = styled.aside`
       align-items: center;
       column-gap: 1.6rem;
 
+      p {
+        word-break: break-all;
+
+        a {
+          text-decoration: none;
+          color: ${({ theme }) => theme.COLORS.white};
+        }
+      }
+
       img {
         width: 3.2rem;
         height: 3.2rem;
