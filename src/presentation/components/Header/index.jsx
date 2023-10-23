@@ -3,9 +3,16 @@ import { useState } from 'react'
 
 import logoRKI from '../../assets/logoRKI.svg'
 
-function Hamburger({ ...rest }) {
+/**
+ * Render burger component.
+ * @param {boolean} $opened - Check the status of the burger.
+ * @param {void} onChange - Handles burger state.
+ * @return {JSX.Element} The rendered animated burger component.
+ */
+
+function Hamburger({ $opened, ...rest }) {
   return (
-    <ToggleHamburger>
+    <ToggleHamburger $opened={$opened}>
       <input id="checkbox" type="checkbox" {...rest} />
       <label htmlFor="checkbox">
         <span />
