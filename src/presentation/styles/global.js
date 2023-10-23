@@ -19,12 +19,13 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
 
     min-height: 99vh;
+    overflow-x: hidden;
   }
 
   #root {
     display: flex;
     justify-content: center;
     min-height: 99vh;
-    overflow-x: hidden;
+    
   }
 `

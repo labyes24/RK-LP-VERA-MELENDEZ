@@ -9,6 +9,7 @@ export const Container = styled.div`
   padding: 3rem 0;
 
   &::before {
+    display: ${({ $opened }) => ($opened ? 'flex' : 'none')};
     position: absolute;
     content: '';
 
