@@ -9,7 +9,7 @@ export function Button({
   ...props
 }) {
   return (
-    <StyledButton $size={size} {...props}>
+    <StyledButton disabled={isLoading} $size={size} {...props}>
       {isLoading ? <Spinner size="small" /> : children}
     </StyledButton>
   )
