@@ -25,6 +25,12 @@ export const Container = styled.div`
 
     transition: all 0.5s ease;
   }
+  @media (min-width: 1024px) {
+    &::before {
+      background-color: transparent;
+      backdrop-filter: blur(0);
+    }
+  }
 `
 export const Logo = styled(NavLink)`
   z-index: 3;
