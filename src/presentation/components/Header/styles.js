@@ -49,6 +49,7 @@ export const ToggleHamburger = styled.div`
     justify-content: center;
     gap: 6px;
     transition-duration: 0.5s;
+    transform-origin: 2rem center;
   }
 
   span {
@@ -75,7 +76,7 @@ export const ToggleHamburger = styled.div`
   }
 
   input:checked + label span:first-child {
-    width: 100%;
+    width: 75%;
     transform: rotate(45deg);
     transition-duration: 0.5s;
   }
@@ -86,7 +87,7 @@ export const ToggleHamburger = styled.div`
   }
 
   input:checked + label span:last-child {
-    width: 100%;
+    width: 75%;
     transform: rotate(-45deg);
     transition-duration: 0.5s;
   }
