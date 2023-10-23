@@ -11,6 +11,7 @@ export const Container = styled.div`
   main {
     width: 45rem;
     height: 54rem;
+    margin: 2rem;
     padding: 2rem;
 
     display: flex;
@@ -21,7 +22,7 @@ export const Container = styled.div`
     border-radius: 1rem;
     background-color: ${({ theme }) => theme.COLORS['blue-titan']};
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       width: 33rem;
     }
 
@@ -44,6 +45,5 @@ export const TagsWrapper = styled.span`
   width: 100%;
   display: flex;
   gap: 1.1rem;
-  align-items: center;
-  justify-content: stretch;
+  flex: auto;
 `
