@@ -32,7 +32,7 @@ export const Logo = styled(NavLink)`
   }
 `
 export const ToggleHamburger = styled.div`
-  z-index: 1;
+  z-index: 3;
 
   input {
     display: none;
@@ -107,7 +107,7 @@ export const Links = styled.ul`
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: 2;
 
   transform: ${({ $opened }) =>
     $opened ? 'translateX(0)' : 'translateX(100%)'};
