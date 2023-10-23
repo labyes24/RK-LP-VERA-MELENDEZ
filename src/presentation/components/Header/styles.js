@@ -9,7 +9,7 @@ export const Container = styled.div`
   padding: 3rem 0;
 
   &::before {
-    display: ${({ $opened }) => ($opened ? 'flex' : 'none')};
+    /* display: ${({ $opened }) => ($opened ? 'flex' : 'none')}; */
     position: absolute;
     content: '';
 
@@ -18,7 +18,8 @@ export const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: ${({ $opened }) =>
+      $opened ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
     backdrop-filter: blur(3px);
     opacity: ${({ $opened }) => ($opened ? 0.7 : 0)};
 
