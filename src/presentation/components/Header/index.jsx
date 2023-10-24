@@ -1,6 +1,9 @@
-import { Container, Logo, ToggleHamburger, Links, LinkWrapper } from './styles'
+import { Container, Logo, Links, LinkWrapper } from './styles'
+
 import { useState } from 'react'
+
 import { NavLink } from 'react-router-dom'
+import { Hamburger } from './Hamburger'
 
 import logoRKI from '../../assets/logoRKI.svg'
 
@@ -10,26 +13,6 @@ const routes = [
   { route: 'properties', name: 'imóveis' },
   { route: 'contact', name: 'contato' },
 ]
-
-/**
- * Render burger component.
- * @param {boolean} $opened - Check the status of the burger.
- * @param {void} onChange - Handles burger state.
- * @return {JSX.Element} The rendered animated burger component.
- */
-
-function Hamburger({ $opened, ...rest }) {
-  return (
-    <ToggleHamburger $opened={$opened}>
-      <input id="checkbox" type="checkbox" {...rest} />
-      <label htmlFor="checkbox">
-        <span />
-        <span />
-        <span />
-      </label>
-    </ToggleHamburger>
-  )
-}
 
 /**
  * Render a header component.
