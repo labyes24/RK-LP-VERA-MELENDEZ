@@ -7,7 +7,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 0;
+
+  padding: 3rem 2rem;
+  @media (min-width: 1024px) {
+    padding: 3 4.8rem;
+  }
 
   &::before {
     /* display: ${({ $opened }) => ($opened ? 'flex' : 'none')}; */

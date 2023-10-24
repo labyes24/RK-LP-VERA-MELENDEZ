@@ -16,6 +16,9 @@ export function RoutesApp() {
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<h1>RK Landing Page</h1>} />
         <Route path="*" element={<h2>Rota inexistente</h2>} />
+        <Route path="/profile" element={<h2>profile</h2>} />
+        <Route path="/properties" element={<h2>properties</h2>} />
+        <Route path="/contact" element={<h2>contact</h2>} />
       </Route>
 
       {/* Test Routes */}

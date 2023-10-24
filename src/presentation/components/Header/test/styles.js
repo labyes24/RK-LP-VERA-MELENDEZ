@@ -8,11 +8,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: stretch;
 
-  padding: 0 2rem;
-  @media (min-width: 1024px) {
-    padding: 0 4.8rem;
-  }
-
   .content {
     flex: 1;
   }
