@@ -16,13 +16,19 @@ export function ButtonTest() {
 
   return (
     <Container>
-      <Button>Botão pequeno</Button>
+      <div className="small-button">
+        <Button>Botão pequeno</Button>
+      </div>
 
-      <Button size="large">Botão Grande</Button>
+      <div className="large-button">
+        <Button size="large">Botão Grande</Button>
+      </div>
 
-      <Button onClick={handleLoading} isLoading={isLoading} size="large">
-        Clique aqui para carregar
-      </Button>
+      <div className="large-button-2">
+        <Button onClick={handleLoading} isLoading={isLoading} size="large">
+          Clique aqui para carregar
+        </Button>
+      </div>
     </Container>
   )
 }
