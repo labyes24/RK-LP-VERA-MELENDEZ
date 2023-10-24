@@ -19,7 +19,12 @@ export function RoutesApp() {
       </Route>
 
       {/* Test Routes */}
-      <Route path="/Header" element={<HeaderTest />} />
+      <Route path="/header" element={<HeaderTest />}>
+        <Route path="/header/profile" element={<h2>profile</h2>} />
+        <Route path="/header/properties" element={<h2>properties</h2>} />
+        <Route path="/header/contact" element={<h2>contact</h2>} />
+      </Route>
+
       <Route path="/Video" element={<VideoTest />} />
       <Route path="/RealEstateBrokerImage" element={<BrokerImageTest />} />
       <Route
