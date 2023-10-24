@@ -40,7 +40,6 @@ export function RoutesApp() {
       <Route path="/Modal" element={<ModalTest />} />
       <Route path="/WhatsappButton" element={<WhatsappButtonTest />} />
       <Route path="/Tags" element={<TagsTest />} />
-      <Route path="*" element={<h2>Rota inexistente</h2>} />
     </Routes>
   )
 }
