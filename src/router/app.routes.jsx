@@ -11,6 +11,7 @@ import { CardTest } from '../presentation/components/Card/test'
 import { TagsTest } from '../presentation/components/Tag/test'
 import { RealEstateBrokerDescriptionTest } from '../presentation/pages/Profile/components/RealEstateBrokerDescription/test'
 import { ButtonTest } from '../presentation/components/Button/test'
+import { InputTextTest } from '../presentation/components/TextInput/test'
 
 export function RoutesApp() {
   return (
@@ -42,6 +43,7 @@ export function RoutesApp() {
       <Route path="/WhatsappButton" element={<WhatsappButtonTest />} />
       <Route path="/Tags" element={<TagsTest />} />
       <Route path="/Button" element={<ButtonTest />} />
+      <Route path="/TextInputTest" element={<InputTextTest />} />
     </Routes>
   )
 }
