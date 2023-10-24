@@ -13,6 +13,7 @@ import { RealEstateBrokerDescriptionTest } from '../presentation/pages/Profile/c
 import { ButtonTest } from '../presentation/components/Button/test'
 import { InputTextTest } from '../presentation/components/TextInput/test'
 import { FooterTest } from '../presentation/components/Footer/test'
+import { ContactBlockTest } from '../presentation/components/ContactBlock/test'
 
 export function RoutesApp() {
   return (
@@ -46,6 +47,7 @@ export function RoutesApp() {
       <Route path="/Button" element={<ButtonTest />} />
       <Route path="/TextInputTest" element={<InputTextTest />} />
       <Route path="/Footer" element={<FooterTest />} />
+      <Route path="/ContactBlock" element={<ContactBlockTest />} />
     </Routes>
   )
 }
