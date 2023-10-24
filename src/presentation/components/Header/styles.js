@@ -139,7 +139,6 @@ export const Links = styled.ul`
 `
 export const LinkWrapper = styled.li`
   list-style: none;
-  padding: 1.6rem 3rem;
   position: relative;
 
   &::before {
@@ -163,6 +162,10 @@ export const LinkWrapper = styled.li`
   }
 
   > a {
+    display: flex;
+    width: 100%;
+    padding: 1.6rem 3rem;
+
     position: relative;
     text-decoration: none;
     font-size: 2.4rem;
@@ -177,24 +180,18 @@ export const LinkWrapper = styled.li`
       cursor: pointer;
       color: ${({ theme }) => theme.COLORS['blue-sky-700']};
     }
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      right: 0;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s ease;
-    }
   }
-  &:hover a::before {
+  span {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+  &:hover span {
     border-bottom: 2px solid ${({ theme }) => theme.COLORS['blue-sky-700']};
   }
 
   a.active {
     font-weight: bold;
-    ${({ theme }) => theme.COLORS['blue-sky-700']}
+    color: ${({ theme }) => theme.COLORS['blue-sky-700']};
   }
 
   &:has(a.active)::before {
@@ -203,16 +200,15 @@ export const LinkWrapper = styled.li`
   }
 
   @media (min-width: 1024px) {
-    padding: 0 0;
-
     > a {
+      padding: 0 0;
       color: ${({ theme }) => theme.COLORS['zinc-100']};
 
       &:hover {
         color: ${({ theme }) => theme.COLORS.white};
       }
 
-      &:hover::before {
+      &:hover span {
         border-bottom: 2px solid ${({ theme }) => theme.COLORS.white};
       }
     }
