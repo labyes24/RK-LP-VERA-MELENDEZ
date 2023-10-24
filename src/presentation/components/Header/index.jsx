@@ -4,6 +4,13 @@ import { NavLink } from 'react-router-dom'
 
 import logoRKI from '../../assets/logoRKI.svg'
 
+const routes = [
+  { route: '/', name: 'home' },
+  { route: 'profile', name: 'perfil' },
+  { route: 'properties', name: 'imóveis' },
+  { route: 'contact', name: 'contato' },
+]
+
 /**
  * Render burger component.
  * @param {boolean} $opened - Check the status of the burger.
@@ -27,30 +34,30 @@ function Hamburger({ $opened, ...rest }) {
 /**
  * Render a header component.
  *
+ * @param {Array<Object>?} paths - Routes array that this routes have route attribute and name.
  * @return {JSX.Element} The rendered header component.
  */
-export function Header() {
+export function Header({ paths = routes }) {
   const [openMenuHambuger, setOpenMenuHambuger] = useState(false)
   function handleOpenMenuHambuger() {
     return setOpenMenuHambuger(!openMenuHambuger)
   }
+
   return (
     <Container $opened={openMenuHambuger}>
-      <Logo to="/home">
+      <Logo to={paths[0].route}>
         <img src={logoRKI} alt="Logo da RK Imóveis" />
       </Logo>
       <Hamburger $opened={openMenuHambuger} onChange={handleOpenMenuHambuger} />
 
       <Links $opened={openMenuHambuger}>
-        <LinkWrapper>
-          <NavLink to="/profile">perfil</NavLink>
-        </LinkWrapper>
-        <LinkWrapper>
-          <NavLink to="/properties">imóveis</NavLink>
-        </LinkWrapper>
-        <LinkWrapper>
-          <NavLink to="/contact">contato</NavLink>
-        </LinkWrapper>
+        {paths.slice(1).map(path => (
+          <LinkWrapper key={path.name}>
+            <NavLink to={path.route}>
+              <span>{path.name}</span>
+            </NavLink>
+          </LinkWrapper>
+        ))}
       </Links>
     </Container>
   )
