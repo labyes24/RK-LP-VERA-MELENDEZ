@@ -6,4 +6,18 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
+
+  > section {
+    padding-inline: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 650px) {
+      padding: 0;
+    }
+  }
 `

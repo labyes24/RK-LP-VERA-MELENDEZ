@@ -1,11 +1,15 @@
+import { Card } from '../../components/Card'
 import { Container } from './styles'
 
 export function Profile() {
   return (
     <Container>
-      <p>Profile</p>
-
-      <span>Cards</span>
+      <section>
+        <Card quote={'teste'} author={'testador'} />
+        <Card quote={'teste'} author={'testador'} />
+        <Card quote={'teste'} author={'testador'} />
+        <Card quote={'teste'} author={'testador'} />
+      </section>
     </Container>
   )
 }
