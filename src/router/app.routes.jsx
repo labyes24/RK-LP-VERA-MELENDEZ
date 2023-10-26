@@ -14,6 +14,7 @@ import { ButtonTest } from '../presentation/components/Button/test'
 import { InputTextTest } from '../presentation/components/TextInput/test'
 import { FooterTest } from '../presentation/components/Footer/test'
 import { ContactBlockTest } from '../presentation/components/ContactBlock/test'
+import { Contact } from '../presentation/pages/Contact'
 import { SelectOptionTest } from '../presentation/components/SelectOption/test'
 import { TextAreaTest } from '../presentation/components/TextArea/test'
 import { ContactFormTest } from '../presentation/pages/Contact/components/ContactForm/test'
@@ -29,7 +30,7 @@ export function RoutesApp() {
         <Route path="*" element={<h2>Rota inexistente</h2>} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/properties" element={<h2>properties</h2>} />
-        <Route path="/contact" element={<h2>contact</h2>} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
 
       {/* Test Routes */}
