@@ -1,4 +1,5 @@
 import { Card } from '../../components/Card'
+import { RealEstateBrokerDescription } from './components/RealEstateBrokerDescription'
 import { Container } from './styles'
 
 const quotesList = [
@@ -27,6 +28,8 @@ const quotesList = [
 export function Profile() {
   return (
     <Container>
+      <RealEstateBrokerDescription />
+
       <section>
         {quotesList.map((quote, index) => (
           <Card key={index} {...quote} />
