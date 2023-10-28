@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
 
   &::before {
-    /* display: ${({ $opened }) => ($opened ? 'flex' : 'none')}; */
+    display: ${({ $opened }) => ($opened ? 'flex' : 'none')};
     position: absolute;
     content: '';
 
