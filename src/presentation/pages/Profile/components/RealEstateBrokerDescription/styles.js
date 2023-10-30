@@ -142,6 +142,12 @@ export const LinksCard = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.COLORS.white};
     word-break: break-all;
+
+    transition: 0.3s opacity;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
 
   @media screen and (min-width: 1440px) {
