@@ -1,5 +1,5 @@
 import { Container } from './styles'
-// import { BrokerImage } from '../../components/BrokerImage'
+import { BrokerImage } from '../../components/BrokerImage'
 import { ContactBlock } from '../../components/ContactBlock'
 
 export function Contact() {
@@ -10,7 +10,12 @@ export function Contact() {
         <p>O primeiro passo é preencher esse formulário</p>
       </div>
       <div className="form">Loading form...</div>
-      <ContactBlock />
+      <ContactBlock
+        address={'Rua das Gaivotas, 1709 - Ingleses Florianópolis - SC'}
+        email={'winnetou@rkimoveis.com.br'}
+        phoneNumber={'(48) 98826-2951'}
+      />
+      <BrokerImage removeelipses={true} />
     </Container>
   )
 }

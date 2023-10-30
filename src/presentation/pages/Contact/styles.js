@@ -4,13 +4,13 @@ export const Container = styled.div`
   @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 2.5rem;
+    padding: 3.5rem 2rem;
 
     > .titles {
       text-align: center;
       > h1 {
-        padding-top: 3.5rem;
         font-size: 2rem;
         font-weight: 300;
         font-family: ${props => props.theme.FONTS.Primary};
@@ -20,7 +20,7 @@ export const Container = styled.div`
         padding-top: 0.5rem;
         font-weight: bold;
         font-size: 1.6rem;
-        color: #5490f9;
+        color: ${({ theme }) => theme.COLORS['blue-sky']};
       }
     }
 
