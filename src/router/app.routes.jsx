@@ -14,6 +14,7 @@ import { ButtonTest } from '../presentation/components/Button/test'
 import { InputTextTest } from '../presentation/components/TextInput/test'
 import { FooterTest } from '../presentation/components/Footer/test'
 import { ContactBlockTest } from '../presentation/components/ContactBlock/test'
+import { SelectOptionTest } from '../presentation/components/SelectOption/test'
 
 import { Profile } from '../presentation/pages/Profile'
 
@@ -50,6 +51,7 @@ export function RoutesApp() {
       <Route path="/TextInputTest" element={<InputTextTest />} />
       <Route path="/Footer" element={<FooterTest />} />
       <Route path="/ContactBlock" element={<ContactBlockTest />} />
+      <Route path="/SelectOptionTest" element={<SelectOptionTest />} />
     </Routes>
   )
 }
