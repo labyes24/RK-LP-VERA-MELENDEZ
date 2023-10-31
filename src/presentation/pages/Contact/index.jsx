@@ -10,12 +10,16 @@ export function Contact() {
         <p>O primeiro passo é preencher esse formulário</p>
       </div>
       <div className="form">Loading form...</div>
-      <ContactBlock
-        address={'Rua das Gaivotas, 1709 - Ingleses Florianópolis - SC'}
-        email={'winnetou@rkimoveis.com.br'}
-        phoneNumber={'(48) 98826-2951'}
-      />
-      <BrokerImage removeelipses={true} />
+      <div className="contact">
+        <ContactBlock
+          address={'Rua das Gaivotas, 1709 - Ingleses Florianópolis - SC'}
+          email={'winnetou@rkimoveis.com.br'}
+          phoneNumber={'(48) 98826-2951'}
+        />
+        <div className="image">
+          <BrokerImage removeelipses={true} />
+        </div>
+      </div>
     </Container>
   )
 }
