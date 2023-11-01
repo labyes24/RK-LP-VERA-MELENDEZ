@@ -15,8 +15,12 @@ export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
     padding: 3.2rem 2.4rem 1.6rem;
+  }
 
-    container: fields / inline-size;
+  @supports (container: fields) {
+    .fieldsContainer {
+      container: fields / inline-size;
+    }
   }
 
   fieldset + fieldset {
@@ -49,6 +53,13 @@ export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
     line-gap-override: 1.6rem;
+  }
+
+  @media screen and (min-width: 80rem) {
+    .inRow {
+      flex-direction: row;
+      gap: 1.6rem;
+    }
   }
 
   @container fields (min-width: 60rem) {
