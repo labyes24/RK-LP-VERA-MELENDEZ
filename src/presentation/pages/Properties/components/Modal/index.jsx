@@ -13,7 +13,20 @@ import closeIcon from '../../../../assets/x-close-icon.svg'
 export function Modal({ isOpen, closeFn }) {
   window.addEventListener('keyup', event => {
     if (event.key === 'Escape' && isOpen) closeFn()
+
+    if (event.key === 'Enter' && isOpen) handleSubmit()
   })
+
+  function handleSubmit(event) {
+    if (event && event.target) {
+      event.preventDefault()
+
+      alert('Formulário enviado!')
+
+      return location.reload()
+    }
+    // TODO: send data to email
+  }
 
   return isOpen ? (
     <Container>
@@ -33,7 +46,7 @@ export function Modal({ isOpen, closeFn }) {
           breve possível.
         </Description>
 
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <label htmlFor="name">Nome:</label>
           <input id="name" placeholder="Seu nome" minLength="2" required />
 
@@ -48,7 +61,7 @@ export function Modal({ isOpen, closeFn }) {
 
               <input
                 id="phone"
-                placeholder="(xx)xxxxx-xxxx"
+                placeholder="+xx xx xxxxx-xxxx"
                 pattern="^[0-9+ ]+$"
                 minLength="9"
                 maxLength="17"
