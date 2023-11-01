@@ -21,11 +21,16 @@ export function Modal({ isOpen, closeFn }) {
     if (event && event.target) {
       event.preventDefault()
 
+      const formData = new FormData(event.target)
+      const data = Object.fromEntries(formData)
+
+      // Enviar informações para o corretor
+      console.log(data)
+
       alert('Formulário enviado!')
 
-      return location.reload()
+      location.reload()
     }
-    // TODO: send data to email
   }
 
   return isOpen ? (
@@ -48,12 +53,23 @@ export function Modal({ isOpen, closeFn }) {
 
         <Form onSubmit={handleSubmit}>
           <label htmlFor="name">Nome:</label>
-          <input id="name" placeholder="Seu nome" minLength="2" required />
+          <input
+            name="name"
+            id="name"
+            placeholder="Seu nome"
+            minLength="2"
+            required
+          />
 
           <InputGroup>
             <div>
               <label htmlFor="email">E-mail:</label>
-              <input type="email" id="email" placeholder="Seu melhor e-mail" />
+              <input
+                name="email"
+                type="email"
+                id="email"
+                placeholder="Seu melhor e-mail"
+              />
             </div>
 
             <div>
@@ -61,6 +77,7 @@ export function Modal({ isOpen, closeFn }) {
 
               <input
                 id="phone"
+                name="phone"
                 placeholder="+xx xx xxxxx-xxxx"
                 pattern="^[0-9+ ]+$"
                 minLength="9"
