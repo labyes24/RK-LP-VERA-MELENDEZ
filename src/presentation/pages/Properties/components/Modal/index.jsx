@@ -11,6 +11,10 @@ import {
 import closeIcon from '../../../../assets/x-close-icon.svg'
 
 export function Modal({ isOpen, closeFn }) {
+  window.addEventListener('keyup', event => {
+    if (event.key === 'Escape' && isOpen) closeFn()
+  })
+
   return isOpen ? (
     <Container>
       <StyledModal>
