@@ -10,7 +10,7 @@ import {
 
 import closeIcon from '../../../../assets/x-close-icon.svg'
 
-export function Modal({ isOpen, toggleFn }) {
+export function Modal({ isOpen, closeFn }) {
   return isOpen ? (
     <Container>
       <StyledModal>
@@ -20,7 +20,7 @@ export function Modal({ isOpen, toggleFn }) {
           <img
             src={closeIcon}
             alt="Ícone de X para fechar o modal"
-            onClick={toggleFn}
+            onClick={closeFn}
           />
         </TitleGroup>
 
