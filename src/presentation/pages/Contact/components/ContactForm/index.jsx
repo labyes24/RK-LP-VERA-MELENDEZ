@@ -7,6 +7,15 @@ import { FormContainer, ShortButton } from './styles'
 export function ContactForm() {
   function handleSubmit(event) {
     event.preventDefault()
+
+    const formData = new FormData(event.target)
+    const data = Object.fromEntries(formData)
+
+    console.log(data)
+
+    // TODO: Send data to email
+
+    event.target.reset()
   }
 
   return (
