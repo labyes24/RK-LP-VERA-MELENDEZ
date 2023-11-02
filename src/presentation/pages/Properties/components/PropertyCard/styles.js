@@ -28,6 +28,7 @@ export const ImageSection = styled.section`
     height: unset;
   }
 `
+
 export const DescriptionSection = styled.section`
   display: grid;
   gap: 1.6rem;
@@ -41,6 +42,7 @@ export const DescriptionSection = styled.section`
     width: 50%;
   }
 `
+
 export const Header = styled.div`
   font-style: normal;
   font-weight: 700;
@@ -69,6 +71,7 @@ export const Header = styled.div`
     }
   }
 `
+
 export const Tags = styled.div`
   width: 100%;
   display: flex;
@@ -92,6 +95,7 @@ export const Tags = styled.div`
     }
   }
 `
+
 export const Description = styled.p`
   font-family: ${({ theme }) => theme.FONTS.Secundary};
   font-size: 1.2rem;
@@ -122,5 +126,18 @@ export const Description = styled.p`
     background-color: ${({ theme }) => theme.COLORS['zinc-400']};
     border-radius: 10px;
     border: 3px none transparent;
+  }
+`
+
+export const Price = styled.p`
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+
+  color: ${({ theme }) => theme.COLORS['zinc-400']};
+
+  @media (min-width: 1024px) {
+    font-size: 2.4rem;
   }
 `
