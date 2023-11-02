@@ -28,3 +28,16 @@ export const ImageSection = styled.section`
     height: unset;
   }
 `
+export const DescriptionSection = styled.section`
+  display: grid;
+  gap: 1.6rem;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    gap: 4.5rem;
+    justify-items: space-between;
+    align-content: space-around;
+
+    width: 50%;
+  }
+`
