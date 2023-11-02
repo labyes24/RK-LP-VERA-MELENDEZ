@@ -69,3 +69,8 @@ export const Header = styled.div`
     }
   }
 `
+export const Tags = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex: auto;
