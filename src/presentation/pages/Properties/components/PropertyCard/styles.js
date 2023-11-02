@@ -41,3 +41,31 @@ export const DescriptionSection = styled.section`
     width: 50%;
   }
 `
+export const Header = styled.div`
+  font-style: normal;
+  font-weight: 700;
+
+  > h2 {
+    color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+    font-size: 2.4rem;
+    line-height: 100%;
+  }
+
+  > h3 {
+    color: ${({ theme }) => theme.COLORS['zinc-400']};
+    font-size: 1.6rem;
+    line-height: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    gap: 1.6rem;
+    > h2 {
+      font-size: 3.6rem;
+    }
+
+    > h3 {
+      font-size: 2.4rem;
+    }
+  }
+`
