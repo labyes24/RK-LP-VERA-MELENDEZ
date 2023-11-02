@@ -92,3 +92,35 @@ export const Tags = styled.div`
     }
   }
 `
+export const Description = styled.p`
+  font-family: ${({ theme }) => theme.FONTS.Secundary};
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  max-height: 15rem;
+  color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+
+  overflow-y: auto;
+  scrollbar-width: auto;
+
+  scrollbar-color: ${({ theme }) => theme.COLORS['zinc-400']} transparent;
+
+  @media (min-width: 1024px) {
+    font-size: 1.8rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS['zinc-400']};
+    border-radius: 10px;
+    border: 3px none transparent;
+  }
+`
