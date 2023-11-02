@@ -17,3 +17,14 @@ export const Container = styled.div`
     width: 105.8rem;
   }
 `
+export const ImageSection = styled.section`
+  border-radius: 0.8rem;
+  background-color: red;
+
+  aspect-ratio: 16/9;
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    height: unset;
+  }
+`
