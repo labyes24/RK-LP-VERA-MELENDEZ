@@ -74,3 +74,21 @@ export const Tags = styled.div`
   display: flex;
   gap: 1rem;
   flex: auto;
+  > span {
+    font-size: 1.4rem;
+    height: fit-content;
+
+    > img {
+      height: 1.6rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    > span {
+      font-size: 2rem;
+
+      > img {
+        height: 1.8rem;
+      }
+    }
+  }
+`
