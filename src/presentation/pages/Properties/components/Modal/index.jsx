@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import {
   Container,
   StyledModal,
@@ -11,11 +13,21 @@ import {
 import closeIcon from '../../../../assets/x-close-icon.svg'
 
 export function Modal({ isOpen, closeFn }) {
-  window.addEventListener('keyup', event => {
-    if (event.key === 'Escape' && isOpen) closeFn()
+  useEffect(() => {
+    window.addEventListener('keyup', event => {
+      if (event.key === 'Escape' && isOpen) closeFn()
 
-    if (event.key === 'Enter' && isOpen) handleSubmit()
-  })
+      if (event.key === 'Enter' && isOpen) handleSubmit()
+    })
+
+    return () => {
+      window.removeEventListener('keyup', event => {
+        if (event.key === 'Escape' && isOpen) closeFn()
+
+        if (event.key === 'Enter' && isOpen) handleSubmit()
+      })
+    }
+  }, [closeFn, isOpen])
 
   function handleSubmit(event) {
     if (event && event.target) {
