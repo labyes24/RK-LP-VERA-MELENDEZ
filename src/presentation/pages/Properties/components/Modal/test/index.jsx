@@ -6,19 +6,19 @@ import { Container } from './styles'
 export function ModalTest() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  function openModal() {
-    setIsModalOpen(true)
+  function handleCloseModal() {
+    setIsModalOpen(false)
   }
 
-  function closeModal() {
-    setIsModalOpen(false)
+  function handleToggleModal() {
+    setIsModalOpen(previous => !previous)
   }
 
   return (
     <Container>
-      <button onClick={openModal}>Open Modal</button>
+      <button onClick={handleToggleModal}>Open Modal</button>
 
-      <Modal isOpen={isModalOpen} closeFn={closeModal} />
+      <Modal isOpen={isModalOpen} closeFn={handleCloseModal} />
     </Container>
   )
 }
