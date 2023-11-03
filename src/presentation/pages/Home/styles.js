@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import backgroundImg from '../../assets/backgroundImg.png'
 
 export const Container = styled.div`
   width: 100%;
@@ -7,9 +8,14 @@ export const Container = styled.div`
 
   > .bg-img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
+
+    background-image: url(${backgroundImg});
+    background-size: cover;
   }
 `
 
@@ -21,7 +27,6 @@ export const Content = styled.div`
   gap: 4rem;
   max-width: 113rem;
   margin: 4rem auto;
-  padding-bottom: 4rem;
 
   > h2 {
     font-family: ${({ theme }) => theme.FONTS.Secondary};
@@ -77,24 +82,23 @@ export const Content = styled.div`
     &::-webkit-scrollbar-thumb:active {
       background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
     }
+  }
 
-    @media (max-width: 320px) {
-      > h2 {
-        font-size: 2.2rem;
-      }
-
-      .cards-wrapper {
-        gap: 1rem;
-      }
+  @media (min-width: 320px) {
+    > h2 {
+      font-size: 2.2rem;
     }
+    .cards-wrapper {
+      gap: 1rem;
+    }
+  }
 
-    @media (min-width: 768px) {
-      > h2 {
-        font-size: 3.2rem;
-      }
-      .cards-wrapper {
-        gap: 2rem;
-      }
+  @media (min-width: 768px) {
+    > h2 {
+      font-size: 3.2rem;
+    }
+    .cards-wrapper {
+      gap: 2rem;
     }
   }
 `

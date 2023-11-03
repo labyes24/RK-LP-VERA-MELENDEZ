@@ -2,7 +2,6 @@ import { Container, Content } from './styles'
 import { Video } from '../../components/Video'
 import { Card } from '../../components/Card'
 import { WhatsappButton } from '../../components/WhatsappButton'
-import backgroundImg from '../../assets/costa-norte-ingleses-5 3.png'
 
 export function Home() {
   const quotes = [
@@ -34,12 +33,7 @@ export function Home() {
 
   return (
     <Container>
-      <div className="bg-img">
-        <img
-          src={backgroundImg}
-          alt="Vista da Costa Norte da praia dos ingleses"
-        />
-      </div>
+      <div className="bg-img" />
       <Content>
         <h2>Oportunidades únicas não esperam por ninguém!</h2>
         <Video />
