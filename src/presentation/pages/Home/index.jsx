@@ -2,31 +2,51 @@ import { Container, Content } from './styles'
 import { Video } from '../../components/Video'
 import { Card } from '../../components/Card'
 import { WhatsappButton } from '../../components/WhatsappButton'
-//import backgroundImg from '../../assets/costa-norte-ingleses-5 3.png'
+import backgroundImg from '../../assets/costa-norte-ingleses-5 3.png'
 
 export function Home() {
+  const quotes = [
+    {
+      id: 'q1',
+      quote:
+        'Life is like riding a bicycle. To keep your balance, you must keep moving.',
+      author: 'Albert Einstein',
+    },
+    {
+      id: 'q2',
+      quote:
+        'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
+      author: 'Paola Oliveira,  Atriz',
+    },
+    {
+      id: 'q3',
+      quote:
+        'Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido.',
+      author: 'Manoel de Barros, Poeta',
+    },
+    {
+      id: 'q4',
+      quote:
+        'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
+      author: 'Madam CJ Walker, empresária',
+    },
+  ]
+
   return (
     <Container>
+      <div className="bg-img">
+        <img
+          src={backgroundImg}
+          alt="Vista da Costa Norte da praia dos ingleses"
+        />
+      </div>
       <Content>
         <h2>Oportunidades únicas não esperam por ninguém!</h2>
         <Video />
         <div className="cards-wrapper">
-          <Card
-            quote="Life is like riding a bicycle. To keep your balance, you must keep moving."
-            author="Madam CJ Walker, empresária"
-          />
-          <Card
-            quote="Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido."
-            author="Manoel de Barros, Poeta"
-          />
-          <Card
-            quote="Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe."
-            author="Paola Oliveira,  Atriz"
-          />
-          <Card
-            quote="Life is like riding a bicycle. To keep your balance, you must keep moving."
-            author="Albert Einstein"
-          />
+          {quotes.map(quote => (
+            <Card key={quote.id} {...quote} />
+          ))}
         </div>
       </Content>
       <WhatsappButton />
