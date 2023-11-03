@@ -24,7 +24,7 @@ export const StyledButton = styled.button`
   transition: 0.3s background-color;
 
   &:hover {
-    background-color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+    background-color: ${({ theme }) => theme.COLORS['blue-hover']};
   }
 
   @media screen and (min-width: 1440px) {
