@@ -6,25 +6,25 @@ import { WhatsappButton } from '../../components/WhatsappButton'
 export function Home() {
   const quotes = [
     {
-      id: 'q1',
+      id: crypto.randomUUID(),
       quote:
         'Life is like riding a bicycle. To keep your balance, you must keep moving.',
       author: 'Albert Einstein',
     },
     {
-      id: 'q2',
+      id: crypto.randomUUID(),
       quote:
         'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
       author: 'Paola Oliveira,  Atriz',
     },
     {
-      id: 'q3',
+      id: crypto.randomUUID(),
       quote:
         'Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido.',
       author: 'Manoel de Barros, Poeta',
     },
     {
-      id: 'q4',
+      id: crypto.randomUUID(),
       quote:
         'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
       author: 'Madam CJ Walker, empresária',
