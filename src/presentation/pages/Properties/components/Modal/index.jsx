@@ -12,22 +12,22 @@ import {
 
 import closeIcon from '../../../../assets/x-close-icon.svg'
 
-export function Modal({ isOpen, closeFn }) {
+export function Modal({ isOpen, onCloseModal }) {
   useEffect(() => {
     window.addEventListener('keyup', event => {
-      if (event.key === 'Escape' && isOpen) closeFn()
+      if (event.key === 'Escape' && isOpen) onCloseModal()
 
       if (event.key === 'Enter' && isOpen) handleSubmit()
     })
 
     return () => {
       window.removeEventListener('keyup', event => {
-        if (event.key === 'Escape' && isOpen) closeFn()
+        if (event.key === 'Escape' && isOpen) onCloseModal()
 
         if (event.key === 'Enter' && isOpen) handleSubmit()
       })
     }
-  }, [closeFn, isOpen])
+  }, [onCloseModal, isOpen])
 
   function handleSubmit(event) {
     if (event && event.target) {
@@ -54,7 +54,7 @@ export function Modal({ isOpen, closeFn }) {
           <img
             src={closeIcon}
             alt="Ícone de X para fechar o modal"
-            onClick={closeFn}
+            onClick={onCloseModal}
           />
         </TitleGroup>
 

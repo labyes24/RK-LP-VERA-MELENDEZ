@@ -18,7 +18,7 @@ export function ModalTest() {
     <Container>
       <button onClick={handleToggleModal}>Open Modal</button>
 
-      <Modal isOpen={isModalOpen} closeFn={handleCloseModal} />
+      <Modal isOpen={isModalOpen} onCloseModal={handleCloseModal} />
     </Container>
   )
 }
