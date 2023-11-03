@@ -18,12 +18,13 @@ import { SelectOptionTest } from '../presentation/components/SelectOption/test'
 import { TextAreaTest } from '../presentation/components/TextArea/test'
 
 import { Profile } from '../presentation/pages/Profile'
+import { Home } from '../presentation/pages/Home'
 
 export function RoutesApp() {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
-        <Route path="/" element={<h1>RK Landing Page</h1>} />
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<h2>Rota inexistente</h2>} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/properties" element={<h2>properties</h2>} />
