@@ -2,7 +2,7 @@ import { Container } from './style'
 import { WhatsappButton } from '../../WhatsappButton'
 
 const personData = {
-  number: '19996546371',
+  number: '48988262951',
   message: 'Olá, gostaria de saber mais sobre o imóvel.',
 }
 
