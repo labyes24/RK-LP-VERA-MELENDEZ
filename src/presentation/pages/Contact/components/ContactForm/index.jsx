@@ -47,6 +47,7 @@ export function ContactForm() {
                 type="email"
                 name="email"
                 id="email"
+                pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$"
               />
             </div>
 
@@ -55,10 +56,11 @@ export function ContactForm() {
                 Whatsapp <span>(Campo obrigatório):</span>
               </label>
               <TextInput
-                type="tel"
-                placeholder="(00) 00000-0000"
+                placeholder="+55 (00) 00000-0000"
                 name="whatsapp"
                 id="whatsapp"
+                pattern="^[+]?(\d{9,17})"
+                minLength={10}
                 required
               />
             </div>
@@ -82,12 +84,7 @@ export function ContactForm() {
 
             <div className="inputWrapper">
               <label htmlFor="purpose">Finalidade</label>
-              <SelectOption
-                name="purpose"
-                id="purpose"
-                defaultValue=""
-                required
-              >
+              <SelectOption name="purpose" id="purpose" defaultValue="">
                 <option value="" disabled hidden>
                   Selecione
                 </option>
