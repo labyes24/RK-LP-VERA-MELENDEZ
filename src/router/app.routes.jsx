@@ -19,6 +19,7 @@ import { SelectOptionTest } from '../presentation/components/SelectOption/test'
 import { TextAreaTest } from '../presentation/components/TextArea/test'
 import { ContactFormTest } from '../presentation/pages/Contact/components/ContactForm/test'
 import { PropertyCardTest } from '../presentation/pages/Properties/components/PropertyCard/test'
+import { CarouselTest } from '../presentation/components/Carousel/test'
 
 import { Profile } from '../presentation/pages/Profile'
 import { Home } from '../presentation/pages/Home'
@@ -60,6 +61,7 @@ export function RoutesApp() {
       <Route path="/TextAreaTest" element={<TextAreaTest />} />
       <Route path="/ContactFormTest" element={<ContactFormTest />} />
       <Route path="/PropertyCard" element={<PropertyCardTest />} />
+      <Route path="/Carousel" element={<CarouselTest />} />
     </Routes>
   )
 }
