@@ -102,14 +102,14 @@ export const FormContainer = styled.form`
     gap: 1.6rem;
 
     > p {
-      font-family: Nunito;
+      font-family: ${({ theme }) => theme.FONTS.Secondary};
       font-size: 10px;
       font-style: normal;
       font-weight: 400;
       color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
       > a {
-        font-family: Nunito;
+        font-family: ${({ theme }) => theme.FONTS.Secondary};
         font-size: 10px;
         font-style: normal;
         font-weight: 700;
