@@ -9,6 +9,7 @@ import {
 } from './styles'
 import { Button } from '../../../../components/Button'
 import { Tag } from '../../../../components/Tag'
+import { Carousel } from '../../../../components/Carousel'
 
 import garageIcon from '../../../../assets/garage-icon.svg'
 import roomIcon from '../../../../assets/room-icon.svg'
@@ -35,8 +36,8 @@ const IconsArray = [
 ]
 
 const PropertyInfo = {
-  title: 'test',
-  subtitle: 'teste maneiro',
+  title: 'Undefined undefined',
+  subtitle: 'Undefined undefined',
   stats: [
     {
       type: 'square',
@@ -60,26 +61,28 @@ const PropertyInfo = {
   price: 99999999,
 }
 
-export function PropertyCard({ ...rest }) {
+export function PropertyCard({ propertyInfo = PropertyInfo, ...rest }) {
   const iconMap = {}
   IconsArray.forEach(item => {
     iconMap[item.type] = item.icon
   })
   return (
     <Container {...rest}>
-      <ImageSection></ImageSection>
+      <ImageSection>
+        <Carousel></Carousel>
+      </ImageSection>
       <DescriptionSection>
         <Header>
-          <h2>{PropertyInfo.title}</h2>
-          <h3>{PropertyInfo.subtitle}</h3>
+          <h2>{propertyInfo.title}</h2>
+          <h3>{propertyInfo.subtitle}</h3>
         </Header>
         <Tags>
-          {PropertyInfo.stats.map(stat => (
+          {propertyInfo.stats.map(stat => (
             <Tag key={stat.type} src={iconMap[stat.type]} title={stat.value} />
           ))}
         </Tags>
-        <Description>{PropertyInfo.description}</Description>
-        <Price>{`R$ ${PropertyInfo.price}`}</Price>
+        <Description>{propertyInfo.description}</Description>
+        <Price>{`R$ ${propertyInfo.price}`}</Price>
         <Button size="large">Tenho interesse</Button>
       </DescriptionSection>
     </Container>

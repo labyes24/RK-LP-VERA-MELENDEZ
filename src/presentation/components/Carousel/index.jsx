@@ -12,7 +12,7 @@ const cardOption = {
   arrows: false,
 
   perPage: 4,
-  gap: '7rem',
+  gap: '9rem',
   autoWidth: false,
   breakpoints: {
     1024: {
