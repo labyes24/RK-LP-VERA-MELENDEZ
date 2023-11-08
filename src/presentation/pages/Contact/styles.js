@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 2.5rem;
   padding: 3.5rem 2rem;
 
@@ -42,11 +41,8 @@ export const Container = styled.div`
       'contact form form';
 
     .image {
-      /* position: fixed; */
-      /* bottom: 0; */
       display: block;
       transform: translate(0, 42px);
-      /* border: solid blue 5px; */
       z-index: -1;
     }
 

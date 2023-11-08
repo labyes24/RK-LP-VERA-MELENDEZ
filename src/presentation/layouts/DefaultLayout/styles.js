@@ -10,6 +10,5 @@ export const LayoutContainer = styled.div`
 
   .content {
     flex: 1;
-    /* border: 1px solid red; */
   }
 `
