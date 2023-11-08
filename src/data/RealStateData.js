@@ -94,6 +94,6 @@ const properties = [
  * Retrieves the properties info.
  * @return {Array<Property>} returns an array of properties info.
  */
-export function getProperties() {
+export function useProperties() {
   return properties
 }

@@ -91,6 +91,6 @@ const brokerProfile = {
  * Retrieves the broker profile.
  * @return {BrokerProfile} returns the broker profile info.
  */
-export function getBrokerProfile() {
+export function useBrokerProfile() {
   return brokerProfile
 }
