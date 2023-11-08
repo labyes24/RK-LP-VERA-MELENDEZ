@@ -20,7 +20,7 @@
  * @typedef {Object} BrokerComments
  * @property {string} id - The id.
  * @property {string} author - The author.
- * @property {string} text - The text.
+ * @property {string} quote - The text quote.
  */
 
 /**
@@ -63,22 +63,26 @@ const brokerProfile = {
     {
       id: crypto.randomUUID(),
       author: 'Paola Oliveira,  Atriz',
-      text: 'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
+      quote:
+        'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
     },
     {
       id: crypto.randomUUID(),
       author: 'Paola Oliveira,  Atriz',
-      text: 'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
+      quote:
+        'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
     },
     {
       id: crypto.randomUUID(),
       author: 'Manoel de Barros, Poeta',
-      text: 'Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido.',
+      quote:
+        'Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido.',
     },
     {
       id: crypto.randomUUID(),
       author: 'Manoel',
-      text: 'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
+      quote:
+        'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
     },
   ],
 }
