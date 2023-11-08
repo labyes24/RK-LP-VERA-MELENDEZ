@@ -27,17 +27,8 @@ export const Container = styled.div`
   }
 
   > .form {
-    display: flex;
-    background-color: #fff;
     width: 100%;
-    height: 120rem;
     border-radius: 0.8rem;
-
-    //excluir v
-    color: #000;
-    align-items: center;
-    justify-content: center;
-    //
   }
 
   @media (min-width: 1024px) {
@@ -77,17 +68,7 @@ export const Container = styled.div`
     }
     > .form {
       grid-area: form;
-      display: flex;
-      background-color: #fff;
-      width: 100%;
-      height: 83.5rem;
       border-radius: 0.8rem;
-
-      //excluir v 'loading form...'
-      color: #000;
-      align-items: center;
-      justify-content: center;
-      //
     }
 
     > .contact {
@@ -95,7 +76,6 @@ export const Container = styled.div`
       flex-direction: column;
       grid-area: contact;
       position: relative;
-      /* border: red solid 1px; */
       justify-content: space-between;
     }
   }
