@@ -40,9 +40,9 @@ export const Container = styled.div`
 export const Logo = styled(NavLink)`
   z-index: 3;
   img {
-    width: 6rem;
+    width: 20rem;
     @media (min-width: 1024px) {
-      width: 8rem;
+      width: 30rem;
     }
   }
 `
