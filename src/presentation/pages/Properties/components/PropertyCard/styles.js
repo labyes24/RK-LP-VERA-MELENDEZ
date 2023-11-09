@@ -19,10 +19,22 @@ export const Container = styled.div`
 `
 export const ImageSection = styled.section`
   border-radius: 0.8rem;
-  background-color: red;
+  height: 100%;
+  .splide {
+    height: 100%;
+  }
+  .splide__track {
+    padding-bottom: 0;
+    height: 100%;
+  }
 
-  aspect-ratio: 16/9;
-
+  img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+  }
   @media (min-width: 1024px) {
     width: 50%;
     height: unset;
@@ -31,14 +43,14 @@ export const ImageSection = styled.section`
 
 export const DescriptionSection = styled.section`
   display: grid;
+
   gap: 1.6rem;
 
   @media (min-width: 1024px) {
     display: grid;
     gap: 4.5rem;
     justify-items: space-between;
-    align-content: space-around;
-
+    align-content: center;
     width: 50%;
   }
 `
