@@ -88,6 +88,75 @@ const properties = [
       'https://i.ibb.co/XJCvTHQ/imagens-850807.jpg',
     ],
   },
+  {
+    id: crypto.randomUUID(),
+    brokerId: BROKER_ID,
+    RKCode: '9193',
+    title: 'Apartamento à venda - Condomínio Canto do Costão',
+    region: 'Santinho, Florianópolis',
+    description:
+      'Estamos oferecendo um encantador apartamento de um dormitório localizado nas proximidades das belíssimas praias dos Ingleses e Santinho, em Florianópolis. Esta é uma oportunidade imperdível para quem busca viver em um local paradisíaco, com fácil acesso a duas das praias mais deslumbrantes da região.',
+    price: 'R$ 450.000,00',
+    details: {
+      square: '51,30 m²',
+      rooms: '1',
+      bathrooms: '1',
+      garage: '1',
+    },
+    pictures: [
+      '../../public/santinho-f01.jpg',
+      '../../public/santinho-f02.jpg',
+      '../../public/santinho-f03.jpg',
+      '../../public/santinho-f04.jpg',
+      '../../public/santinho-f05.jpg',
+    ],
+  },
+  {
+    id: crypto.randomUUID(),
+    brokerId: BROKER_ID,
+    RKCode: '8843',
+    title: 'Apartamento à venda - Cannes Club Residence',
+    region: 'Ingleses, Florianópolis',
+    description:
+      'Belíssimo apartamento de dois dormitórios com uma suite, banheiro social, varanda com churrasqueira, duas vagas paralelas de garagem e hobby box. CANNES CLUB RESIDENCE é um empreendimento localizado na região nobre da praia dos Ingleses, Norte da Ilha de Florianópolis. A 300m do mar, na Rua dos Canudos, com estrutura de lazer, piscina, salão de festas, brinquedoteca e academia.',
+    price: 'R$ 620.000,00',
+    details: {
+      square: '79,64 m²',
+      rooms: '2',
+      bathrooms: '2',
+      garage: '2',
+    },
+    pictures: [
+      '../../public/cannes-f01.jpg',
+      '../../public/cannes-f02.jpg',
+      '../../public/cannes-f03.jpg',
+      '../../public/cannes-f04.jpg',
+      '../../public/cannes-f05.jpg',
+    ],
+  },
+  {
+    id: crypto.randomUUID(),
+    brokerId: BROKER_ID,
+    RKCode: '8430',
+    title: 'Apartamento à venda - Condomínio Costão dos Ingleses',
+    region: 'Ingleses, Florianópolis',
+    description:
+      'Trata-se de um apartamento em uma localização verdadeiramente privilegiada na deslumbrante Praia dos Ingleses. Com 3 dormitórios, incluindo uma suíte elegante, todos os cômodos estão equipados com móveis planejados, duas vagas de garagem e Hobbybox.. Além disso, você encontrará um banheiro social e uma sacada com churrasqueira, proporcionando uma vista encantadora da rua. E o melhor de tudo: está a apenas 300 metros do mar. Esta é uma oportunidade incrível para você e sua família desfrutarem de um lar excepcional!',
+    price: 'R$ 775.000,00',
+    details: {
+      square: '108 m²',
+      rooms: '3',
+      bathrooms: '2',
+      garage: '2',
+    },
+    pictures: [
+      '../../public/ingleses-f01.jpg',
+      '../../public/ingleses-f02.jpg',
+      '../../public/ingleses-f03.jpg',
+      '../../public/ingleses-f04.jpg',
+      '../../public/ingleses-f05.jpg',
+    ],
+  },
 ]
 
 /**
