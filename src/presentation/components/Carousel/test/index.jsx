@@ -42,34 +42,10 @@ const quotes = [
     author: 'CJ Walker, empresária',
   },
 ]
-const PropertyInfo = {
-  title: 'test',
-  subtitle: 'teste maneiro',
-  stats: [
-    {
-      type: 'square',
-      value: '9999',
-    },
-    {
-      type: 'shower',
-      value: '9999',
-    },
-    {
-      type: 'room',
-      value: '9999',
-    },
-    {
-      type: 'garage',
-      value: '9999',
-    },
-  ],
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra',
-  price: 99999999,
-}
 
-const Properties = [
+const properties = [
   {
+    id: 1,
     title: 'test1',
     subtitle: 'teste1 maneiro',
     stats: [
@@ -93,8 +69,16 @@ const Properties = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra',
     price: 99999999,
+    pictures: [
+      'https://i.ibb.co/hXFdzSq/imagens-173453.jpg',
+      'https://i.ibb.co/SmmxBFq/imagens-68249.jpg',
+      'https://i.ibb.co/LgP4LRY/imagens-742811.jpg',
+      'https://i.ibb.co/WpNX0rS/imagens-836752.jpg',
+      'https://i.ibb.co/6P2RtxV/imagens-992826.jpg',
+    ],
   },
   {
+    id: 2,
     title: 'test2',
     subtitle: 'teste2 maneiro',
     stats: [
@@ -118,8 +102,16 @@ const Properties = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra',
     price: 99999999,
+    pictures: [
+      'https://i.ibb.co/hXFdzSq/imagens-173453.jpg',
+      'https://i.ibb.co/SmmxBFq/imagens-68249.jpg',
+      'https://i.ibb.co/LgP4LRY/imagens-742811.jpg',
+      'https://i.ibb.co/WpNX0rS/imagens-836752.jpg',
+      'https://i.ibb.co/6P2RtxV/imagens-992826.jpg',
+    ],
   },
   {
+    id: 3,
     title: 'test3',
     subtitle: 'teste3 maneiro',
     stats: [
@@ -143,6 +135,13 @@ const Properties = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra',
     price: 99999999,
+    pictures: [
+      'https://i.ibb.co/hXFdzSq/imagens-173453.jpg',
+      'https://i.ibb.co/SmmxBFq/imagens-68249.jpg',
+      'https://i.ibb.co/LgP4LRY/imagens-742811.jpg',
+      'https://i.ibb.co/WpNX0rS/imagens-836752.jpg',
+      'https://i.ibb.co/6P2RtxV/imagens-992826.jpg',
+    ],
   },
 ]
 export function CarouselTest() {
@@ -156,9 +155,9 @@ export function CarouselTest() {
         ))}
       </Carousel>
       <Carousel option="cardProperty">
-        {quotes.map(quote => (
-          <SplideSlide key={quote.id}>
-            <PropertyCard {...quote} />
+        {properties.map(property => (
+          <SplideSlide key={property.id}>
+            <PropertyCard propertyInfo={property} />
           </SplideSlide>
         ))}
       </Carousel>
