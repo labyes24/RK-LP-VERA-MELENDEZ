@@ -15,7 +15,7 @@ import garageIcon from '../../../../assets/garage-icon.svg'
 import roomIcon from '../../../../assets/room-icon.svg'
 import squareIcon from '../../../../assets/square-icon.svg'
 import showerIcon from '../../../../assets/shower-icon.svg'
-
+import { SplideSlide } from '@splidejs/react-splide'
 const IconsArray = [
   {
     type: 'garage',
@@ -69,7 +69,14 @@ export function PropertyCard({ propertyInfo = PropertyInfo, ...rest }) {
   return (
     <Container {...rest}>
       <ImageSection>
-        <Carousel></Carousel>
+        <Carousel option="picture">
+          {propertyInfo.pictures.map((picture, index) => (
+            <SplideSlide key={index}>
+              <img src={picture} alt="Imagem do imóvel" />
+            </SplideSlide>
+          ))}
+        </Carousel>
+        {/* <img src={propertyInfo.pictures[1]} alt="Imagem do imóvel" /> */}
       </ImageSection>
       <DescriptionSection>
         <Header>
