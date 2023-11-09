@@ -15,8 +15,8 @@ export function Footer() {
           >
             Team Lab Yes!
           </a>
-        </b>
-        . Todos os direitos reservados.
+        </b>{' '}
+        <span>Todos os direitos reservados.</span>
       </p>
     </Container>
   )
