@@ -16,7 +16,7 @@ import squareIcon from '../../../../assets/square-icon.svg'
 import showerIcon from '../../../../assets/shower-icon.svg'
 import { SplideSlide } from '@splidejs/react-splide'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const IconsMap = {
   garage: garageIcon,
