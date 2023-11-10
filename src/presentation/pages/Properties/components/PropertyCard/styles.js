@@ -49,7 +49,6 @@ export const DescriptionSection = styled.section`
     display: grid;
     gap: 4.5rem;
     justify-items: space-between;
-    align-content: center;
     width: 100%;
   }
 `
