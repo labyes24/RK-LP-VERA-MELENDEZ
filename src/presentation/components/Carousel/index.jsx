@@ -1,69 +1,91 @@
 import { ContainerSplide } from './styles'
 
-const defaultOption = {
-  rewind: true,
-  type: 'loop',
-  arrows: false,
-  gap: '1rem',
-  autoWidth: true,
-}
+const PER_PAGE_MOBILE = 2
+const PER_PAGE_DESKTOP = 4
 
-const cardOption = {
-  rewind: true,
-  type: 'loop',
-  arrows: false,
+/**
+ * Creates a styled Carousel component.
+ * options are rendered as children into a <SplideSlide> tag.
+ * @param {String} option - Type of component into carousel can be | 'card' | 'cardProperty' | 'picture' | style.
+ * @param {Number} length - length of array.
+ * @return {JSX.Element} The styled Carousel component.
+ */
+export function Carousel({
+  children,
+  option = 'default',
+  length = 0,
+  ...rest
+}) {
+  const defaultOption = {
+    rewind: true,
+    type: 'loop',
+    arrows: false,
+    gap: '1rem',
+    autoWidth: true,
+  }
 
-  perPage: 4,
-  gap: '9rem',
-  autoWidth: false,
-  breakpoints: {
-    1024: {
-      //abaixo de 1024
-      type: 'loop',
-      perPage: 2,
-      gap: '1rem',
-      autoWidth: true,
+  const cardOption = {
+    rewind: true,
+    type: 'loop',
+    arrows: false,
+    navigation: true,
+    perPage: 4,
+    gap: '9rem',
+    autoWidth: false,
+    drag: length > PER_PAGE_DESKTOP,
+    breakpoints: {
+      1024: {
+        //abaixo de 1024
+        type: 'loop',
+        perPage: 2,
+        gap: '1rem',
+        autoWidth: true,
+        drag: length > PER_PAGE_MOBILE,
+      },
     },
-  },
-}
-const propertyCardOption = {
-  type: 'loop',
-  arrows: false,
-  gap: '3.2rem',
-  focus: 'center',
-  autoWidth: true,
+  }
+  const propertyCardOption = {
+    type: 'loop',
+    arrows: false,
+    gap: '3.2rem',
+    focus: 'center',
+    autoWidth: true,
 
-  breakpoints: {
-    1024: {
-      rewind: true,
-      type: 'loop',
-      arrows: false,
-      gap: '1rem',
-      focus: 'center',
-      autoWidth: true,
+    breakpoints: {
+      1024: {
+        rewind: true,
+        type: 'loop',
+        arrows: false,
+        gap: '1rem',
+        focus: 'center',
+        autoWidth: true,
+      },
     },
-  },
-}
+  }
 
-const pictureOption = {
-  arrows: true,
-  type: 'loop',
-  perPage: 1,
-  width: '100%',
-  height: '100%',
-  drag: false,
-}
-export function Carousel({ children, option = 'default', ...rest }) {
+  const pictureOption = {
+    arrows: true,
+    type: 'loop',
+    perPage: 1,
+    width: '100%',
+    height: '100%',
+    drag: false,
+  }
+
   let settings = defaultOption
 
-  if (option === 'card') {
-    settings = cardOption
-  } else if (option === 'cardProperty') {
-    settings = propertyCardOption
-  } else if (option === 'picture') {
-    settings = pictureOption
-  } else {
-    settings = defaultOption
+  switch (option) {
+    case 'card':
+      settings = cardOption
+      break
+    case 'cardProperty':
+      settings = propertyCardOption
+      break
+    case 'picture':
+      settings = pictureOption
+      break
+    default:
+      settings = defaultOption
   }
 
   return (
