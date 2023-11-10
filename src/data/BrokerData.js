@@ -24,6 +24,13 @@
  */
 
 /**
+ * The Broker tips
+ * @typedef {Object} BrokerTips
+ * @property {string} id - The id.
+ * @property {string} quote - The tip text.
+ */
+
+/**
  * The broker profile.
  * @typedef {Object} BrokerProfile
  * @property {string} id - indicates the unique identifier of the broker.
@@ -34,7 +41,8 @@
  * @property {Address} address - indicates the address of the broker.
  * @property {string} phone - indicates the phone number of the broker.
  * @property {string} email - indicates the email of the broker.
- * @property {Array<BrokerComments>} comments - indicates the comments or tips of the broker.
+ * @property {Array<BrokerComments>} comments - indicates the comments to the broker.
+ * @property {Array<BrokerTips>} tips - indicates the tips of the broker.
  *
  */
 const brokerProfile = {
@@ -83,6 +91,28 @@ const brokerProfile = {
       author: 'Manoel',
       quote:
         'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
+    },
+  ],
+  tips: [
+    {
+      id: crypto.randomUUID(),
+      quote:
+        'Defina seu objetivo: ao comprar um imóvel é fundamental entender a finalidade, pois influenciará nas suas escolhas.',
+    },
+    {
+      id: crypto.randomUUID(),
+      quote:
+        'Você pode ter diferentes objetivos como investimento em Revenda: Pesquise a valorização da propriedade a longo prazo, se for imóvel usado ou em construção.',
+    },
+    {
+      id: crypto.randomUUID(),
+      quote:
+        'Se é para locação: Considere a demanda por aluguéis na área e o retorno sobre o investimento, seja rentabilidade anual ou sazonal.',
+    },
+    {
+      id: crypto.randomUUID(),
+      quote:
+        'Se for para moradia: Priorize suas necessidades pessoais, como proximidade do trabalho e qualidade de vida na região.',
     },
   ],
 }
