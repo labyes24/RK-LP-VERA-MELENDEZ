@@ -12,7 +12,15 @@ import emailIcon from '../../../../assets/email-icon.svg'
 import whatsappIcon from '../../../../assets/whatsapp-icon.svg'
 import mapPinIcon from '../../../../assets/map-pin-icon.svg'
 
-export function RealEstateBrokerDescription() {
+/**
+ * Renders the description of a real estate broker.
+ * @param {Object<string, import('../../../../../data/BrokerData').BrokerProfile>} brokerData - the information of the broker
+ * @return {JSX.Element} the rendered broker description
+ */
+export function RealEstateBrokerDescription({ brokerData }) {
+  const { title, paragraph } = brokerData.description
+  const phoneDigits = brokerData.phone.replace(/\D/g, '')
+
   return (
     <Container>
       <ImageContainer>
@@ -21,59 +29,43 @@ export function RealEstateBrokerDescription() {
 
       <article>
         <TitleGroup>
-          <h4>Winnetou Soares Martins</h4>
-          <span>CRECI 15089</span>
+          <h4>{brokerData.name}</h4>
+          <span>CRECI {brokerData.CRECI}</span>
         </TitleGroup>
 
         <CopyGroup>
-          <strong>
-            Investir em imóveis é investir em conhecimento, no seu tempo e na
-            sua família.
-          </strong>
+          <strong>{title}</strong>
 
-          <p>
-            Apresento-me como seu corretor de imóveis, especializado em oferecer
-            mais do que propriedades, vendo informações estratégicas e
-            oportunidades de investimento sólido no dinâmico mercado
-            imobiliário.
-          </p>
-
-          <p>
-            Estou aqui para ser seu guia confiável nessa jornada, proporcionando
-            acesso aos insights valiosos sobre tendências do mercado,
-            recomendações personalizadas para investimentos sólidos e orientação
-            em cada etapa, desde pesquisa até a negociação de sucesso para as
-            partes envolvidas.
-          </p>
+          <div className="paragraphs">
+            {paragraph.map(paragraph => (
+              <p key={crypto.randomUUID()}>{paragraph}</p>
+            ))}
+          </div>
         </CopyGroup>
       </article>
 
       <LinksCard>
         <a
-          href="https://www.google.com/maps/place/RK/@-27.4241037,-48.4066508,15z/data=!4m10!1m2!2m1!1sRK!3m6!1s0x9527420b068878f5:0x4b86a614a636e7a9!8m2!3d-27.4233434!4d-48.4018518!15sCgJSS1oEIgJya5IBEnJlYWxfZXN0YXRlX2FnZW5jeeABAA!16s%2Fg%2F1tdbxyhw?hl=pt-BR&entry=ttu"
+          href={`https://www.google.com/maps/place/${brokerData.address.city}`}
           rel="noreferrer"
           target="_blank"
         >
           <img src={mapPinIcon} alt="Ícone de Mapa" />
-          <span>Florianópolis</span>
+          <span>{brokerData.address.city}</span>
         </a>
 
         <a
-          href="https://api.whatsapp.com/send?phone=48988262951"
+          href={`https://api.whatsapp.com/send?phone=${phoneDigits}`}
           rel="noreferrer"
           target="_blank"
         >
           <img src={whatsappIcon} alt="Ícone do WhatsApp" />
-          <span>(48) 98826-2951</span>
+          <span>{brokerData.phone}</span>
         </a>
 
-        <a
-          href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=winnetou@rkimoveis.com.br"
-          rel="noreferrer"
-          target="_blank"
-        >
+        <a href={'mailto:' + brokerData.email} rel="noreferrer" target="_blank">
           <img src={emailIcon} alt="Ícone do Gmail" />
-          <span>winnetou@rkimoveis.com.br</span>
+          <span>{brokerData.email}</span>
         </a>
       </LinksCard>
     </Container>

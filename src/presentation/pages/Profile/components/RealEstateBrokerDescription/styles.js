@@ -118,9 +118,17 @@ export const CopyGroup = styled.div`
       font-size: 1.6rem;
     }
 
-    strong,
-    :nth-child(2) {
+    .paragraphs {
+      max-height: 18rem;
+      overflow-y: auto;
+    }
+
+    strong {
       margin-bottom: 2.2rem;
+    }
+
+    p + p {
+      margin-top: 1.6rem;
     }
   }
 `
