@@ -47,7 +47,6 @@ const defaultInfo = {
  * @return {JSX.Element} The styled PropertyCard component.
  */
 export function PropertyCard({ propertyInfo = defaultInfo, ...rest }) {
-  // console.log(details[0])
   const [details, _] = useState(Object.keys(propertyInfo.details))
   return (
     <Container {...rest}>
