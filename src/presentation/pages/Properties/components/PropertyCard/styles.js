@@ -5,15 +5,15 @@ export const Container = styled.div`
   padding: 3.2rem 1.6rem;
   gap: 1.6rem;
   border-radius: 0.8rem;
+  height: 100%;
   width: 36rem;
   background-color: ${({ theme }) => theme.COLORS['blue-titan']};
-
   @media (min-width: 1024px) {
     display: flex;
     gap: 4.8rem;
     padding: 4.8rem;
     border-radius: 1.6rem;
-
+    transform: scale(1);
     width: 105.8rem;
   }
 `
@@ -22,10 +22,10 @@ export const ImageSection = styled.section`
   height: 100%;
   .splide {
     height: 100%;
-  }
-  .splide__track {
-    padding-bottom: 0;
-    height: 100%;
+    .splide__track {
+      padding-bottom: 0;
+      height: 100%;
+    }
   }
 
   img {
@@ -43,7 +43,6 @@ export const ImageSection = styled.section`
 
 export const DescriptionSection = styled.section`
   display: grid;
-
   gap: 1.6rem;
 
   @media (min-width: 1024px) {
@@ -56,6 +55,9 @@ export const DescriptionSection = styled.section`
 `
 
 export const Header = styled.div`
+  display: grid;
+  gap: 1rem;
+
   font-style: normal;
   font-weight: 700;
 

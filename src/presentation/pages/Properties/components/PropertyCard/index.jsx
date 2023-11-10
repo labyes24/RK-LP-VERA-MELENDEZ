@@ -16,56 +16,38 @@ import roomIcon from '../../../../assets/room-icon.svg'
 import squareIcon from '../../../../assets/square-icon.svg'
 import showerIcon from '../../../../assets/shower-icon.svg'
 import { SplideSlide } from '@splidejs/react-splide'
-const IconsArray = [
-  {
-    type: 'garage',
-    icon: garageIcon,
-  },
-  {
-    type: 'room',
-    icon: roomIcon,
-  },
-  {
-    type: 'square',
-    icon: squareIcon,
-  },
-  {
-    type: 'shower',
-    icon: showerIcon,
-  },
-]
 
-const PropertyInfo = {
-  title: 'Undefined undefined',
-  subtitle: 'Undefined undefined',
-  stats: [
-    {
-      type: 'square',
-      value: '9999',
-    },
-    {
-      type: 'shower',
-      value: '9999',
-    },
-    {
-      type: 'room',
-      value: '9999',
-    },
-    {
-      type: 'garage',
-      value: '9999',
-    },
-  ],
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac justo lacinia tempus. Fusce vehicula justo vel urna ultrices, sit amet bibendum libero gravida. Praesent vel volutpat nisi. Sed tincidunt eget elit eu vestibulum. Proin tincidunt, ligula sed bibendum viverra',
-  price: 99999999,
+const IconsMap = {
+  garage: garageIcon,
+  rooms: roomIcon,
+  square: squareIcon,
+  bathrooms: showerIcon,
 }
 
+const PropertyInfo = {
+  id: crypto.randomUUID(),
+  brokerId: 1,
+  RKCode: 'N/A',
+  title: 'N/A',
+  region: 'N/A',
+  details: {
+    square: 'N/A',
+    rooms: 'N/A',
+    bathrooms: 'N/A',
+    garage: 'N/A',
+  },
+  description: 'N/A',
+  price: 'R$ N/A',
+  pictures: ['N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
+}
+/**
+ * Creates a styled PropertyCard component.
+ * @param {Property} propertyInfo - Property information.
+ * @return {JSX.Element} The styled PropertyCard component.
+ */
 export function PropertyCard({ propertyInfo = PropertyInfo, ...rest }) {
-  const iconMap = {}
-  IconsArray.forEach(item => {
-    iconMap[item.type] = item.icon
-  })
+  const details = Object.keys(PropertyInfo.details)
+
   return (
     <Container {...rest}>
       <ImageSection>
@@ -76,20 +58,23 @@ export function PropertyCard({ propertyInfo = PropertyInfo, ...rest }) {
             </SplideSlide>
           ))}
         </Carousel>
-        {/* <img src={propertyInfo.pictures[1]} alt="Imagem do imóvel" /> */}
       </ImageSection>
       <DescriptionSection>
         <Header>
           <h2>{propertyInfo.title}</h2>
-          <h3>{propertyInfo.subtitle}</h3>
+          <h3>{propertyInfo.region}</h3>
         </Header>
         <Tags>
-          {propertyInfo.stats.map(stat => (
-            <Tag key={stat.type} src={iconMap[stat.type]} title={stat.value} />
+          {details.map(detail => (
+            <Tag
+              key={detail}
+              src={IconsMap[detail]}
+              title={PropertyInfo.details[detail]}
+            />
           ))}
         </Tags>
         <Description>{propertyInfo.description}</Description>
-        <Price>{`R$ ${propertyInfo.price}`}</Price>
+        <Price>{`${propertyInfo.price}`}</Price>
         <Button size="large">Tenho interesse</Button>
       </DescriptionSection>
     </Container>
