@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: grid;
+  grid-template-rows: 2fr 4fr;
   padding: 3.2rem 1.6rem;
   gap: 1.6rem;
   border-radius: 0.8rem;
@@ -10,11 +11,10 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS['blue-titan']};
   @media (min-width: 1024px) {
     display: flex;
+    width: 105.8rem;
     gap: 4.8rem;
     padding: 4.8rem;
     border-radius: 1.6rem;
-    transform: scale(1);
-    width: 105.8rem;
   }
 `
 export const ImageSection = styled.section`
@@ -36,7 +36,7 @@ export const ImageSection = styled.section`
     border-radius: 0.8rem;
   }
   @media (min-width: 1024px) {
-    width: 50%;
+    width: 100%;
     height: unset;
   }
 `
@@ -50,7 +50,7 @@ export const DescriptionSection = styled.section`
     gap: 4.5rem;
     justify-items: space-between;
     align-content: center;
-    width: 50%;
+    width: 100%;
   }
 `
 
@@ -94,6 +94,7 @@ export const Tags = styled.div`
   > span {
     font-size: 1.4rem;
     height: fit-content;
+    min-width: fit-content;
 
     > img {
       height: 1.6rem;

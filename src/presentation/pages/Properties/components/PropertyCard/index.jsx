@@ -10,12 +10,13 @@ import {
 import { Button } from '../../../../components/Button'
 import { Tag } from '../../../../components/Tag'
 import { Carousel } from '../../../../components/Carousel'
-
 import garageIcon from '../../../../assets/garage-icon.svg'
 import roomIcon from '../../../../assets/room-icon.svg'
 import squareIcon from '../../../../assets/square-icon.svg'
 import showerIcon from '../../../../assets/shower-icon.svg'
 import { SplideSlide } from '@splidejs/react-splide'
+
+import { useEffect, useState } from 'react'
 
 const IconsMap = {
   garage: garageIcon,
@@ -24,7 +25,7 @@ const IconsMap = {
   bathrooms: showerIcon,
 }
 
-const PropertyInfo = {
+const defaultInfo = {
   id: crypto.randomUUID(),
   brokerId: 1,
   RKCode: 'N/A',
@@ -45,9 +46,9 @@ const PropertyInfo = {
  * @param {Property} propertyInfo - Property information.
  * @return {JSX.Element} The styled PropertyCard component.
  */
-export function PropertyCard({ propertyInfo = PropertyInfo, ...rest }) {
-  const details = Object.keys(PropertyInfo.details)
-
+export function PropertyCard({ propertyInfo = defaultInfo, ...rest }) {
+  // console.log(details[0])
+  const [details, _] = useState(Object.keys(propertyInfo.details))
   return (
     <Container {...rest}>
       <ImageSection>
@@ -65,13 +66,14 @@ export function PropertyCard({ propertyInfo = PropertyInfo, ...rest }) {
           <h3>{propertyInfo.region}</h3>
         </Header>
         <Tags>
-          {details.map(detail => (
-            <Tag
-              key={detail}
-              src={IconsMap[detail]}
-              title={PropertyInfo.details[detail]}
-            />
-          ))}
+          {details &&
+            details.map(detail => (
+              <Tag
+                key={detail}
+                src={IconsMap[detail]}
+                title={propertyInfo.details[detail]}
+              />
+            ))}
         </Tags>
         <Description>{propertyInfo.description}</Description>
         <Price>{`${propertyInfo.price}`}</Price>
