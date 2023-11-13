@@ -14,7 +14,7 @@ const propertyInfo = {
 
 // Renderize o PropertyCard com propertyInfo
 <PropertyCard propertyInfo={propertyInfo} />;
-
+```
 
 
 ## Componentes Utilizados
