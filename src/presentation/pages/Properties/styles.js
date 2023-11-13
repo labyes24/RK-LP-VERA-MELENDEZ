@@ -5,13 +5,23 @@ export const Container = styled.div`
 
   > h1 {
     width: fit-content;
+
+    padding: 0 1rem;
     margin: 0 auto 2.4rem;
-    align-self: center;
+    text-align: center;
 
     font-family: ${({ theme }) => theme.FONTS.Primary};
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 140%;
+  }
+
+  @media (min-width: 1024px) {
+    > h1 {
+      align-self: center;
+      font-size: 3.6rem;
+      line-height: 100%;
+    }
   }
 `

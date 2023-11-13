@@ -4,8 +4,11 @@ import { Carousel } from '../../components/Carousel'
 import { SplideSlide } from '@splidejs/react-splide'
 import { PropertyCard } from './components/PropertyCard'
 import { WhatsappButton } from '../../components/WhatsappButton'
+import { useBrokerProfile } from '../../../data/BrokerData'
+
 export function Properties() {
   const properties = useProperties()
+  const { phone } = useBrokerProfile()
   return (
     <Container>
       <h1>Encontre o imóvel perfeito para você e sua família!</h1>
@@ -16,7 +19,7 @@ export function Properties() {
           </SplideSlide>
         ))}
       </Carousel>
-      <WhatsappButton />
+      <WhatsappButton phoneNumber={phone} />
     </Container>
   )
 }
