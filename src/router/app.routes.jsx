@@ -23,7 +23,7 @@ import { CarouselTest } from '../presentation/components/Carousel/test'
 
 import { Profile } from '../presentation/pages/Profile'
 import { Home } from '../presentation/pages/Home'
-
+import { Properties } from '../presentation/pages/Properties'
 export function RoutesApp() {
   return (
     <Routes>
@@ -31,7 +31,7 @@ export function RoutesApp() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<h2>Rota inexistente</h2>} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/properties" element={<h2>properties</h2>} />
+        <Route path="/properties" element={<Properties />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
 
