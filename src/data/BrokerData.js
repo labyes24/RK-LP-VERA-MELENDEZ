@@ -49,7 +49,7 @@ const brokerProfile = {
   id: crypto.randomUUID(),
   name: 'Winnetou Soares Martins',
   CRECI: '64.763-F',
-  profileImage: 'https://i.ibb.co/VjzQ4W9/Corretor-Img.png',
+  profileImage: '/broker/tom2.png',
   description: {
     title:
       'Pai do Bento e marido da Luciana, praticante de artes marciais e nas horas vagas se arrisca a cantar, tocando violão',
