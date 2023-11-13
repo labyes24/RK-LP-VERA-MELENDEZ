@@ -3,7 +3,8 @@ import { Splide } from '@splidejs/react-splide'
 
 export const ContainerSplide = styled(Splide)`
   ul {
-    transition: all 0.3s ease;
+    ${({ $option }) =>
+      $option === 'picture' ? 'transition: all 0.3s ease;' : 'none'};
   }
   .splide__track {
     padding-bottom: 4rem;

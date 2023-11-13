@@ -26,8 +26,8 @@ export function Carousel({
 
   const cardOption = {
     rewind: true,
-    type: 'loop',
-    // arrows: length <= PER_PAGE_DESKTOP,
+    type: length === PER_PAGE_DESKTOP ? '' : 'loop',
+    arrows: false,
     navigation: true,
     perPage: PER_PAGE_DESKTOP,
     gap: '9rem',
@@ -37,7 +37,8 @@ export function Carousel({
       1024: {
         //abaixo de 1024
         // arrows: length <= PER_PAGE_MOBILE,
-        type: 'loop',
+        arrows: false,
+        type: length === PER_PAGE_MOBILE ? '' : 'loop',
         perPage: PER_PAGE_MOBILE,
         gap: '1rem',
         autoWidth: true,
@@ -54,7 +55,6 @@ export function Carousel({
 
     breakpoints: {
       1024: {
-        rewind: true,
         type: 'loop',
         arrows: false,
         gap: '1rem',
@@ -90,7 +90,12 @@ export function Carousel({
   }
 
   return (
-    <ContainerSplide options={settings} aria-labelledby="carousel" {...rest}>
+    <ContainerSplide
+      options={settings}
+      $option={option}
+      aria-labelledby="carousel"
+      {...rest}
+    >
       {children}
     </ContainerSplide>
   )
