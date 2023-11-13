@@ -4,6 +4,13 @@ export const Container = styled.div`
   .Images {
     width: fit-content;
     display: ${({ $removeelipses }) => ($removeelipses ? 'none' : 'flex')};
+
+    position: relative;
+
+    :nth-child(1) {
+      position: absolute;
+      top: -25%;
+    }
   }
 
   > div img:nth-child(1) {
