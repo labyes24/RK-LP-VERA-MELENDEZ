@@ -4,6 +4,7 @@ export const CardContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS['zinc-500']};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
+  border-bottom: 3px solid transparent;
   border-radius: 6px;
   padding: 2rem 0.8rem;
   gap: 1rem;
@@ -17,6 +18,27 @@ export const CardContainer = styled.div`
   justify-content: center;
 
   flex: 1 1 16rem;
+
+  transition:
+    filter 0.3s ease,
+    box-shadow 0.6s ease,
+    border-bottom 1s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.2);
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid ${({ theme }) => theme.COLORS['blue-sky']};
+
+    > blockquote,
+    > cite {
+      filter: brightness(1.1), contrast(1.1);
+    }
+  }
+
+  > blockquote,
+  > cite {
+    transition: filter 0.3s ease;
+  }
 
   > blockquote {
     font-family: ${({ theme }) => theme.FONTS.Secondary};
