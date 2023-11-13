@@ -44,6 +44,8 @@ export const Container = styled.div`
       display: block;
       transform: translate(0, 42px);
       z-index: -1;
+
+      margin-bottom: 10%;
     }
 
     > .titles {

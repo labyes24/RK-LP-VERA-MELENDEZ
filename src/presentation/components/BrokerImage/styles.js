@@ -8,8 +8,9 @@ export const Container = styled.div`
     position: relative;
 
     :nth-child(1) {
-      position: absolute;
-      top: -25%;
+      position: ${({ $removeelipses }) =>
+        $removeelipses ? 'initial' : 'absolute'};
+      top: ${({ $removeelipses }) => ($removeelipses ? 'initial' : '-25%')};
     }
   }
 
