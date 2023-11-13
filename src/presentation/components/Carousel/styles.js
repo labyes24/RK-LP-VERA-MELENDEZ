@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import { Splide } from '@splidejs/react-splide'
 
 export const ContainerSplide = styled(Splide)`
+  ul {
+    transition: all 0.3s ease;
+  }
   .splide__track {
     padding-bottom: 4rem;
   }
@@ -10,6 +13,7 @@ export const ContainerSplide = styled(Splide)`
       fill: ${({ theme }) => theme.COLORS['blue-sky-700']};
     }
   }
+
   @media screen and (min-width: 1024px) {
     .splide__arrow {
       height: 4rem;

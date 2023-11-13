@@ -27,20 +27,21 @@ export function Carousel({
   const cardOption = {
     rewind: true,
     type: 'loop',
-    arrows: false,
+    // arrows: length <= PER_PAGE_DESKTOP,
     navigation: true,
-    perPage: 4,
+    perPage: PER_PAGE_DESKTOP,
     gap: '9rem',
     autoWidth: false,
-    drag: length > PER_PAGE_DESKTOP,
+    // drag: ,
     breakpoints: {
       1024: {
         //abaixo de 1024
+        // arrows: length <= PER_PAGE_MOBILE,
         type: 'loop',
-        perPage: 2,
+        perPage: PER_PAGE_MOBILE,
         gap: '1rem',
         autoWidth: true,
-        drag: length > PER_PAGE_MOBILE,
+        // drag: ,
       },
     },
   }
