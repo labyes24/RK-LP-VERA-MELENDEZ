@@ -12,7 +12,14 @@ import {
 
 import closeIcon from '../../../../assets/x-close-icon.svg'
 
-export function Modal({ isOpen, onCloseModal }) {
+/**
+ * Creates a styled Modal component.
+ * @param {Boolean} isOpen - Modal state.
+ * @param {requestCallback} onCloseModal - Cb function to change open modal state to false.
+ * @param {String} propertyCode - Property code information.
+ * @return {JSX.Element} The styled Modal component.
+ */
+export function Modal({ isOpen, onCloseModal, propertyCode }) {
   useEffect(() => {
     window.addEventListener('keyup', event => {
       if (event.key === 'Escape' && isOpen) onCloseModal()
@@ -35,10 +42,6 @@ export function Modal({ isOpen, onCloseModal }) {
 
       const formData = new FormData(event.target)
       const data = Object.fromEntries(formData)
-
-      // Enviar informações para o corretor
-      console.log(data)
-
       alert('Formulário enviado!')
 
       location.reload()
