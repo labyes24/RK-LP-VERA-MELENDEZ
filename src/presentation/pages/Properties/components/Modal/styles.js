@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   background-color: #0009;
 
-  transition: 0.3s background-color;
+  transition: 0.5s background-color;
 `
 
 export const StyledModal = styled.div`
