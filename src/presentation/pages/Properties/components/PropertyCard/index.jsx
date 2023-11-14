@@ -10,6 +10,7 @@ import {
 import { Button } from '../../../../components/Button'
 import { Tag } from '../../../../components/Tag'
 import { Carousel } from '../../../../components/Carousel'
+
 import garageIcon from '../../../../assets/garage-icon.svg'
 import roomIcon from '../../../../assets/room-icon.svg'
 import squareIcon from '../../../../assets/square-icon.svg'
@@ -44,9 +45,14 @@ const defaultInfo = {
 /**
  * Creates a styled PropertyCard component.
  * @param {Property} propertyInfo - Property information.
+ * @param {requestCallback} onInterestingProperty - Get RKCode info from current property.
  * @return {JSX.Element} The styled PropertyCard component.
  */
-export function PropertyCard({ propertyInfo = defaultInfo, ...rest }) {
+export function PropertyCard({
+  propertyInfo = defaultInfo,
+  onInterestingProperty = () => {},
+  ...rest
+}) {
   const [details, _] = useState(Object.keys(propertyInfo.details))
   return (
     <Container {...rest}>
@@ -76,7 +82,12 @@ export function PropertyCard({ propertyInfo = defaultInfo, ...rest }) {
         </Tags>
         <Description>{propertyInfo.description}</Description>
         <Price>{`${propertyInfo.price}`}</Price>
-        <Button size="large">Tenho interesse</Button>
+        <Button
+          size="large"
+          onClick={() => onInterestingProperty(propertyInfo.RKCode)}
+        >
+          Tenho interesse
+        </Button>
       </DescriptionSection>
     </Container>
   )
