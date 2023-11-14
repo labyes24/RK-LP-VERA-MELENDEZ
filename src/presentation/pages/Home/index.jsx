@@ -2,12 +2,14 @@ import { Container, Content } from './styles'
 import { Video } from '../../components/Video'
 import { Card } from '../../components/Card'
 import { WhatsappButton } from '../../components/WhatsappButton'
+import { SplideSlide } from '@splidejs/react-splide'
+import { Carousel } from '../../components/Carousel'
 
 import { useBrokerProfile } from '../../../data/BrokerData'
 
 export function Home() {
   const broker = useBrokerProfile()
-  const quotes = broker.comments
+  const { comments: quotes } = useBrokerProfile()
   const brokerPhoneNumber = broker.phone
 
   return (
@@ -16,11 +18,13 @@ export function Home() {
       <Content>
         <h2>Oportunidades únicas não esperam por ninguém!</h2>
         <Video />
-        <div className="cards-wrapper">
+        <Carousel option="card" length={quotes.length}>
           {quotes.map(quote => (
-            <Card key={quote.id} {...quote} />
+            <SplideSlide key={quote.id}>
+              <Card {...quote} />
+            </SplideSlide>
           ))}
-        </div>
+        </Carousel>
       </Content>
       <WhatsappButton phoneNumber={brokerPhoneNumber} />
     </Container>
