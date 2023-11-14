@@ -7,12 +7,4 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
-
-  > section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4.8rem;
-    flex-wrap: wrap;
-  }
 `
