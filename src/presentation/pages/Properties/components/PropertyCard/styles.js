@@ -112,10 +112,10 @@ export const Tags = styled.div`
 
 export const Description = styled.p`
   font-family: ${({ theme }) => theme.FONTS.Secundary};
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 160%;
   max-height: 15rem;
   color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
