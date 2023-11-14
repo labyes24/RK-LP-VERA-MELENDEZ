@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   inset: 0;
-  height: 100vh;
-  width: 100vw;
+  z-index: 3;
   padding-inline: 1.6rem;
 
   display: flex;
