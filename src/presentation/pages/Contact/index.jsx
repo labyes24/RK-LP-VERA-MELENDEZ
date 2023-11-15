@@ -3,7 +3,14 @@ import { BrokerImage } from '../../components/BrokerImage'
 import { ContactBlock } from '../../components/ContactBlock'
 import { ContactForm } from './components/ContactForm'
 
+import { useBrokerProfile } from '../../../data/BrokerData'
+
 export function Contact() {
+  const broker = useBrokerProfile()
+  const brokerAddress = broker.address
+  const brokerEmail = broker.email
+  const brokerPhoneNumber = broker.phone
+
   return (
     <Container>
       <div className="titles">
@@ -15,9 +22,9 @@ export function Contact() {
       </div>
       <div className="contact">
         <ContactBlock
-          address={'Rua das Gaivotas, 1709 - Ingleses Florianópolis - SC'}
-          email={'winnetou@rkimoveis.com.br'}
-          phoneNumber={'(48) 98826-2951'}
+          address={`${brokerAddress.street}, ${brokerAddress.number} - ${brokerAddress.district} ${brokerAddress.city} - ${brokerAddress.state}`}
+          email={brokerEmail}
+          phoneNumber={brokerPhoneNumber}
         />
         <div className="image">
           <BrokerImage removeelipses={true} />
