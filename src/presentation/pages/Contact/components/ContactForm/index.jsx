@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { useBrokerProfile } from '../../../../../data/BrokerData'
+
 import { TextInput } from '../../../../components/TextInput'
 import { TextArea } from '../../../../components/TextArea'
 import { SelectOption } from '../../../../components/SelectOption'
@@ -5,6 +8,18 @@ import { SelectOption } from '../../../../components/SelectOption'
 import { FormContainer, ShortButton } from './styles'
 
 export function ContactForm() {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+
+  const { email: brokerEmail } = useBrokerProfile()
+  const devMode = import.meta.env.DEV
+  let sendMailTo = ''
+
+  if (devMode) {
+    sendMailTo = import.meta.env.VITE_EMAILJS_MAIL_TEST
+  } else {
+    sendMailTo = brokerEmail
+  }
+
   async function sendMail(mailSenderName, mailTo, messageText) {
     const EMAILJS_SEND_API = 'https://api.emailjs.com/api/v1.0/email/send'
 
@@ -41,11 +56,35 @@ export function ContactForm() {
     const formData = new FormData(event.target)
     const data = Object.fromEntries(formData)
 
-    console.log(data)
+    const messageText = `Dados pessoais: \n
+      Nome: ${data?.name}
+      Email: ${data?.email}
+      Whatsapp: ${data?.whatsapp} \n\n
+      Dados do Imóvel: \n
+      Localização: ${data?.local}
+      Finalidade: ${data?.purpose}
+      Categoria: ${data?.category}
+      Quartos: ${data?.bedroom}
+      Valor mínimo: ${data?.min_value}
+      Valor máximo: ${data?.max_value}
+      Informações extras: ${data?.extra_info}`
 
-    // TODO: Send data to email
+    setIsFormSubmitted(true)
 
-    event.target.reset()
+    sendMail(data.name, sendMailTo, messageText)
+      .then(response => {
+        if (response.status === 200) {
+          alert('Mensagem enviada com sucesso!')
+          event.target.reset()
+        }
+      })
+      .catch(error => {
+        alert('Ocorreu um erro. \nPor favor, tente novamente mais tarde.')
+        console.error(error)
+      })
+      .finally(() => {
+        setIsFormSubmitted(false)
+      })
   }
 
   return (
@@ -115,12 +154,12 @@ export function ContactForm() {
             <div className="inputWrapper">
               <label htmlFor="purpose">Finalidade</label>
               <SelectOption name="purpose" id="purpose" defaultValue="">
-                <option value="" disabled hidden>
+                <option value="" hidden>
                   Selecione
                 </option>
-                <option value="rent">Alugar</option>
-                <option value="sell">Vender</option>
-                <option value="invest">Investir</option>
+                <option value="alugar">Alugar</option>
+                <option value="vender">Vender</option>
+                <option value="investir">Investir</option>
               </SelectOption>
             </div>
           </div>
@@ -132,11 +171,11 @@ export function ContactForm() {
                 <option value="" hidden>
                   Selecione
                 </option>
-                <option value="apartment">Apartamento</option>
-                <option value="house">Casa</option>
-                <option value="terrain">Terreno</option>
-                <option value="shed">Galpão</option>
-                <option value="others">outros</option>
+                <option value="apartmento">Apartamento</option>
+                <option value="casa">Casa</option>
+                <option value="terreno">Terreno</option>
+                <option value="galpão">Galpão</option>
+                <option value="outros">outros</option>
               </SelectOption>
             </div>
 
@@ -150,7 +189,7 @@ export function ContactForm() {
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5mais">5 ou mais</option>
+                <option value="5 ou mais">5 ou mais</option>
               </SelectOption>
             </div>
           </div>
@@ -195,7 +234,7 @@ export function ContactForm() {
           <a href="">Política de privacidade</a>.
         </p>
 
-        <ShortButton size="small" type="submit">
+        <ShortButton size="small" type="submit" isLoading={isFormSubmitted}>
           Enviar
         </ShortButton>
       </footer>
