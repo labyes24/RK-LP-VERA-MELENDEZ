@@ -5,6 +5,36 @@ import { SelectOption } from '../../../../components/SelectOption'
 import { FormContainer, ShortButton } from './styles'
 
 export function ContactForm() {
+  async function sendMail(mailSenderName, mailTo, messageText) {
+    const EMAILJS_SEND_API = 'https://api.emailjs.com/api/v1.0/email/send'
+
+    const validEmailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
+    const isEmailValid = validEmailRegex.test(mailTo)
+
+    if (!isEmailValid) {
+      return Promise.reject(`sendMail error: invalid email ${mailTo}`)
+    }
+
+    const response = await fetch(EMAILJS_SEND_API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        service_id: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        user_id: import.meta.env.VITE_EMAILJS_USER_ID,
+        template_id: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        template_params: {
+          senderName: mailSenderName,
+          mailto: mailTo,
+          message: messageText,
+        },
+      }),
+    })
+
+    return response
+  }
+
   function handleSubmit(event) {
     event.preventDefault()
 
