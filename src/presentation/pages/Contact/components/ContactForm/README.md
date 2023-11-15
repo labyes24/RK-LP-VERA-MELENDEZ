@@ -1,6 +1,8 @@
 # ContactForm
 
-O componente `ContactForm` renderiza um formulário de contato com as informações de contato do cliente para o corretor e também informações ao tipo de imóvel e sua aplicação.
+O componente `ContactForm` renderiza um formulário de contato com o corretor. O formulário captura as informações de contato do cliente e também informações sobre o tipo de imóvel e sua aplicação e as envia para o corretor no email informado.
+
+> ⚠️ **Atenção**: informar as credenciais do `emailjs` e o email para teste conforme [configuração](#🔧-configuração) descrita abaixo.
 
 ## 💪 Funcionalidades
 
@@ -9,6 +11,34 @@ O componente `ContactForm` renderiza um formulário de contato com as informaç�
 ## 🖥️ Screenshots
 
 <img src='https://i.ibb.co/nCm7XP2/contact-Form.png' width='65%' />
+
+## 🔧 Configuração
+
+Criar um arquivo com o nome `.env.local` na pasta raiz do projeto e adicionar os valores das credenciais do `emailjs` seguindo o exemplo abaixo:
+
+```bash
+# emailjs credentials
+VITE_EMAILJS_USER_ID: "DddDddDddDddDddDd"
+VITE_EMAILJS_SERVICE_ID: "service_nnnnnnn"
+VITE_EMAILJS_TEMPLATE_ID: "template_nnnnnnn"
+
+# development emailjs test
+VITE_EMAILJS_MAIL_TEST: "seu.email@gmail.com"
+```
+
+> 🔑 Os valores de ***user_id***, ***service_id*** e ***template_id*** devem ser obtidos da conta do `emailjs`.
+
+> 🧪 O valor de ***mail_test*** deve ser o email que receberá as mensagens do formulário durante o **desenvolvimento** e **testes**.
+
+Na conta [**emailJs**](https://dashboard.emailjs.com/) é necessário um template com a estrutura apresentada abaixo para envio do e-mail.
+
+<img src='https://i.ibb.co/hDHCbB8/emailjs-template.png' width='85%' />
+
+> Os valores marcados em vermelho são variáveis que precisam estar presentes no template para o funcionamento do envio.
+
+Exemplo de email enviado:
+
+<img src='https://i.ibb.co/f8dXZP2/email-example.png' width='55%' />
 
 ## 🛠️ Stack utilizada
 
