@@ -125,6 +125,27 @@ export const CopyGroup = styled.div`
     .paragraphs {
       max-height: 18rem;
       overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: #d9d9d980;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #d9d9d9;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
+      }
+
+      &::-webkit-scrollbar-thumb:active {
+        background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
+      }
     }
 
     strong {
