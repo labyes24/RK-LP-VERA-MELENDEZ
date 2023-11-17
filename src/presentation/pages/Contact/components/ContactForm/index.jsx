@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useBrokerProfile } from '../../../../../data/BrokerData'
+import { sendMail } from '../../../../../services/sendMail'
 
 import { TextInput } from '../../../../components/TextInput'
 import { TextArea } from '../../../../components/TextArea'
@@ -18,36 +19,6 @@ export function ContactForm() {
     sendMailTo = import.meta.env.VITE_EMAILJS_MAIL_TEST
   } else {
     sendMailTo = brokerEmail
-  }
-
-  async function sendMail(mailSenderName, mailTo, messageText) {
-    const EMAILJS_SEND_API = 'https://api.emailjs.com/api/v1.0/email/send'
-
-    const validEmailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
-    const isEmailValid = validEmailRegex.test(mailTo)
-
-    if (!isEmailValid) {
-      return Promise.reject(`sendMail error: invalid email ${mailTo}`)
-    }
-
-    const response = await fetch(EMAILJS_SEND_API, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        service_id: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        user_id: import.meta.env.VITE_EMAILJS_USER_ID,
-        template_id: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        template_params: {
-          senderName: mailSenderName,
-          mailto: mailTo,
-          message: messageText,
-        },
-      }),
-    })
-
-    return response
   }
 
   function handleSubmit(event) {
@@ -71,7 +42,7 @@ export function ContactForm() {
 
     setIsFormSubmitted(true)
 
-    sendMail(data.name, sendMailTo, messageText)
+    sendMail(data.name, messageText, sendMailTo)
       .then(response => {
         if (response.status === 200) {
           alert('Mensagem enviada com sucesso!')
