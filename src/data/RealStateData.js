@@ -23,8 +23,8 @@ const properties = [
     id: crypto.randomUUID(),
     brokerId: BROKER_ID,
     RKCode: '9193',
-    title: 'SANTINHO - Canto do Costão',
-    region: 'Santinho, Florianópolis',
+    title: 'Santinho',
+    region: 'Canto do Costão',
     description:
       'IMÓVEL COM MATRÍCULA. Estamos oferecendo um encantador apartamento de 1 dormitório localizado nas proximidades das belíssimas praias dos Ingleses e Santinho, em Florianópolis. Esta é uma oportunidade imperdível para quem busca viver em um local paradisíaco, com fácil acesso a duas das praias mais deslumbrantes da região.    Características do apartamento: 1 dormitório espaçoso, ideal para casais ou solteiros que desejam ter seu próprio espaço confortável. Sala de estar aconchegante, perfeita para relaxar e receber visitas. Cozinha compacta, equipada com armários e eletrodomésticos, proporcionando praticidade no dia a dia.  Banheiro completo, com acabamentos modernos. Varanda com vista agradável, onde você pode desfrutar do clima tropical e apreciar momentos de tranquilidade. Área de serviço separada, para maior comodidade. O condomínio oferece diversas comodidades, como: Piscina para refrescar-se nos dias ensolarados. Áreas de lazer, incluindo churrasqueira e salão de festas, ideais para confraternizações com amigos e familiares. A localização é um dos grandes diferenciais deste apartamento, pois está estrategicamente posicionado próximo às praias dos Ingleses e Santinho. Com apenas alguns passos, você pode desfrutar de areias brancas, mar cristalino e paisagens deslumbrantes. Além disso, a região oferece uma infraestrutura completa, com supermercados, restaurantes, escolas e outros serviços essenciais. Não perca a oportunidade de adquirir este apartamento incrível, perfeito para quem busca viver próximo às praias mais famosas de Florianópolis. Entre em contato conosco para agendar uma visita e conhecer todos os detalhes deste imóvel encantador. Aproveite o estilo de vida único que a região oferece!',
     price: 'R$ 450.000,00',
@@ -46,8 +46,8 @@ const properties = [
     id: crypto.randomUUID(),
     brokerId: BROKER_ID,
     RKCode: '8843',
-    title: 'INGLESES NORTE - Cannes Club Residence',
-    region: 'Ingleses, Florianópolis',
+    title: 'Ingleses Norte',
+    region: 'Cannes Club Residence',
     description:
       'OPORTUNIDADE!! POSSIBILIDADE DE FINANCIAMENTO DIRETO!! Imóvel em processo de individualização de matrícula!   Belíssimo apartamento de dois dormitórios com uma suite, banheiro social, varanda com churrasqueira, duas vagas paralelas de garagem e hobby box. CANNES CLUB RESIDENCE é um empreendimento localizado na região nobre da praia dos Ingleses, Norte da Ilha de Florianópolis. A 300m do mar, na Rua dos Canudos, com estrutura de lazer, piscina, salão de festas, brinquedoteca e academia.',
     price: 'R$ 620.000,00',
@@ -69,8 +69,8 @@ const properties = [
     id: crypto.randomUUID(),
     brokerId: BROKER_ID,
     RKCode: '8430',
-    title: 'INGLESES NORTE - Costão dos Ingleses',
-    region: 'Ingleses, Florianópolis',
+    title: 'Ingleses Norte',
+    region: 'Costão dos Ingleses',
     description:
       'Imóvel com matrícula! Imperdível! Trata-se de um apartamento em uma localização verdadeiramente privilegiada na deslumbrante Praia dos Ingleses. Com 3 dormitórios, incluindo uma suíte elegante, todos os cômodos estão equipados com móveis planejados, duas vagas de garagem e Hobbybox. Além disso, você encontrará um banheiro social e uma sacada com churrasqueira, proporcionando uma vista encantadora da rua. E o melhor de tudo: está a apenas 300 metros do mar. Esta é uma oportunidade incrível para você e sua família desfrutarem de um lar excepcional!',
     price: 'R$ 775.000,00',
