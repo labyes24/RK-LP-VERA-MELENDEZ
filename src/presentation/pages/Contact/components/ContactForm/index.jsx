@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useBrokerProfile } from '../../../../../data/BrokerData'
 import { sendMail } from '../../../../../services/sendMail'
+import { toast } from 'react-toastify'
 
 import { TextInput } from '../../../../components/TextInput'
 import { TextArea } from '../../../../components/TextArea'
@@ -45,12 +46,12 @@ export function ContactForm() {
     sendMail(data.name, messageText, sendMailTo)
       .then(response => {
         if (response.status === 200) {
-          alert('Mensagem enviada com sucesso!')
+          toast.success('Mensagem enviada com sucesso!')
           event.target.reset()
         }
       })
       .catch(error => {
-        alert('Ocorreu um erro. \nPor favor, tente novamente mais tarde.')
+        toast.error('Ocorreu um erro. \nPor favor, tente novamente mais tarde.')
         console.error(error)
       })
       .finally(() => {
