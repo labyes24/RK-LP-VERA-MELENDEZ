@@ -16,6 +16,7 @@ export const Container = styled.div`
 
   > div img:nth-child(1) {
     ${({ $removeelipses }) => ($removeelipses ? null : 'position : absolute')};
+    filter: drop-shadow(-10px 0px 4px rgba(0, 0, 0, 0.25));
   }
 
   > div img:nth-child(2) {
