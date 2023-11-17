@@ -62,6 +62,10 @@ export const ImageContainer = styled.div`
       img:nth-child(2) {
         width: 42.7rem !important;
       }
+
+      img:nth-child(1) {
+        left: 5%;
+      }
     }
   }
 `
