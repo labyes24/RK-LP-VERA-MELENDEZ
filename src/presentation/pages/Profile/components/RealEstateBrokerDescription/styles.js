@@ -14,6 +14,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 2.4rem 4.8rem 2.4rem 3.5rem;
+    border-radius: 3.5rem 1.6rem 1.6rem 1.6rem;
 
     article {
       margin: 0 0 0 0;
