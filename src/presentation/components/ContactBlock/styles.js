@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.aside`
-  max-width: 38rem;
+  max-width: 34rem;
+
   width: 100%;
 
   padding: 1rem;
 
   word-wrap: break-word;
 
-  @media (max-width: 768px) {
+  @media (max-width: 704px) {
     max-width: 28rem;
   }
 
@@ -54,16 +55,13 @@ export const Container = styled.aside`
       }
     }
 
-    :first-child {
-      align-items: start;
-    }
-
     :nth-child(3) {
       font-size: 2.4rem;
+      column-gap: 0.8rem;
 
       img {
-        width: 3.6rem;
-        height: 3.6rem;
+        width: 4rem;
+        height: 4rem;
       }
     }
 
@@ -72,10 +70,11 @@ export const Container = styled.aside`
 
       :nth-child(3) {
         font-size: 2rem;
+        column-gap: 1.1rem;
 
         img {
-          width: 3rem;
-          height: 3rem;
+          width: 2.5rem;
+          height: 2.5rem;
         }
       }
     }
