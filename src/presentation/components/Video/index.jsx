@@ -16,7 +16,6 @@ export function Video({ src = video, ...rest }) {
           controls
           autoPlay
           muted
-          loop
           onError={() => setVideoError(true)}
           {...rest}
         >
