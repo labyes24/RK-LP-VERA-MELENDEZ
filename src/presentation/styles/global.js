@@ -18,15 +18,14 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.white};
     font-family: ${props => props.theme.FONTS.Primary};
     font-size: 1.6rem;
-
     min-height: 99vh;
-    overflow-x: hidden;
+
   }
 
   #root {
     display: flex;
     justify-content: center;
     min-height: 99vh;
-    
+  
   }
 `

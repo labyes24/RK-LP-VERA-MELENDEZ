@@ -61,9 +61,13 @@ export const Links = styled.ul`
   top: 0;
   bottom: 0;
   z-index: 2;
+  overflow: hidden;
 
-  transform: ${({ $opened }) =>
-    $opened ? 'translateX(0)' : 'translateX(100%)'};
+  /* transform: ${({ $opened }) =>
+    $opened ? 'translateX(0)' : 'translateX(100%)'}; */
+
+  width: ${({ $opened }) => ($opened ? '25rem' : 0)};
+
   transition: all 0.3s ease;
 
   @media (min-width: 1024px) {
