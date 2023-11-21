@@ -14,8 +14,8 @@ export const Container = styled.div`
   }
 
   &::before {
+    position: fixed;
     display: flex;
-    position: absolute;
     content: '';
 
     top: 0;
@@ -57,16 +57,15 @@ export const Links = styled.ul`
 
   background-color: ${({ theme }) => theme.COLORS['blue-titan']};
 
-  position: absolute;
-  width: 25rem;
+  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: 2;
-  overflow: hidden;
 
-  /* transform: ${({ $opened }) =>
-    $opened ? 'translateX(0)' : 'translateX(100%)'}; */
+  width: 25rem;
+
+  overflow: hidden;
 
   width: ${({ $opened }) => ($opened ? '25rem' : 0)};
 

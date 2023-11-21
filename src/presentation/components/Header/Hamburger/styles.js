@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  ${({ $opened }) => ($opened ? 'position: fixed;' : '')};
+  ${({ $opened }) => ($opened ? 'right: 2rem;' : '')};
+
   z-index: 3;
 
   input {
