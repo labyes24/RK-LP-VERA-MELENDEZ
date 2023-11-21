@@ -1,7 +1,9 @@
 import { Container } from './styles'
 import { WhatsappButton } from '../../components/WhatsappButton'
+import { useBrokerProfile } from '../../../data/BrokerData'
 
 export function PrivatePolicy() {
+  const { phone } = useBrokerProfile()
   return (
     <Container>
       <h1>Política de Privacidade</h1>
@@ -32,7 +34,7 @@ export function PrivatePolicy() {
           para informá-lo sobre novidades.
         </p>
       </section>
-      <WhatsappButton />
+      <WhatsappButton phoneNumber={phone} />
     </Container>
   )
 }
