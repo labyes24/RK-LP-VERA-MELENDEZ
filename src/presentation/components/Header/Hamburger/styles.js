@@ -4,7 +4,7 @@ export const Container = styled.div`
   ${({ $opened }) => ($opened ? 'position: fixed;' : '')};
   ${({ $opened }) => ($opened ? 'right: 2rem;' : '')};
 
-  z-index: 3;
+  z-index: 5;
 
   input {
     display: none;

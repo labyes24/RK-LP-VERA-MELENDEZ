@@ -9,7 +9,7 @@ export const Container = styled.button`
     bottom: 2.2rem;
     right: 3.2rem;
 
-    z-index: 999;
+    z-index: 3;
 
     transition: all 0.3s ease-in;
 

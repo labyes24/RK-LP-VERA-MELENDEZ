@@ -23,7 +23,7 @@ export const Container = styled.div`
     left: 0;
     right: 0;
 
-    z-index: ${({ $opened }) => ($opened ? 1 : -1)};
+    z-index: ${({ $opened }) => ($opened ? 4 : -1)};
 
     background-color: ${({ $opened }) =>
       $opened ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
@@ -40,7 +40,6 @@ export const Container = styled.div`
   }
 `
 export const Logo = styled(NavLink)`
-  z-index: 3;
   img {
     width: 20rem;
     @media (min-width: 1024px) {
@@ -61,7 +60,7 @@ export const Links = styled.ul`
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 4;
 
   width: 25rem;
 
