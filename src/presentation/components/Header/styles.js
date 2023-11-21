@@ -26,7 +26,7 @@ export const Container = styled.div`
     z-index: ${({ $opened }) => ($opened ? 4 : -1)};
 
     background-color: ${({ $opened }) =>
-      $opened ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
+      $opened ? 'rgb(0 25 50 / 5%)' : 'transparent'};
     backdrop-filter: blur(3px);
     opacity: ${({ $opened }) => ($opened ? 0.7 : 0)};
 

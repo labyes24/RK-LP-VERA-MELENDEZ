@@ -31,11 +31,16 @@ export function Header({ paths = routes }) {
       <Logo to={paths[0].route}>
         <img src={logoRKI} alt="Logo da RK Imóveis" />
       </Logo>
-      <Hamburger $opened={openMenuHambuger} onChange={handleOpenMenuHambuger} />
+
+      <Hamburger
+        $opened={openMenuHambuger}
+        checked={openMenuHambuger}
+        onChange={handleOpenMenuHambuger}
+      />
 
       <Links $opened={openMenuHambuger}>
         {paths.slice(1).map(path => (
-          <LinkWrapper key={path.name}>
+          <LinkWrapper key={path.name} onClick={handleOpenMenuHambuger}>
             <NavLink to={path.route}>
               <span>{path.name}</span>
             </NavLink>
