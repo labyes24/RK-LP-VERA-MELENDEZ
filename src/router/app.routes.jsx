@@ -24,6 +24,7 @@ import { CarouselTest } from '../presentation/components/Carousel/test'
 import { Profile } from '../presentation/pages/Profile'
 import { Home } from '../presentation/pages/Home'
 import { Properties } from '../presentation/pages/Properties'
+import { PrivatePolicy } from '../presentation/pages/PrivatePolicy'
 export function RoutesApp() {
   return (
     <Routes>
@@ -33,6 +34,7 @@ export function RoutesApp() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/properties" element={<Properties />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privatePolicy" element={<PrivatePolicy />} />
       </Route>
 
       {/* Test Routes */}
