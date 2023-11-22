@@ -203,7 +203,10 @@ export function ContactForm() {
       <footer>
         <p>
           Ao informar meus dados eu concordo com a{' '}
-          <a href="/privatePolicy">Política de privacidade</a>.
+          <a href="/privatePolicy" target="_blank">
+            Política de privacidade
+          </a>
+          .
         </p>
 
         <ShortButton size="small" type="submit" isLoading={isFormSubmitted}>
