@@ -22,7 +22,7 @@ export function Contact() {
       </div>
       <div className="contact">
         <ContactBlock
-          address={`${brokerAddress.street}, ${brokerAddress.number} ${brokerAddress.district} ${brokerAddress.city}-${brokerAddress.state}`}
+          address={`${brokerAddress.street}, ${brokerAddress.number} ${brokerAddress.district} - ${brokerAddress.city}-${brokerAddress.state}`}
           email={brokerEmail}
           phoneNumber={brokerPhoneNumber}
         />

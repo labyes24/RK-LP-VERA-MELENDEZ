@@ -1,19 +1,16 @@
 import { Container } from './styles'
 import { ContactBlock } from '../index'
-
-const ContactData = {
-  address: 'Rua das Gaivotas, 1709 - Ingleses Florianópolis - SC',
-  email: 'winnetou@rkimoveis.com.br',
-  phoneNumber: '(48) 98826-2951',
-}
+import { useBrokerProfile } from '../../../../data/BrokerData'
 
 export function ContactBlockTest() {
+  const { email, phone, address } = useBrokerProfile()
+
   return (
     <Container>
       <ContactBlock
-        address={ContactData.address}
-        email={ContactData.email}
-        phoneNumber={ContactData.phoneNumber}
+        address={`${address.street}, ${address.number} ${address.district} - ${address.city}-${address.state}`}
+        email={email}
+        phoneNumber={phone}
       />
     </Container>
   )
