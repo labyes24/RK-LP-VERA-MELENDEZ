@@ -1,8 +1,16 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  @keyframes appear {
+    from {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
   ${({ $opened }) => ($opened ? 'position: fixed;' : '')};
   ${({ $opened }) => ($opened ? 'right: 2rem;' : '')};
+
+  animation: appear 1s;
 
   z-index: 5;
 
@@ -20,7 +28,7 @@ export const Container = styled.div`
     align-items: flex-end;
     justify-content: center;
     gap: 6px;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     transform-origin: 2rem center;
   }
 
@@ -32,36 +40,36 @@ export const Container = styled.div`
   }
 
   span:nth-child(2) {
-    transition-duration: 0.6s;
+    transition-duration: 1s;
     width: 75%;
   }
 
   input:checked + label {
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     transform: rotate(180deg);
   }
 
   input:checked + label span {
     position: absolute;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     background-color: ${({ theme }) => theme.COLORS['blue-sky-700']};
   }
 
   input:checked + label span:first-child {
     width: 75%;
     transform: rotate(45deg);
-    transition-duration: 0.5s;
+    transition-duration: 1s;
   }
 
   input:checked + label span:nth-child(2) {
     transform: scaleX(0);
-    transition-duration: 0.1s;
+    transition-duration: 1s;
   }
 
   input:checked + label span:last-child {
     width: 75%;
     transform: rotate(-45deg);
-    transition-duration: 0.5s;
+    transition-duration: 1s;
   }
   @media (min-width: 1024px) {
     display: none;

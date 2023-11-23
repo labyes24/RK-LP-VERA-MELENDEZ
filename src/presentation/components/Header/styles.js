@@ -69,7 +69,7 @@ export const Links = styled.ul`
 
   width: ${({ $opened }) => ($opened ? '25rem' : 0)};
 
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 
   @media (min-width: 1024px) {
     position: unset;
