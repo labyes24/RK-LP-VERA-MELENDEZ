@@ -69,7 +69,7 @@ export function ContactForm() {
 
           <div className="inputWrapper">
             <label htmlFor="name">
-              Nome: <span>(Campo obrigatório):</span>
+              Nome <span>(Campo obrigatório):</span>
             </label>
             <TextInput
               placeholder="Digite seu nome"
@@ -94,7 +94,7 @@ export function ContactForm() {
 
             <div className="inputWrapper">
               <label htmlFor="whatsapp">
-                Whatsapp: <span>(Campo obrigatório):</span>
+                Whatsapp <span>(Campo obrigatório):</span>
               </label>
               <TextInput
                 placeholder="+55 (00) 00000-0000"
