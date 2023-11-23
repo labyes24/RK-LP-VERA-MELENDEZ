@@ -119,16 +119,13 @@ export const Description = styled.p`
   font-weight: 400;
   line-height: 160%;
   max-height: 14rem;
+  padding-right: 1rem;
   color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
   overflow-y: auto;
   scrollbar-width: auto;
 
   scrollbar-color: ${({ theme }) => theme.COLORS['zinc-400']} transparent;
-
-  @media (min-width: 1024px) {
-    font-size: 1.8rem;
-  }
 
   &::-webkit-scrollbar {
     width: 8px;
