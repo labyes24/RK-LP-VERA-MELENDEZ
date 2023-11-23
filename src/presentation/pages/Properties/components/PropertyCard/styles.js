@@ -7,7 +7,7 @@ export const Container = styled.div`
   gap: 1rem;
   border-radius: 0.8rem;
   height: fit-content;
-  width: 36rem;
+  width: 32rem;
   background-color: ${({ theme }) => theme.COLORS['blue-titan']};
   @media (min-width: 1024px) {
     display: flex;
