@@ -2,18 +2,19 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: grid;
-  grid-template-rows: 2fr 4fr;
-  padding: 3.2rem 1.6rem;
-  gap: 1.6rem;
+  /* grid-template-rows: 2fr 3fr; */
+  padding: 1.6rem;
+  gap: 1rem;
   border-radius: 0.8rem;
-  height: 100%;
+  height: fit-content;
   width: 36rem;
   background-color: ${({ theme }) => theme.COLORS['blue-titan']};
   @media (min-width: 1024px) {
     display: flex;
-    width: 105.8rem;
-    gap: 4.8rem;
-    padding: 4.8rem;
+    height: fit-content;
+    width: 95rem;
+    gap: 3.2rem;
+    padding: 3.2rem;
     border-radius: 1.6rem;
   }
 `
@@ -43,11 +44,12 @@ export const ImageSection = styled.section`
 
 export const DescriptionSection = styled.section`
   display: grid;
-  gap: 1.6rem;
+  height: fit-content;
+  gap: 1rem;
 
   @media (min-width: 1024px) {
     display: grid;
-    gap: 4.5rem;
+    gap: 2rem;
     justify-items: space-between;
     width: 100%;
   }
@@ -55,7 +57,7 @@ export const DescriptionSection = styled.section`
 
 export const Header = styled.div`
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 
   font-style: normal;
   font-weight: 700;
@@ -112,11 +114,11 @@ export const Tags = styled.div`
 
 export const Description = styled.p`
   font-family: ${({ theme }) => theme.FONTS.Secundary};
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
-  max-height: 15rem;
+  max-height: 14rem;
   color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
   overflow-y: auto;
@@ -140,6 +142,9 @@ export const Description = styled.p`
     background-color: ${({ theme }) => theme.COLORS['zinc-400']};
     border-radius: 10px;
     border: 3px none transparent;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.8rem;
   }
 `
 
