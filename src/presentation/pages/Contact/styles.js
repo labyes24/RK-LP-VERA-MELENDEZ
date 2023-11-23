@@ -62,7 +62,7 @@ export const Container = styled.div`
         font-family: ${props => props.theme.FONTS.Primary};
       }
       > p {
-        padding: 1.6rem 0 3.2rem 0;
+        padding: 1.6rem 0 0.7rem 0;
         font-weight: bold;
         font-size: 2rem;
 
