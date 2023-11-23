@@ -69,7 +69,7 @@ export function ContactForm() {
 
           <div className="inputWrapper">
             <label htmlFor="name">
-              Nome <span>(Campo obrigatório):</span>
+              Nome: <span>(Campo obrigatório):</span>
             </label>
             <TextInput
               placeholder="Digite seu nome"
@@ -82,7 +82,7 @@ export function ContactForm() {
 
           <div className="inRow">
             <div className="inputWrapper">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email:</label>
               <TextInput
                 placeholder="Digite seu e-mail"
                 type="email"
@@ -94,7 +94,7 @@ export function ContactForm() {
 
             <div className="inputWrapper">
               <label htmlFor="whatsapp">
-                Whatsapp <span>(Campo obrigatório):</span>
+                Whatsapp: <span>(Campo obrigatório):</span>
               </label>
               <TextInput
                 placeholder="+55 (00) 00000-0000"
@@ -115,7 +115,7 @@ export function ContactForm() {
 
           <div className="inRow">
             <div className="inputWrapper">
-              <label htmlFor="local">Localização </label>
+              <label htmlFor="local">Localização: </label>
               <TextInput
                 placeholder="Cidade, bairro..."
                 name="local"
@@ -124,7 +124,7 @@ export function ContactForm() {
             </div>
 
             <div className="inputWrapper">
-              <label htmlFor="purpose">Finalidade</label>
+              <label htmlFor="purpose">Finalidade:</label>
               <SelectOption name="purpose" id="purpose" defaultValue="">
                 <option value="" hidden>
                   Selecione
@@ -138,7 +138,7 @@ export function ContactForm() {
 
           <div className="inRow">
             <div className="inputWrapper">
-              <label htmlFor="category">Categoria</label>
+              <label htmlFor="category">Categoria:</label>
               <SelectOption name="category" id="category" defaultValue="">
                 <option value="" hidden>
                   Selecione
@@ -152,7 +152,7 @@ export function ContactForm() {
             </div>
 
             <div className="inputWrapper">
-              <label htmlFor="bedroom">Quartos</label>
+              <label htmlFor="bedroom">Quartos:</label>
               <SelectOption name="bedroom" id="bedroom" defaultValue="">
                 <option value="" hidden>
                   Selecione
@@ -168,7 +168,7 @@ export function ContactForm() {
 
           <div className="inRow">
             <div className="inputWrapper">
-              <label htmlFor="min_value">Valor mínimo</label>
+              <label htmlFor="min_value">Valor mínimo:</label>
               <TextInput
                 placeholder="Mín (R$)"
                 type="number"
@@ -178,7 +178,7 @@ export function ContactForm() {
             </div>
 
             <div className="inputWrapper">
-              <label htmlFor="max_value">Valor máximo</label>
+              <label htmlFor="max_value">Valor máximo:</label>
               <TextInput
                 placeholder="Máx (R$)"
                 type="number"
@@ -189,7 +189,7 @@ export function ContactForm() {
           </div>
 
           <div className="inputWrapper">
-            <label htmlFor="extra_info">Informações extras</label>
+            <label htmlFor="extra_info">Informações extras:</label>
             <TextArea
               placeholder="Preferências de imóveis na planta e/ou interesse do imóvel..."
               name="extra_info"
