@@ -30,11 +30,12 @@ export const Container = styled.div`
     border-radius: 0.8rem;
   }
 
+  /* desktop */
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
-    padding: 0 5rem 1rem;
+    padding: 0 2rem 0 1rem;
 
     grid-template-areas:
       'null  titles titles'
@@ -42,10 +43,14 @@ export const Container = styled.div`
 
     .image {
       display: block;
+      position: relative;
       transform: translate(0, 42px);
       z-index: -1;
 
-      margin-bottom: 10%;
+      /* Corrige o problema do footer entrar na imagem */
+      img {
+        width: 99% !important;
+      }
     }
 
     > .titles {
@@ -67,6 +72,7 @@ export const Container = styled.div`
     > .form {
       grid-area: form;
       border-radius: 0.8rem;
+      padding-bottom: 2rem;
     }
 
     > .contact {
@@ -75,6 +81,11 @@ export const Container = styled.div`
       grid-area: contact;
       position: relative;
       justify-content: space-between;
+
+      /* Esse aside é o ContactBlock */
+      aside {
+        padding-left: 2rem;
+      }
     }
   }
 `
