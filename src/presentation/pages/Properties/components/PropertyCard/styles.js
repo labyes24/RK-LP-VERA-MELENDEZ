@@ -128,7 +128,7 @@ export const Description = styled.p`
   scrollbar-color: ${({ theme }) => theme.COLORS['zinc-400']} transparent;
 
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
