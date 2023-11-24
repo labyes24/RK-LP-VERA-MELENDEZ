@@ -52,12 +52,11 @@ const brokerProfile = {
   profileImage: '/broker/tom2.png',
   description: {
     title:
-      'Pai do Bento e marido da Luciana, praticante de artes marciais e nas horas vagas se arrisca a cantar, tocando violão',
+      '"Pai do Bento e marido da Luciana, praticante de artes marciais e nas horas vagas se arrisca a cantar, tocando violão."',
     paragraph: [
       'Apresento-me como seu corretor de imóveis, especializado em oferecer mais do que propriedades, vendo informações estratégicas e oportunidades de investimento sólido no dinâmico mercado imobiliário.',
       'Estou aqui para ser seu guia confiável nessa jornada, proporcionando acesso aos insights valiosos sobre tendências do mercado, recomendações personalizadas para investimentos sólidos e orientação em cada etapa, desde pesquisa até a negociação de sucesso para as partes envolvidas.',
-      'Super-dica: na hora de negociar, solicite as certidões negativas necessárias para a realização da escritura.',
-      'Confira mais dicas valiosas abaixo!',
+      'Lembre-se: Na hora de negociar, solicite as certidões negativas necessárias para a realização da escritura.',
     ],
   },
   address: {

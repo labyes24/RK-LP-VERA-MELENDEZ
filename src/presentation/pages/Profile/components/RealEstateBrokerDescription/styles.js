@@ -14,7 +14,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 2.4rem 4.8rem 2.4rem 3.5rem;
-    border-radius: 3.5rem 1.6rem 1.6rem 1.6rem;
+    border-radius: 5.5rem 1.6rem 1.6rem 1.6rem;
 
     article {
       margin: 0 0 0 0;
@@ -109,10 +109,12 @@ export const CopyGroup = styled.div`
     line-height: 140%;
     font-size: 1.2rem;
     font-family: ${({ theme }) => theme.FONTS.Secondary};
+    text-align: justify;
   }
 
   strong {
     font-weight: 700;
+    font-style: italic;
   }
 
   @media screen and (min-width: 1440px) {
@@ -121,6 +123,7 @@ export const CopyGroup = styled.div`
     strong,
     p {
       font-size: 1.6rem;
+      padding-right: 1.2rem;
     }
 
     .paragraphs {
