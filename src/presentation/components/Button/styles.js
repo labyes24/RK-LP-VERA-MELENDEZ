@@ -8,8 +8,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   gap: 1rem;
 
-  padding: ${({ $size }) =>
-    $size === 'large' ? '1.6rem 2.4rem' : '0.8rem 2.4rem'};
+  padding: ${({ $size }) => ($size === 'large' ? '1.6rem ' : '0.8rem 2.4rem')};
 
   border: none;
   color: ${({ theme }) => theme.COLORS.white};
@@ -28,7 +27,7 @@ export const StyledButton = styled.button`
   }
 
   @media screen and (min-width: 1440px) {
-    padding: ${({ $size }) => ($size === 'large' ? '2.4rem' : '1.6rem 2.4rem')};
-    font-size: ${({ $size }) => ($size === 'large' ? '3.6rem' : '1.8rem')};
+    padding: ${({ $size }) => ($size === 'large' ? '1.6rem' : '1.6rem 2.4rem')};
+    font-size: ${({ $size }) => ($size === 'large' ? '3rem' : '1.8rem')};
   }
 `

@@ -141,7 +141,7 @@ export const Description = styled.p`
     border: 3px none transparent;
   }
   @media (min-width: 1024px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `
 
