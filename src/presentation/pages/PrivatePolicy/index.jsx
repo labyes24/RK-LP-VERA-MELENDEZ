@@ -14,9 +14,12 @@ export function PrivatePolicy() {
             A empresa responsável por coletar, processar e usar dados pessoais
             nos termos da Lei Geral de Proteção de Dados Pessoais (LGPDP) é:
             <span>
-              RK Imóveis Rua das Gaivotas, 1709 – Salas 102 e 104 – Ingleses do
-              Rio Vermelho | 88058-500 | Florianópolis | SC Telefone: (48)
-              3266-0866 E-mail:contato@rkimoveis.com.br
+              <strong className="title">RK Imóveis</strong> <br />
+              Rua das Gaivotas, 1709 – Salas 102 e 104 <br />
+              Ingleses do Rio Vermelho <br />
+              CEP: 88058-500 - Florianópolis-SC <br />
+              Telefone: (48) 3266-0866 <br />
+              E-mail: contato@rkimoveis.com.br
             </span>
             Esta declaração de privacidade de dados tem como objetivo divulgar
             informações sobre a coleta, o processamento e o uso (doravante

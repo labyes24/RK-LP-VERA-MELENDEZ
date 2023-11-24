@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 3.2rem 2.5rem;
+  padding: 3rem 2rem;
 
   > main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
 
     h1 {
       font-size: 2.4rem;
@@ -34,15 +35,14 @@ export const Container = styled.div`
         flex-direction: column;
         font-size: 1.6rem;
         font-family: ${({ theme }) => theme.FONTS.Primary};
-        line-height: 2rem;
+        line-height: 2.2rem;
         text-align: justify;
         margin-bottom: 2rem;
 
         span {
-          width: 22rem;
           margin: 2rem 0;
           font-weight: 500;
-          line-height: 2rem;
+          line-height: 2.2rem;
           color: ${({ theme }) => theme.COLORS['zinc-100']};
         }
       }
@@ -59,6 +59,7 @@ export const Container = styled.div`
 
         > span {
           width: 80rem;
+          line-height: 2rem;
         }
       }
     }
