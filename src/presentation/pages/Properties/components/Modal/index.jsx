@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import { Button } from '../../../../components/Button'
 import {
   Container,
   StyledModal,
@@ -102,7 +103,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
             </div>
           </InputGroup>
 
-          <button type="submit">Envie seu contato</button>
+          <Button type="submit">Envie seu contato</Button>
         </Form>
       </StyledModal>
     </Container>

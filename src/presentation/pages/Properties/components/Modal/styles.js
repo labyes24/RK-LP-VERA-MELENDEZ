@@ -112,22 +112,6 @@ export const Form = styled.form`
 
   button[type='submit'] {
     padding: 1.6rem 3.2rem;
-
-    background-color: ${({ theme }) =>
-      theme.COLORS['blue-sky-600']}; /*form/button-background-color */
-    border: none;
-    border-radius: 8px;
-
-    color: ${({ theme }) => theme.COLORS.white}; /* form/background */
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-family: ${({ theme }) => theme.FONTS.Primary}, sans-serif;
-
-    &:hover {
-      cursor: pointer;
-      filter: brightness(1.3);
-    }
-
     @media screen and (min-width: 524px) {
       font-size: 2rem;
     }
