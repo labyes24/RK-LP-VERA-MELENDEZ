@@ -37,7 +37,7 @@ export function Carousel({
       1024: {
         //abaixo de 1024
         // arrows: length <= PER_PAGE_MOBILE,
-        arrows: false,
+        arrows: true,
         type: length === PER_PAGE_MOBILE ? '' : 'loop',
         perPage: PER_PAGE_MOBILE,
         gap: '1rem',
