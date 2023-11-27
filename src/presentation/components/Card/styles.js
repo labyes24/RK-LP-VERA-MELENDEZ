@@ -44,7 +44,7 @@ export const CardContainer = styled.div`
     font-family: ${({ theme }) => theme.FONTS.Secondary};
     color: ${({ theme }) => theme.COLORS.white};
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     line-height: 1.4;
   }
@@ -72,7 +72,7 @@ export const CardContainer = styled.div`
     height: 19rem;
 
     > blockquote {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     }
 
     > cite {
