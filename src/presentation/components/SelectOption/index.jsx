@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { SelectContainer } from './styles'
 
 /**
@@ -7,5 +8,15 @@ import { SelectContainer } from './styles'
  * @return {JSX.Element} The styled SelectOption component.
  */
 export function SelectOption({ children, ...rest }) {
-  return <SelectContainer {...rest}>{children}</SelectContainer>
+  const [hasChanged, setHasChanged] = useState(false)
+
+  return (
+    <SelectContainer
+      onChange={() => setHasChanged(true)}
+      hasChanged={hasChanged}
+      {...rest}
+    >
+      {children}
+    </SelectContainer>
+  )
 }

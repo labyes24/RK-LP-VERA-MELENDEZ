@@ -1,10 +1,13 @@
 import { styled } from 'styled-components'
 
 import ChevronDown from '../../assets/chevron-down.svg'
+
 export const SelectContainer = styled.select`
   background-color: ${({ theme }) => theme.COLORS['zinc-50']};
   border: 1px solid ${({ theme }) => theme.COLORS['blue-sky-600']};
-  color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+
+  color: ${({ hasChanged, theme }) =>
+    hasChanged ? theme.COLORS['blue-sky-700'] : theme.COLORS['zinc-200']};
 
   border-radius: 8px;
   padding: 10px 16px;
