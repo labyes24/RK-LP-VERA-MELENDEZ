@@ -13,7 +13,7 @@ export function SelectOption({ children, ...rest }) {
   return (
     <SelectContainer
       onChange={() => setHasChanged(true)}
-      hasChanged={hasChanged}
+      $hasChanged={hasChanged}
       {...rest}
     >
       {children}
