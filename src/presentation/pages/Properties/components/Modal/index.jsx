@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 
 import { sendMail } from '../../../../../services/sendMail'
@@ -25,6 +25,8 @@ import closeIcon from '../../../../assets/x-close-icon.svg'
  * @return {JSX.Element} The styled Modal component.
  */
 export function Modal({ isOpen, onCloseModal, propertyCode }) {
+  const [isLoading, setIsLoading] = useState(false)
+
   const { email } = useBrokerProfile()
 
   const devMode = import.meta.env.DEV
@@ -35,6 +37,8 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
     event => {
       if (event && event.target) {
         event.preventDefault()
+
+        setIsLoading(true)
 
         const formData = new FormData(event.target)
         const data = Object.fromEntries(formData)
@@ -50,6 +54,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
           .then(response => {
             if (response.status === 200) {
               toast.success('Mensagem enviada com sucesso!')
+              setIsLoading(false)
               event.target.reset()
             }
           })
@@ -134,7 +139,9 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
             </div>
           </InputGroup>
 
-          <Button type="submit">Envie seu contato</Button>
+          <Button type="submit" isLoading={isLoading}>
+            Envie seu contato
+          </Button>
         </Form>
       </StyledModal>
     </Container>
