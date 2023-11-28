@@ -1,4 +1,8 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
+import { toast } from 'react-toastify'
+
+import { sendMail } from '../../../../../services/sendMail'
+import { useBrokerProfile } from '../../../../../data/BrokerData'
 
 import { Button } from '../../../../components/Button'
 import {
@@ -21,6 +25,45 @@ import closeIcon from '../../../../assets/x-close-icon.svg'
  * @return {JSX.Element} The styled Modal component.
  */
 export function Modal({ isOpen, onCloseModal, propertyCode }) {
+  const { email } = useBrokerProfile()
+
+  const devMode = import.meta.env.DEV
+
+  let sendMailTo = devMode ? import.meta.env.VITE_EMAILJS_MAIL_TEST : email
+
+  const handleSubmit = useCallback(
+    event => {
+      if (event && event.target) {
+        event.preventDefault()
+
+        const formData = new FormData(event.target)
+        const data = Object.fromEntries(formData)
+
+        const messageText = `Dados pessoais: \n
+          Nome: ${data?.name ?? '(Informação não preenchida)'}
+          Email: ${data?.email ? data?.email : '(Informação não preenchida)'}
+          Whatsapp: ${data?.phone ?? '(Informação não preenchida)'}
+          Código do Imóvel: ${propertyCode ?? '(Informação não preenchida)'}
+          `
+
+        sendMail(data.name, messageText, sendMailTo)
+          .then(response => {
+            if (response.status === 200) {
+              toast.success('Mensagem enviada com sucesso!')
+              event.target.reset()
+            }
+          })
+          .catch(error => {
+            toast.error(
+              'Ocorreu um erro. \nPor favor, tente novamente mais tarde.',
+            )
+            console.error(error)
+          })
+      }
+    },
+    [propertyCode, sendMailTo],
+  )
+
   useEffect(() => {
     window.addEventListener('keyup', event => {
       if (event.key === 'Escape' && isOpen) onCloseModal()
@@ -35,19 +78,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
         if (event.key === 'Enter' && isOpen) handleSubmit()
       })
     }
-  }, [onCloseModal, isOpen])
-
-  function handleSubmit(event) {
-    if (event && event.target) {
-      event.preventDefault()
-
-      const formData = new FormData(event.target)
-      const data = Object.fromEntries(formData)
-      alert('Formulário enviado!')
-
-      location.reload()
-    }
-  }
+  }, [handleSubmit, isOpen, onCloseModal])
 
   return isOpen ? (
     <Container>
