@@ -6,8 +6,8 @@ import {
   Tags,
   Description,
   Price,
+  PropertiesButton,
 } from './styles'
-import { Button } from '../../../../components/Button'
 import { Tag } from '../../../../components/Tag'
 import { Carousel } from '../../../../components/Carousel'
 
@@ -82,12 +82,12 @@ export function PropertyCard({
         </Tags>
         <Description>{propertyInfo.description}</Description>
         <Price>{`${propertyInfo.price}`}</Price>
-        <Button
+        <PropertiesButton
           size="large"
           onClick={() => onInterestingProperty(propertyInfo.RKCode)}
         >
           Tenho interesse
-        </Button>
+        </PropertiesButton>
       </DescriptionSection>
     </Container>
   )

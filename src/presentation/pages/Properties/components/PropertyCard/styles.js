@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Button } from '../../../../components/Button'
+
 export const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 2fr;
@@ -156,4 +158,9 @@ export const Price = styled.p`
   @media (min-width: 1024px) {
     font-size: 2.4rem;
   }
+`
+
+export const PropertiesButton = styled(Button)`
+  padding: 1.5rem;
+  font-size: 2.4rem;
 `
