@@ -123,6 +123,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
                 type="email"
                 id="email"
                 placeholder="Seu melhor e-mail"
+                pattern=".*\.com$"
               />
             </div>
 
