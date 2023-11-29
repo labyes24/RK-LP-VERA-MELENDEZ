@@ -25,15 +25,15 @@ export const GlobalStyle = createGlobalStyle`
     width: 8px;
   }
   body::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.COLORS['zinc-150']};
+    background-color: ${({ theme }) => theme.COLORS['zinc-200']};
     border-radius: 10px;
     }
   body::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
+    background-color: ${({ theme }) => theme.COLORS['zinc-100']};
     border-radius: 10px;
   }
   body::-webkit-scrollbar-thumb:hover {
-    background-color: ${({ theme }) => theme.COLORS['blue-sky-100']};    
+    background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};    
   }
   body::-webkit-scrollbar-thumb:active {
     background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
