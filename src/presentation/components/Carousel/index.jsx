@@ -67,11 +67,12 @@ export function Carousel({
 
   const pictureOption = {
     arrows: true,
-    type: 'loop',
+    type: 'fade',
     perPage: 1,
     width: '100%',
     height: '100%',
     drag: false,
+    rewind: true,
   }
 
   let settings = defaultOption
