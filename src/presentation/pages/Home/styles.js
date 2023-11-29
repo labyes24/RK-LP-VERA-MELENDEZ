@@ -20,10 +20,19 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
+  @keyframes appear {
+    from {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
+
   display: flex;
   flex-direction: column;
   gap: 4rem;
   margin: 4rem auto;
+
+  animation: appear ease-in 1.8s;
 
   .splide__arrow {
     height: 2rem;
