@@ -71,27 +71,51 @@ const brokerProfile = {
   comments: [
     {
       id: crypto.randomUUID(),
-      author: 'Paola Oliveira,  Atriz',
+      author: 'Crescimento Econômico',
       quote:
-        'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
+        'Investir em propriedades no Norte de Floripa significa fazer parte de uma comunidade em expansão.',
     },
     {
       id: crypto.randomUUID(),
-      author: 'Paola Oliveira,  Atriz',
+      author: 'Praia Paradisíaca',
       quote:
-        'Winnetou apresentou-se bastante solícito e acolhedor. Acompanhou cada etapa do processo com bastante cuidado. Profissional excelente, capacitado e atencioso com cada detalhe.',
+        'Quem mora em Ingleses tem acesso a um verdadeiro paraíso tropical: praia deslumbrante com águas cristalinas e areias brancas.',
     },
     {
       id: crypto.randomUUID(),
-      author: 'Manoel de Barros, Poeta',
+      author: 'Infraestrutura Completa',
       quote:
-        'Fazer negócios com a RK Imóveis é garantia de sucesso. Eu já comprei, vendi, fui locador e locatário de imóveis, e em todas as negociações fui bem atendido.',
+        'Escolas, clínicas médicas, supermercados, comércios locais proporcionam comodidade e praticidade no dia a dia.',
     },
     {
       id: crypto.randomUUID(),
-      author: 'Manoel',
+      author: 'Natureza Preservada',
       quote:
-        'Excelente atendimento, quando anunciei meu imóvel, foram muito atenciosos, e venderam ele muito rápido. Empresa séria e transparente. Recomendo!',
+        'As praias Ingleses e Santinho contam com áreas de preservação ambiental. Equilíbrio entre o desenvolvimento urbano e a natureza exuberante.',
+    },
+    {
+      id: crypto.randomUUID(),
+      author: 'Diversidade de Imóveis',
+      quote:
+        'A diversidade de opções imobiliárias permite encontrar o lar ideal para todos os gostos e necessidades.',
+    },
+    {
+      id: crypto.randomUUID(),
+      author: 'Acessibilidade',
+      quote:
+        'A região é bem conectada, facilitando o deslocamento para outras partes da ilha e para o continente.',
+    },
+    {
+      id: crypto.randomUUID(),
+      author: 'Esportes Aquáticos',
+      quote:
+        'Surf, Stand Up Paddle e outros esportes náuticos são populares graças às condições ideais oferecidas pelo mar local.',
+    },
+    {
+      id: crypto.randomUUID(),
+      author: 'Qualidade de Vida',
+      quote:
+        'A atmosfera relaxada, a natureza exuberante e a infraestrutura completa contribuem para uma experiência única.',
     },
   ],
   tips: [
