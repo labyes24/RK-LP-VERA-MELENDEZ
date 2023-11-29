@@ -52,6 +52,8 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
 
         sendMail(data.name, messageText, sendMailTo)
           .then(response => {
+            onCloseModal()
+
             if (response.status === 200) {
               toast.success('Mensagem enviada com sucesso!')
               setIsLoading(false)
@@ -63,7 +65,6 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
               'Ocorreu um erro. \nPor favor, tente novamente mais tarde.',
             )
             console.error(error)
-            onCloseModal()
           })
       }
     },
