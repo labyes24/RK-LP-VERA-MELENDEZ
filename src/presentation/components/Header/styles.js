@@ -115,7 +115,7 @@ export const LinkWrapper = styled.li`
 
     position: relative;
     text-decoration: none;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
     text-transform: uppercase;
@@ -150,6 +150,7 @@ export const LinkWrapper = styled.li`
     > a {
       padding: 0 0;
       color: ${({ theme }) => theme.COLORS['zinc-100']};
+      font-size: 2.2rem;
 
       &:hover {
         color: ${({ theme }) => theme.COLORS.white};
