@@ -42,9 +42,9 @@ export const Container = styled.div`
 `
 export const Logo = styled(NavLink)`
   img {
-    width: 20rem;
+    width: 15rem;
     @media (min-width: 1024px) {
-      width: 30rem;
+      width: 20rem;
     }
   }
 `
