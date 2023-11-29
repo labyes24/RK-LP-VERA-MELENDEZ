@@ -32,6 +32,7 @@ export function Carousel({
     perPage: PER_PAGE_DESKTOP,
     gap: '9rem',
     autoWidth: false,
+    autoplay: true,
     // drag: ,
     breakpoints: {
       1024: {
