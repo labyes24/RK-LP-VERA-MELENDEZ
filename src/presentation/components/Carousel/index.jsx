@@ -53,6 +53,8 @@ export function Carousel({
     gap: '3.2rem',
     focus: 'center',
     autoWidth: true,
+    autoplay: true,
+    pauseOnFocus: true,
 
     breakpoints: {
       1024: {
