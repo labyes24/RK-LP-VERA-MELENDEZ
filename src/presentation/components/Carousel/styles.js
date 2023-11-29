@@ -14,10 +14,6 @@ export const ContainerSplide = styled(Splide)`
       fill: ${({ theme }) => theme.COLORS['blue-sky-700']};
     }
   }
-  .splide__arrow--prev,
-  .splide__arrow--next {
-    top: 7rem;
-  }
 
   @media screen and (min-width: 1024px) {
     .splide__arrow {

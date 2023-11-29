@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 2rem;
-  
 
   > .bg-img {
     width: 100%;
@@ -26,6 +25,24 @@ export const Content = styled.div`
   gap: 4rem;
   margin: 4rem auto;
 
+  .splide__arrow {
+    height: 2rem;
+    width: 2rem;
+    top: 40%;
+    svg {
+      fill: ${({ theme }) => theme.COLORS['blue-sky-700']};
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+  .splide__arrow--prev {
+    left: 0.5rem;
+  }
+
+  .splide__arrow--next {
+    right: 0.5rem;
+  }
+
   > h2 {
     font-family: ${({ theme }) => theme.FONTS.Secondary};
     font-size: 4rem;
@@ -41,6 +58,14 @@ export const Content = styled.div`
   @media (min-width: 768px) {
     > h2 {
       font-size: 3.2rem;
+    }
+    .splide__arrow {
+      height: 3rem;
+      width: 3rem;
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
 `
