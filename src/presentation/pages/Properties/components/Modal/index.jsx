@@ -63,10 +63,11 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
               'Ocorreu um erro. \nPor favor, tente novamente mais tarde.',
             )
             console.error(error)
+            onCloseModal()
           })
       }
     },
-    [propertyCode, sendMailTo],
+    [onCloseModal, propertyCode, sendMailTo],
   )
 
   useEffect(() => {
