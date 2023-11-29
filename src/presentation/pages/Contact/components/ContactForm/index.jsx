@@ -29,7 +29,7 @@ export function ContactForm() {
     const data = Object.fromEntries(formData)
 
     if (data?.purpose < 100) {
-      return alert('O valor não pode ser abaixo do minimo')
+      return toast.warning('O valor não pode ser abaixo do minimo')
     }
 
     const messageText = `Dados pessoais: \n
