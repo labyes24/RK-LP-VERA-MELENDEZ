@@ -2,6 +2,12 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const Container = styled.div`
+  @keyframes appear {
+    from {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
   height: fit-content;
   width: 100%;
   display: flex;
@@ -9,6 +15,7 @@ export const Container = styled.div`
   align-items: center;
 
   padding: 3rem 2rem;
+  animation: appear 1s;
   @media (min-width: 1024px) {
     padding: 3 4.8rem;
   }
