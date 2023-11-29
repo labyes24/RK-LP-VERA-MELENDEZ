@@ -8,9 +8,8 @@ import { Button } from '../../../../components/Button'
 import {
   Container,
   StyledModal,
-  TitleGroup,
+  Header,
   Title,
-  Description,
   Form,
   InputGroup,
 } from './styles'
@@ -46,7 +45,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
         const messageText = `Dados pessoais: \n
           Nome: ${data?.name ?? '(Informação não preenchida)'}
           Email: ${data?.email ? data?.email : '(Informação não preenchida)'}
-          Whatsapp: ${data?.phone ?? '(Informação não preenchida)'}
+          Whatsapp: ${data?.whatsapp ?? '(Informação não preenchida)'}
           Código do Imóvel: ${propertyCode ?? '(Informação não preenchida)'}
           `
 
@@ -90,29 +89,27 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
   return isOpen ? (
     <Container>
       <StyledModal>
-        <TitleGroup>
-          <Title>Duplex em condomínio</Title>
-
+        <Header>
           <img
             src={closeIcon}
             alt="Ícone de X para fechar o modal"
             onClick={onCloseModal}
           />
-        </TitleGroup>
+        </Header>
 
-        <Description>
-          Por gentileza, preencha os campos abaixo, entrarei em contato o mais
-          breve possível.
-        </Description>
+        <Title>Por gentileza, preencha os campos abaixo:</Title>
 
         <Form onSubmit={handleSubmit}>
-          <label htmlFor="name">Nome:</label>
+          <label htmlFor="name">
+            Nome: <span>(Campo obrigatório)</span>
+          </label>
           <input
             name="name"
             id="name"
             placeholder="Seu nome"
             minLength="2"
             required
+            title=""
           />
 
           <InputGroup>
@@ -124,20 +121,24 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
                 id="email"
                 placeholder="Seu melhor e-mail"
                 pattern=".*\.com$"
+                title=""
               />
             </div>
 
             <div>
-              <label htmlFor="phone">Telefone:</label>
+              <label htmlFor="whatsapp">
+                Whatsapp: <span>(Campo obrigatório)</span>
+              </label>
 
               <input
-                id="phone"
-                name="phone"
-                placeholder="+xx xx xxxxx-xxxx"
+                id="whatsapp"
+                name="whatsapp"
+                placeholder="+55 (00) 00000-0000"
                 pattern="^[0-9+ ]+$"
                 minLength="9"
                 maxLength="17"
                 required
+                title=""
               />
             </div>
           </InputGroup>

@@ -1,4 +1,11 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const appear = keyframes`
+  from {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+`
 
 export const Container = styled.div`
   position: fixed;
@@ -16,47 +23,46 @@ export const Container = styled.div`
 `
 
 export const StyledModal = styled.div`
-  @keyframes appear {
-    from {
-      transform: translateY(-10vh);
-      opacity: 0;
-    }
-  }
-
   padding: 2.4rem;
 
-  background-color: ${({ theme }) => theme.COLORS.white}; /* form/background */
+  background-color: ${({ theme }) => theme.COLORS.white};
   border-radius: 8px;
   box-shadow: #64646f33 0 7px 29px 0;
 
-  animation: appear 0.2s;
+  animation: ${appear} 1s;
 
   @media screen and (min-width: 524px) {
     padding: 2.4rem 3.2rem;
   }
 `
 
-export const TitleGroup = styled.div`
+export const Header = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.6rem;
+  justify-content: flex-end;
 
   img {
     cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    @media screen and (min-width: 524px) {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
   }
 `
 
 export const Title = styled.h3`
-  margin-bottom: 0.8rem;
+  margin-block: 3.2rem 0.8rem;
 
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   font-family: ${({ theme }) => theme.FONTS.Primary}, sans-serif;
-  color: ${({ theme }) => theme.COLORS['blue-sky-700']}; /* form/input-border */
+  color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
   @media screen and (min-width: 524px) {
-    font-size: 3.6rem;
+    font-size: 2.4rem;
   }
 `
 
@@ -66,7 +72,7 @@ export const Description = styled.p`
   line-height: 140%;
   font-size: 1.2rem;
   font-family: ${({ theme }) => theme.FONTS.Secondary}, sans-serif;
-  color: ${({ theme }) => theme.COLORS['blue-sky-700']}; /* form/input-border */
+  color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
   @media screen and (min-width: 524px) {
     font-size: 1.6rem;
@@ -80,18 +86,20 @@ export const Form = styled.form`
     width: fit-content;
     margin-bottom: 0.4rem;
 
-    color: ${({ theme }) =>
-      theme.COLORS['blue-sky-700']}; /* form/input-border */
-    font-size: 1.6rem;
+    color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+    font-size: 1.4rem;
     font-family: ${({ theme }) => theme.FONTS.Primary}, sans-serif;
+
+    span {
+      color: ${({ theme }) => theme.COLORS['zinc-200']};
+    }
   }
 
   input {
     padding: 1rem;
 
-    background-color: ${({ theme }) =>
-      theme.COLORS['zinc-50']}; /* form/input-background */
-    border: 1px solid ${({ theme }) => theme.COLORS['blue-sky-700']}; /* form/input-border */
+    background-color: ${({ theme }) => theme.COLORS['zinc-50']};
+    border: 1px solid ${({ theme }) => theme.COLORS['blue-sky-700']};
     border-radius: 5px;
     outline: none;
 
@@ -99,12 +107,11 @@ export const Form = styled.form`
     &[id='email']:invalid:focus,
     &[id='phone']:invalid:focus {
       outline: none;
-      border: 1px solid ${({ theme }) => theme.COLORS.tomate}; /* form/input-border-error */
+      border: 1px solid ${({ theme }) => theme.COLORS.tomate};
     }
 
     &::placeholder {
-      color: ${({ theme }) =>
-        theme.COLORS['zinc-200']}; /* form/secondary-text-color */
+      color: ${({ theme }) => theme.COLORS['zinc-200']};
       font-size: 1.6rem;
       font-family: ${({ theme }) => theme.FONTS.Secondary}, sans-serif;
     }
