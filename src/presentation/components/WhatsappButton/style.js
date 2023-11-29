@@ -39,6 +39,8 @@ export const Container = styled.button`
         width: 5.8rem;
         height: 5.8rem;
       }
+      bottom: 4rem;
+      right: 2rem;
     }
   }
 `
