@@ -6,8 +6,8 @@ export const CardContainer = styled.div`
 
   border-bottom: 3px solid transparent;
   border-radius: 6px;
-  padding: 2rem 0.8rem;
-  gap: 1rem;
+  padding: 1.5rem 0.8rem;
+  gap: 0.8rem;
   width: 17.5rem;
   min-width: 16rem;
   height: 14rem;
@@ -46,7 +46,7 @@ export const CardContainer = styled.div`
     font-style: italic;
     font-size: 1.2rem;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.4rem;
   }
 
   > cite {
@@ -55,7 +55,7 @@ export const CardContainer = styled.div`
     font-weight: bold;
     font-style: normal;
     font-size: 1.2rem;
-    line-height: 1;
+    line-height: 0.8rem;
     text-align: center;
   }
 
@@ -64,15 +64,16 @@ export const CardContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: 3.2rem 1.6rem;
-    gap: 2.4rem;
+    padding: 2rem 1.6rem;
+    gap: 2rem;
     border-radius: 8px;
     width: 28rem;
     min-width: 22rem;
     height: 19rem;
 
     > blockquote {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
     }
 
     > cite {
