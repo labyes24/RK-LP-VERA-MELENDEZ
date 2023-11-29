@@ -1,6 +1,7 @@
 import { BrokerImage } from '../../../../components/BrokerImage'
 
 import {
+  CommentCard,
   Container,
   CopyGroup,
   ImageContainer,
@@ -44,30 +45,46 @@ export function RealEstateBrokerDescription({ brokerData }) {
         </CopyGroup>
       </article>
 
-      <LinksCard>
-        <a
-          href={`https://www.google.com/maps/place/${brokerData.address.city}`}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src={mapPinIcon} alt="Ícone de Mapa" />
-          <span>{brokerData.address.city}</span>
-        </a>
+      <div className="description_card_footer">
+        <LinksCard>
+          <a
+            href={`https://www.google.com/maps/place/${brokerData.address.city}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img src={mapPinIcon} alt="Ícone de Mapa" />
+            <span>{brokerData.address.city}</span>
+          </a>
 
-        <a
-          href={`https://api.whatsapp.com/send?phone=${phoneDigits}`}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src={whatsappIcon} alt="Ícone do WhatsApp" />
-          <span>{brokerData.phone}</span>
-        </a>
+          <a
+            href={`https://api.whatsapp.com/send?phone=${phoneDigits}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img src={whatsappIcon} alt="Ícone do WhatsApp" />
+            <span>{brokerData.phone}</span>
+          </a>
 
-        <a href={'mailto:' + brokerData.email} rel="noreferrer" target="_blank">
-          <img src={emailIcon} alt="Ícone do Gmail" />
-          <span>{brokerData.email}</span>
-        </a>
-      </LinksCard>
+          <a
+            href={'mailto:' + brokerData.email}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img src={emailIcon} alt="Ícone do Gmail" />
+            <span>{brokerData.email}</span>
+          </a>
+        </LinksCard>
+
+        <CommentCard>
+          <p>
+            &rdquo;Eu e meu marido adquirimos um imóvel através do corretor
+            Winnetou Martins e fomos muito bem tratados do início até a
+            conclusão da compra. Ele é hábil, competente e atencioso.&rdquo;
+          </p>
+
+          <h3>Valzira Souza - Advogada</h3>
+        </CommentCard>
+      </div>
     </Container>
   )
 }

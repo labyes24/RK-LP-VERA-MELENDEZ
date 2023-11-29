@@ -5,6 +5,7 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 
   border-radius: 1.6rem;
   background-color: ${({ theme }) => theme.COLORS['zinc-500']};
@@ -13,12 +14,24 @@ export const Container = styled.div`
   @media screen and (min-width: 1440px) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 2.4rem 4.8rem 2.4rem 3.5rem;
+    padding: 2.4rem 2.8rem 2.4rem 3.5rem;
     border-radius: 5.5rem 1.6rem 1.6rem 1.6rem;
 
     article {
       margin: 0 0 0 0;
       max-width: 64rem;
+    }
+  }
+
+  .description_card_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+
+    @media screen and (max-width: 1440px) {
+      justify-content: flex-start;
+      gap: 2rem;
     }
   }
 `
@@ -109,7 +122,7 @@ export const CopyGroup = styled.div`
     line-height: 140%;
     font-size: 1.2rem;
     font-family: ${({ theme }) => theme.FONTS.Secondary};
-    text-align: justify;
+    text-align: left;
   }
 
   strong {
@@ -192,10 +205,52 @@ export const LinksCard = styled.div`
     gap: 1.6rem;
     margin-left: 0.8rem;
     height: fit-content;
-    align-self: end;
+    align-self: flex-start;
 
     a {
       word-break: normal;
     }
+  }
+`
+
+export const CommentCard = styled.div`
+  padding: 2.2rem 1.4rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  border-radius: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+
+  p {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  h3 {
+    color: #758df4;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 2.3rem 1.6rem 1rem;
+    color: ${({ theme }) => theme.COLORS.white};
+
+    max-width: 27rem;
+    width: 100%;
   }
 `
