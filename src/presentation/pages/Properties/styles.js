@@ -3,6 +3,15 @@ import styled from 'styled-components'
 export const Container = styled.div`
   padding: 3.2rem 0;
 
+  @keyframes appear {
+    from {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
+
+  animation: appear 1s;
+
   > h1 {
     width: fit-content;
 
