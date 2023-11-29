@@ -6,6 +6,8 @@ export const Container = styled.div`
   gap: 2.5rem;
   padding: 3.5rem 2rem;
 
+  animation: topToBot 1s ease-in;
+
   > .titles {
     text-align: center;
     > h1 {
@@ -43,9 +45,6 @@ export const Container = styled.div`
 
     .image {
       display: block;
-      position: relative;
-      transform: translate(0, 42px);
-      z-index: -1;
 
       /* Corrige o problema do footer entrar na imagem */
       img {
@@ -86,6 +85,16 @@ export const Container = styled.div`
       aside {
         padding-left: 2rem;
       }
+    }
+  }
+
+  @keyframes topToBot {
+    from {
+      opacity: 0;
+      transform: translateY(-80px);
+    }
+    to {
+      opacity: 1;
     }
   }
 `

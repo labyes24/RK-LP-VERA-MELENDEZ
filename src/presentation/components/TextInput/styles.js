@@ -9,7 +9,7 @@ export const TextInputContainer = styled.input`
   padding: 10px 16px;
 
   font-family: Roboto;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;

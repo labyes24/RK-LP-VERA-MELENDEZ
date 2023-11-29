@@ -28,6 +28,10 @@ export function ContactForm() {
     const formData = new FormData(event.target)
     const data = Object.fromEntries(formData)
 
+    if (data?.purpose < 100) {
+      return alert('O valor não pode ser abaixo do minimo')
+    }
+
     const messageText = `Dados pessoais: \n
       Nome: ${data?.name}
       Email: ${data?.email}
@@ -115,7 +119,7 @@ export function ContactForm() {
 
           <div className="inRow">
             <div className="inputWrapper">
-              <label htmlFor="local">Localização: </label>
+              <label htmlFor="local">Localização desejada: </label>
               <TextInput
                 placeholder="Cidade, bairro..."
                 name="local"
@@ -129,9 +133,9 @@ export function ContactForm() {
                 <option value="" hidden>
                   Selecione
                 </option>
-                <option value="alugar">Alugar</option>
-                <option value="vender">Vender</option>
+                <option value="comprar">Comprar</option>
                 <option value="investir">Investir</option>
+                <option value="vender">Vender</option>
               </SelectOption>
             </div>
           </div>
@@ -145,8 +149,8 @@ export function ContactForm() {
                 </option>
                 <option value="apartmento">Apartamento</option>
                 <option value="casa">Casa</option>
-                <option value="terreno">Terreno</option>
                 <option value="galpão">Galpão</option>
+                <option value="terreno">Terreno</option>
                 <option value="outros">outros</option>
               </SelectOption>
             </div>
@@ -170,6 +174,7 @@ export function ContactForm() {
             <div className="inputWrapper">
               <label htmlFor="min_value">Valor mínimo:</label>
               <TextInput
+                min={100}
                 placeholder="Mín (R$)"
                 type="number"
                 name="min_value"
@@ -180,6 +185,7 @@ export function ContactForm() {
             <div className="inputWrapper">
               <label htmlFor="max_value">Valor máximo:</label>
               <TextInput
+                min={100}
                 placeholder="Máx (R$)"
                 type="number"
                 name="max_value"

@@ -103,14 +103,15 @@ export const FormContainer = styled.form`
 
     > p {
       font-family: ${({ theme }) => theme.FONTS.Secondary};
-      font-size: 10px;
+      font-size: 1.6rem;
       font-style: normal;
       font-weight: 400;
       color: ${({ theme }) => theme.COLORS['blue-sky-700']};
+      letter-spacing: 0;
 
       > a {
         font-family: ${({ theme }) => theme.FONTS.Secondary};
-        font-size: 10px;
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 700;
         color: ${({ theme }) => theme.COLORS['blue-sky-700']};
