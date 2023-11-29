@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   border-bottom: 3px solid transparent;
   border-radius: 6px;
   padding: 1.5rem 0.8rem;
-  gap: 0.8rem;
+  gap: 1rem;
   width: 17.5rem;
   min-width: 16rem;
   height: 14rem;
@@ -47,6 +47,12 @@ export const CardContainer = styled.div`
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.4rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   > cite {
