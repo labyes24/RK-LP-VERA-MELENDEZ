@@ -25,23 +25,30 @@ export function Carousel({
   }
 
   const cardOption = {
-    rewind: true,
-    type: length === PER_PAGE_DESKTOP ? '' : 'loop',
+    type: length === PER_PAGE_DESKTOP ? '' : 'slide',
     arrows: true,
     navigation: true,
     perPage: PER_PAGE_DESKTOP,
     gap: '9rem',
     autoWidth: false,
     autoplay: true,
+    speed: 90000,
+    interval: 1,
+    pauseOnFocus: true,
+    pauseOnHover: true,
     // drag: ,
     breakpoints: {
       1024: {
         //abaixo de 1024
         // arrows: length <= PER_PAGE_MOBILE,
-        type: length === PER_PAGE_MOBILE ? '' : 'loop',
+        type: length === PER_PAGE_MOBILE ? '' : 'slide',
         perPage: PER_PAGE_MOBILE,
         gap: '1rem',
         autoWidth: true,
+        speed: 90000,
+        interval: 1,
+        pauseOnFocus: true,
+        pauseOnHover: true,
         // drag: ,
       },
     },
@@ -53,6 +60,7 @@ export function Carousel({
     focus: 'center',
     autoWidth: true,
     autoplay: true,
+    interval: 8000,
     pauseOnFocus: true,
 
     breakpoints: {
@@ -62,6 +70,7 @@ export function Carousel({
         gap: '1rem',
         focus: 'center',
         autoWidth: true,
+        interval: 8000,
       },
     },
   }
