@@ -28,10 +28,6 @@ export function ContactForm() {
     const formData = new FormData(event.target)
     const data = Object.fromEntries(formData)
 
-    if (data?.purpose < 100) {
-      return toast.warning('O valor não pode ser abaixo do minimo')
-    }
-
     const messageText = `Dados pessoais: \n
       Nome: ${data?.name}
       Email: ${data?.email}
