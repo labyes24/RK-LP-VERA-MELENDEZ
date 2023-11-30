@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
+  @keyframes appear {
+    from {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   background: none;
   border: none;
 
@@ -33,6 +44,8 @@ export const Container = styled.button`
       transform: scale(1.1);
       filter: brightness(150%);
     }
+
+    animation: appear 1.8s;
 
     @media (max-width: 768px) {
       > img {
