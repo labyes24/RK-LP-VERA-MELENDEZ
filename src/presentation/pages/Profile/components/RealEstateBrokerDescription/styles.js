@@ -198,6 +198,10 @@ export const LinksCard = styled.div`
     &:hover {
       opacity: 0.75;
     }
+
+    span {
+      font-size: 1.4rem;
+    }
   }
 
   @media screen and (min-width: 1440px) {
@@ -209,6 +213,10 @@ export const LinksCard = styled.div`
 
     a {
       word-break: normal;
+
+      span {
+        font-size: 1.6rem;
+      }
     }
   }
 `
@@ -229,11 +237,10 @@ export const CommentCard = styled.div`
   p {
     font-family: 'Nunito', sans-serif;
     text-align: center;
-    font-family: Nunito;
     font-size: 14px;
     font-style: italic;
     font-weight: 300;
-    line-height: 100%;
+    line-height: 130%;
   }
 
   h3 {
