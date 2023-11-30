@@ -162,5 +162,8 @@ export const Price = styled.p`
 
 export const PropertiesButton = styled(Button)`
   padding: 1.5rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
+  @media (min-width: 1024px) {
+    font-size: 2.4rem;
+  }
 `
