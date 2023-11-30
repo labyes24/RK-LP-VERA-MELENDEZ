@@ -19,17 +19,24 @@ import {
 } from './styles'
 
 import closeIcon from '../../../../assets/x-close-icon.svg'
+import verifiedIcon from '/verified.gif'
 
 /**
  * Creates a styled Modal component.
- * @param {Boolean} isOpen - Modal state.
+ * @param {Boolean} isOpen - Modal is open.
  * @param {requestCallback} onCloseModal - Cb function to change open modal state to false.
  * @param {String} propertyCode - Property code information.
+ * @param {Boolean} success - Modal state (You can use false for default page and true for success page).
  * @return {JSX.Element} The styled Modal component.
  */
-export function Modal({ isOpen, onCloseModal, propertyCode }) {
+export function Modal({
+  isOpen,
+  onCloseModal,
+  propertyCode = 0,
+  success = false,
+}) {
   const [isLoading, setIsLoading] = useState(false)
-  const [formState, setFormState] = useState('default') // 2 estados: default, success
+  const [isSuccess, setIsSuccess] = useState(success)
 
   const { email } = useBrokerProfile()
 
@@ -39,9 +46,9 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
 
   const handleCloseModal = useCallback(() => {
     setIsLoading(false)
-    setFormState('default')
+    setIsSuccess(success)
     onCloseModal()
-  }, [onCloseModal])
+  }, [onCloseModal, success])
 
   const handleSubmit = useCallback(
     event => {
@@ -64,7 +71,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
           .then(response => {
             if (response.status === 200) {
               toast.success('Mensagem enviada com sucesso!')
-              setFormState('success')
+              setIsSuccess(true)
               setIsLoading(false)
               event.target.reset()
             }
@@ -99,7 +106,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
 
   return isOpen ? (
     <Container>
-      {formState === 'default' ? (
+      {isSuccess == false ? (
         <DefaultModal>
           <Header>
             <img
@@ -172,7 +179,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
 
           <SuccessBody>
             <img
-              src="/verified.gif"
+              src={verifiedIcon}
               alt="Gif de Verificação"
               className="verifiedGif"
             />

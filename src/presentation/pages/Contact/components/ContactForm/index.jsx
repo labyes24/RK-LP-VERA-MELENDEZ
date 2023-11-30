@@ -6,11 +6,13 @@ import { toast } from 'react-toastify'
 import { TextInput } from '../../../../components/TextInput'
 import { TextArea } from '../../../../components/TextArea'
 import { SelectOption } from '../../../../components/SelectOption'
+import { Modal } from '../../../Properties/components/Modal'
 
 import { FormContainer, ShortButton } from './styles'
 
 export function ContactForm() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const { email: brokerEmail } = useBrokerProfile()
   const devMode = import.meta.env.DEV
@@ -55,6 +57,7 @@ export function ContactForm() {
         console.error(error)
       })
       .finally(() => {
+        setIsModalOpen(true)
         setIsFormSubmitted(false)
       })
   }
@@ -201,7 +204,6 @@ export function ContactForm() {
           </div>
         </fieldset>
       </div>
-
       <footer>
         <p>
           Ao informar meus dados eu concordo com a{' '}
@@ -215,6 +217,12 @@ export function ContactForm() {
           Enviar
         </ShortButton>
       </footer>
+
+      <Modal
+        isOpen={isModalOpen}
+        onCloseModal={() => setIsModalOpen(false)}
+        success={true}
+      />
     </FormContainer>
   )
 }
