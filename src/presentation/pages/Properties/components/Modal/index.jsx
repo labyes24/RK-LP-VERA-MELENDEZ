@@ -19,7 +19,6 @@ import {
 } from './styles'
 
 import closeIcon from '../../../../assets/x-close-icon.svg'
-import verifiedIcon from '/verified.gif'
 
 /**
  * Creates a styled Modal component.
@@ -179,7 +178,7 @@ export function Modal({
 
           <SuccessBody>
             <img
-              src={verifiedIcon}
+              src="https://i.ibb.co/tKDWfbN/verified-Copy.gif"
               alt="Gif de Verificação"
               className="verifiedGif"
             />
