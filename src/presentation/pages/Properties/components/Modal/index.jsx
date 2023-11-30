@@ -37,6 +37,12 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
 
   let sendMailTo = devMode ? import.meta.env.VITE_EMAILJS_MAIL_TEST : email
 
+  const handleCloseModal = useCallback(() => {
+    setIsLoading(false)
+    setFormState('default')
+    onCloseModal()
+  }, [onCloseModal])
+
   const handleSubmit = useCallback(
     event => {
       if (event && event.target) {
@@ -48,21 +54,17 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
         const data = Object.fromEntries(formData)
 
         const messageText = `Dados pessoais: \n
-          Nome: ${data?.name ?? '(Informação não preenchida)'}
-          Email: ${data?.email ? data?.email : '(Informação não preenchida)'}
-          Whatsapp: ${data?.whatsapp ?? '(Informação não preenchida)'}
-          Código do Imóvel: ${propertyCode ?? '(Informação não preenchida)'}
-          `
-
-        setIsLoading(false)
-        setFormState('success')
+            Nome: ${data?.name ?? '(Informação não preenchida)'}
+            Email: ${data?.email ? data?.email : '(Informação não preenchida)'}
+            Whatsapp: ${data?.whatsapp ?? '(Informação não preenchida)'}
+            Código do Imóvel: ${propertyCode ?? '(Informação não preenchida)'}
+            `
 
         sendMail(data.name, messageText, sendMailTo)
           .then(response => {
-            onCloseModal()
-
             if (response.status === 200) {
               toast.success('Mensagem enviada com sucesso!')
+              setFormState('success')
               setIsLoading(false)
               event.target.reset()
             }
@@ -72,27 +74,28 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
               'Ocorreu um erro. \nPor favor, tente novamente mais tarde.',
             )
             console.error(error)
+            handleCloseModal()
           })
       }
     },
-    [onCloseModal, propertyCode, sendMailTo],
+    [handleCloseModal, propertyCode, sendMailTo],
   )
 
   useEffect(() => {
     window.addEventListener('keyup', event => {
-      if (event.key === 'Escape' && isOpen) onCloseModal()
+      if (event.key === 'Escape' && isOpen) handleCloseModal()
 
       if (event.key === 'Enter' && isOpen) handleSubmit()
     })
 
     return () => {
       window.removeEventListener('keyup', event => {
-        if (event.key === 'Escape' && isOpen) onCloseModal()
+        if (event.key === 'Escape' && isOpen) handleCloseModal()
 
         if (event.key === 'Enter' && isOpen) handleSubmit()
       })
     }
-  }, [handleSubmit, isOpen, onCloseModal])
+  }, [handleSubmit, isOpen, handleCloseModal])
 
   return isOpen ? (
     <Container>
@@ -102,7 +105,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
             <img
               src={closeIcon}
               alt="Ícone de X para fechar o modal"
-              onClick={onCloseModal}
+              onClick={handleCloseModal}
             />
           </Header>
 
@@ -163,7 +166,7 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
             <img
               src={closeIcon}
               alt="Ícone de X para fechar o modal"
-              onClick={onCloseModal}
+              onClick={handleCloseModal}
             />
           </Header>
 
