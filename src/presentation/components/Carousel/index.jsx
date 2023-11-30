@@ -27,7 +27,7 @@ export function Carousel({
   const cardOption = {
     rewind: true,
     type: length === PER_PAGE_DESKTOP ? '' : 'loop',
-    arrows: false,
+    arrows: true,
     navigation: true,
     perPage: PER_PAGE_DESKTOP,
     gap: '9rem',
@@ -38,7 +38,6 @@ export function Carousel({
       1024: {
         //abaixo de 1024
         // arrows: length <= PER_PAGE_MOBILE,
-        arrows: true,
         type: length === PER_PAGE_MOBILE ? '' : 'loop',
         perPage: PER_PAGE_MOBILE,
         gap: '1rem',
