@@ -7,11 +7,15 @@ import { useBrokerProfile } from '../../../../../data/BrokerData'
 import { Button } from '../../../../components/Button'
 import {
   Container,
-  StyledModal,
+  DefaultModal,
   Header,
   Title,
+  SuccessTitle,
+  SuccessBody,
   Form,
   InputGroup,
+  SuccessModal,
+  SuccessText,
 } from './styles'
 
 import closeIcon from '../../../../assets/x-close-icon.svg'
@@ -25,6 +29,7 @@ import closeIcon from '../../../../assets/x-close-icon.svg'
  */
 export function Modal({ isOpen, onCloseModal, propertyCode }) {
   const [isLoading, setIsLoading] = useState(false)
+  const [formState, setFormState] = useState('default') // 2 estados: default, success
 
   const { email } = useBrokerProfile()
 
@@ -48,6 +53,9 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
           Whatsapp: ${data?.whatsapp ?? '(Informação não preenchida)'}
           Código do Imóvel: ${propertyCode ?? '(Informação não preenchida)'}
           `
+
+        setIsLoading(false)
+        setFormState('success')
 
         sendMail(data.name, messageText, sendMailTo)
           .then(response => {
@@ -88,66 +96,94 @@ export function Modal({ isOpen, onCloseModal, propertyCode }) {
 
   return isOpen ? (
     <Container>
-      <StyledModal>
-        <Header>
-          <img
-            src={closeIcon}
-            alt="Ícone de X para fechar o modal"
-            onClick={onCloseModal}
-          />
-        </Header>
+      {formState === 'default' ? (
+        <DefaultModal>
+          <Header>
+            <img
+              src={closeIcon}
+              alt="Ícone de X para fechar o modal"
+              onClick={onCloseModal}
+            />
+          </Header>
 
-        <Title>Por gentileza, preencha os campos abaixo:</Title>
+          <Title>Por gentileza, preencha os campos abaixo:</Title>
 
-        <Form onSubmit={handleSubmit}>
-          <label htmlFor="name">
-            Nome: <span>(Campo obrigatório)</span>
-          </label>
-          <input
-            name="name"
-            id="name"
-            placeholder="Seu nome"
-            minLength="2"
-            required
-            title=""
-          />
+          <Form onSubmit={handleSubmit}>
+            <label htmlFor="name">
+              Nome: <span>(Campo obrigatório)</span>
+            </label>
+            <input
+              name="name"
+              id="name"
+              placeholder="Seu nome"
+              minLength="2"
+              required
+              title=""
+            />
 
-          <InputGroup>
-            <div>
-              <label htmlFor="email">E-mail:</label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                placeholder="Seu melhor e-mail"
-                pattern=".*\.com$"
-                title=""
-              />
-            </div>
+            <InputGroup>
+              <div>
+                <label htmlFor="email">E-mail:</label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  placeholder="Seu melhor e-mail"
+                  pattern=".*\.com$"
+                  title=""
+                />
+              </div>
 
-            <div>
-              <label htmlFor="whatsapp">
-                Whatsapp: <span>(Campo obrigatório)</span>
-              </label>
+              <div>
+                <label htmlFor="whatsapp">
+                  Whatsapp: <span>(Campo obrigatório)</span>
+                </label>
 
-              <input
-                id="whatsapp"
-                name="whatsapp"
-                placeholder="+55 (00) 00000-0000"
-                pattern="^[0-9+ ]+$"
-                minLength="9"
-                maxLength="17"
-                required
-                title=""
-              />
-            </div>
-          </InputGroup>
+                <input
+                  id="whatsapp"
+                  name="whatsapp"
+                  placeholder="+55 (00) 00000-0000"
+                  pattern="^[0-9+ ]+$"
+                  minLength="9"
+                  maxLength="17"
+                  required
+                  title=""
+                />
+              </div>
+            </InputGroup>
 
-          <Button type="submit" isLoading={isLoading}>
-            Envie seu contato
-          </Button>
-        </Form>
-      </StyledModal>
+            <Button type="submit" isLoading={isLoading}>
+              Envie seu contato
+            </Button>
+          </Form>
+        </DefaultModal>
+      ) : (
+        <SuccessModal>
+          <Header>
+            <img
+              src={closeIcon}
+              alt="Ícone de X para fechar o modal"
+              onClick={onCloseModal}
+            />
+          </Header>
+
+          <SuccessBody>
+            <img
+              src="/verified.gif"
+              alt="Gif de Verificação"
+              className="verifiedGif"
+            />
+
+            <SuccessTitle>Obrigado por confiar em nós!</SuccessTitle>
+
+            <SuccessText>
+              Em breve, um de nossos especialistas entrará em contato para
+              fornecer todas as informações necessárias. Estamos ansiosos para
+              ajudar você a encontrar o lar dos seus sonhos!
+            </SuccessText>
+          </SuccessBody>
+        </SuccessModal>
+      )}
     </Container>
   ) : null
 }
