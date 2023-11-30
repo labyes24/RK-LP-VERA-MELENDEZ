@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.white};
     font-family: ${props => props.theme.FONTS.Primary};
     font-size: 1.6rem;
-    min-height: 99vh;  
+    min-height: 100dvh;
   }
 
   body::-webkit-scrollbar {
@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
   }
   body::-webkit-scrollbar-thumb:hover {
-    background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};    
+    background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
   }
   body::-webkit-scrollbar-thumb:active {
     background-color: ${({ theme }) => theme.COLORS['blue-sky-50']};
@@ -42,7 +42,6 @@ export const GlobalStyle = createGlobalStyle`
   #root {
     display: flex;
     justify-content: center;
-    min-height: 99vh;
-  
+    min-height: 100dvh;
   }
 `
