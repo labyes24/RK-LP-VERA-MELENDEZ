@@ -16,6 +16,7 @@ export const Container = styled.div`
 
   padding: 3rem 2rem;
   animation: appear 1s;
+
   @media (min-width: 1024px) {
     padding: 3 4.8rem;
   }
@@ -39,6 +40,7 @@ export const Container = styled.div`
 
     transition: all 0.5s ease;
   }
+
   @media (min-width: 1024px) {
     &::before {
       display: none;
@@ -49,7 +51,7 @@ export const Container = styled.div`
 `
 export const Logo = styled(NavLink)`
   img {
-    width: 15rem;
+    width: 16rem;
     @media (min-width: 1024px) {
       width: 20rem;
     }
