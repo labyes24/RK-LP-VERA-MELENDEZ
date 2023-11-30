@@ -84,7 +84,11 @@ export const FormContainer = styled.form`
   label {
     color: ${({ theme }) => theme.COLORS['blue-sky-700']};
     font-family: ${({ theme }) => theme.FONTS.Primary};
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+
+    @media (min-width: 1440px) {
+      font-size: 1.8rem;
+    }
   }
 
   label > span {
