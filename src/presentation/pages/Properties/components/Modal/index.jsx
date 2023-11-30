@@ -69,7 +69,6 @@ export function Modal({
         sendMail(data.name, messageText, sendMailTo)
           .then(response => {
             if (response.status === 200) {
-              toast.success('Mensagem enviada com sucesso!')
               setIsSuccess(true)
               setIsLoading(false)
               event.target.reset()

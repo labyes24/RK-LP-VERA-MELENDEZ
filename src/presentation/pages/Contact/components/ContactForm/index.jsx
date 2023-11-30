@@ -48,7 +48,6 @@ export function ContactForm() {
     sendMail(data.name, messageText, sendMailTo)
       .then(response => {
         if (response.status === 200) {
-          toast.success('Mensagem enviada com sucesso!')
           event.target.reset()
         }
       })
