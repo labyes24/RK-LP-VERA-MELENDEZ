@@ -1,4 +1,4 @@
-import { Container } from './styles'
+import { Container, Content } from './styles'
 import { useProperties } from '../../../data/RealStateData'
 import { Carousel } from '../../components/Carousel'
 import { SplideSlide } from '@splidejs/react-splide'
@@ -22,17 +22,19 @@ export function Properties() {
 
   return (
     <Container>
-      <h1>Encontre o imóvel perfeito para você e sua família!</h1>
-      <Carousel option="cardProperty" length={properties.length}>
-        {properties.map(property => (
-          <SplideSlide key={property.id}>
-            <PropertyCard
-              propertyInfo={property}
-              onInterestingProperty={handleGetPropertyCodeInfo}
-            />
-          </SplideSlide>
-        ))}
-      </Carousel>
+      <Content>
+        <h1>Encontre o imóvel perfeito para você e sua família!</h1>
+        <Carousel option="cardProperty" length={properties.length}>
+          {properties.map(property => (
+            <SplideSlide key={property.id}>
+              <PropertyCard
+                propertyInfo={property}
+                onInterestingProperty={handleGetPropertyCodeInfo}
+              />
+            </SplideSlide>
+          ))}
+        </Carousel>
+      </Content>
       <Modal
         isOpen={isModalOpen}
         onCloseModal={() => setIsModalOpen(false)}
