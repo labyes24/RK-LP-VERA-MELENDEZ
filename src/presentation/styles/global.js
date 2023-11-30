@@ -25,8 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 8px;
   }
   body::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.COLORS['zinc-200']};
-    border-radius: 10px;
+    background-color: ${({ theme }) => theme.COLORS['zinc-200']};    
     }
   body::-webkit-scrollbar-thumb {
     background-color: ${({ theme }) => theme.COLORS['zinc-100']};
