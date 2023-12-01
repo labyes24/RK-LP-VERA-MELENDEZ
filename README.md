@@ -56,31 +56,29 @@ Reconhecendo a importância de adotar uma perspectiva diferenciada para se adapt
 
 **Front-end:**
 
-- HTML
-- Styled-Components
-- JavaScript
+- Vitejs
 - ReactJs
+- Styled-Components
+- Emailjs
 
 ## 📁 Documentação
 
-[Documentação](https://www.notion.so/RK-IM-VEIS-V1-FINAL-26e7a78fa5744e28b76caaad00e18386?pvs=4)
+(a publicar)
 
-## 🎬 Demonstração
-
-[Video de Demonstração do Projeto](https://www.youtube.com/watch?v=5rYJ7-UzUh4&ab_channel=LabYes%21)
-
-## Site do Projeto
+## 🎬 Site do Projeto
 
 - Vide link no About
 ## 👥 Autores
 
-- [Caio Balduino](https://github.com/Caiobaldur)
-- [Cristian Sbardelotto](https://github.com/cristian-sbardelotto)
-- [Evandro Damaso](https://github.com/dam450)
-- [Francisco Ylderlan](https://github.com/FranciscoYlderlan)
-- [Grace Kelly](https://github.com/gksouza)
-- [Mateus Villa Nova](https://github.com/Villa-Nova)
-- [Thalyta Rangel](https://github.com/ThalytaRangel)
+- [Adriano Souza](https://github.com/silvasouzaadriano) - Tech Lead
+- [Grace Kelly](https://github.com/gksouza)  - PM | PO | QA Manager | QA Tester
+- [Caio Balduino](https://github.com/Caiobaldur) - Web Designer e Dev Front End
+- [Cristian Sbardelotto](https://github.com/cristian-sbardelotto) - Dev Front End
+- [Evandro Damaso](https://github.com/dam450) - Squad Lead e Dev Front End
+- [Francisco Ylderlan](https://github.com/FranciscoYlderlan) - Squad Lead e Dev Front End
+- [Henrico Angolera](https://github.com/henricoangolera) - QA Tester e Dev Front End
+- [Mateus Villa Nova](https://github.com/Villa-Nova) - QA Tester e Dev Front End
+- [Thalyta Rangel](https://github.com/ThalytaRangel) - Dev Front End
 
 ## 🗣️ Suporte
 
