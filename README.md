@@ -69,10 +69,9 @@ Reconhecendo a importância de adotar uma perspectiva diferenciada para se adapt
 
 [Video de Demonstração do Projeto](https://www.youtube.com/watch?v=5rYJ7-UzUh4&ab_channel=LabYes%21)
 
-## Deploy
+## Site do Projeto
 
-- Veja o link do deploy [aqui](link-do-deploy).
-
+- Vide link no About
 ## 👥 Autores
 
 - [Caio Balduino](https://github.com/Caiobaldur)
