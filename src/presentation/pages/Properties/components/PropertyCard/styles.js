@@ -94,6 +94,9 @@ export const Tags = styled.div`
   display: flex;
   gap: 1rem;
   flex: auto;
+  border-top: 1px solid ${({ theme }) => theme.COLORS['zinc-150']};
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS['zinc-150']};
+
   > span {
     font-size: 1.4rem;
     height: fit-content;

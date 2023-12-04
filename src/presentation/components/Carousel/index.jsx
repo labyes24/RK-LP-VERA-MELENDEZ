@@ -29,7 +29,7 @@ export function Carousel({
     arrows: true,
     navigation: true,
     perPage: PER_PAGE_DESKTOP,
-    gap: '9rem',
+    gap: '6.4rem',
     autoWidth: false,
     autoplay: true,
     speed: 90000,
