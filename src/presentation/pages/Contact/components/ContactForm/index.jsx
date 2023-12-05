@@ -132,7 +132,6 @@ export function ContactForm() {
                   Selecione
                 </option>
                 <option value="comprar">Comprar</option>
-                <option value="investir">Investir</option>
                 <option value="vender">Vender</option>
               </SelectOption>
             </div>
