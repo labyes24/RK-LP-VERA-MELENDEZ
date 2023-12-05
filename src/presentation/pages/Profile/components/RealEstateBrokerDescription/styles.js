@@ -8,10 +8,8 @@ export const Container = styled.div`
   gap: 2rem;
 
   border-radius: 1.6rem;
-  background-color: ${({ theme }) => theme.COLORS['blue-titan']};
+  background-color: ${({ theme }) => theme.COLORS['zinc-500']};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-  color: ${({ theme }) => theme.COLORS['blue-sky-700']};
 
   @media screen and (min-width: 1440px) {
     flex-direction: row;
@@ -151,11 +149,11 @@ export const CopyGroup = styled.div`
 
       &::-webkit-scrollbar-track {
         border-radius: 10px;
-        background: transparent;
+        background: #d9d9d980;
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: ${({ theme }) => theme.COLORS['zinc-400']};
+        background: #d9d9d9;
       }
 
       &::-webkit-scrollbar-thumb:hover {
@@ -231,7 +229,7 @@ export const CommentCard = styled.div`
   gap: 0.4rem;
 
   border-radius: 1.6rem;
-  background-color: ${({ theme }) => theme.COLORS['zinc-500']};
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
   text-align: center;
@@ -256,10 +254,10 @@ export const CommentCard = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 2.3rem 1.2rem 1rem;
+    padding: 2.3rem 1.6rem 1rem;
     color: ${({ theme }) => theme.COLORS.white};
 
-    max-width: 28rem;
+    max-width: 27rem;
     width: 100%;
   }
 `
