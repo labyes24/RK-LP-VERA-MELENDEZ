@@ -11,7 +11,7 @@ import {
 import { Tag } from '../../../../components/Tag'
 import { Carousel } from '../../../../components/Carousel'
 
-import garageIcon from '../../../../assets/garage-icon.svg'
+import garage_icon2 from '../../../../assets/garage_icon2.svg'
 import roomIcon from '../../../../assets/room-icon.svg'
 import squareIcon from '../../../../assets/square-icon.svg'
 import showerIcon from '../../../../assets/shower-icon.svg'
@@ -20,7 +20,7 @@ import { SplideSlide } from '@splidejs/react-splide'
 import { useState } from 'react'
 
 const IconsMap = {
-  garage: garageIcon,
+  garage: garage_icon2,
   rooms: roomIcon,
   square: squareIcon,
   bathrooms: showerIcon,
