@@ -5,6 +5,7 @@ import emailIcon from '../../assets/envelopeEmail.png'
 import whatsappIcon from '../../assets/contactWhatsappIcon.svg'
 
 export function ContactBlock({ address, email, phoneNumber }) {
+  const phoneDigits = phoneNumber.replace(/\D/g, '')
   return (
     <Container>
       <ul>
@@ -48,7 +49,7 @@ export function ContactBlock({ address, email, phoneNumber }) {
             />
             <p>
               <a
-                href={`tel:${phoneNumber}`}
+                href={`https://api.whatsapp.com/send?phone=${phoneDigits}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
