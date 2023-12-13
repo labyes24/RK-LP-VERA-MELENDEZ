@@ -9,7 +9,7 @@ export function Footer() {
         &copy; {year}{' '}
         <b>
           <a
-            href="https://www.linkedin.com/company/lab-yes/"
+            href="https://lab-links.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
