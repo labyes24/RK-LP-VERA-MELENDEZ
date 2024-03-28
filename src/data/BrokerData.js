@@ -55,16 +55,14 @@
  */
 const brokerProfile = {
   id: crypto.randomUUID(),
-  name: 'Winnetou Soares Martins',
-  CRECI: '64.763-F',
-  profileImage: '/broker/tom2.png',
+  name: 'Vera Lucia Melendez',
+  CRECI: '56.000-F',
+  profileImage: '/broker/vera.png',
   description: {
     title:
-      '"Pai do Bento e marido da Luciana, praticante de artes marciais e nas horas vagas se arrisca a cantar, tocando violão."',
+      'Corretora de imóveis e avaliadora, mãe e esposa. Apaixonada por corrida e esporte.',
     paragraph: [
-      'Apresento-me como seu corretor de imóveis, especializado em oferecer mais do que propriedades, vendo informações estratégicas e oportunidades de investimento sólido no dinâmico mercado imobiliário.',
-      'Estou aqui para ser seu guia confiável nessa jornada, proporcionando acesso aos insights valiosos sobre tendências do mercado, recomendações personalizadas para investimentos sólidos e orientação em cada etapa, desde pesquisa até a negociação de sucesso para as partes envolvidas.',
-      'Lembre-se: Na hora de negociar, solicite as certidões negativas necessárias para a realização da escritura.',
+      'Apaixonada por conectar pessoas aos seus lares dos sonhos. Tenho trabalhado arduamente para oferecer um serviço personalizado e resultados excepcionais aos meus clientes que buscam desde moradia a investimento. Vamos trabalhar juntos para transformar suas expectativas em realidade.',
     ],
   },
   address: {
@@ -74,13 +72,8 @@ const brokerProfile = {
     city: 'Florianópolis',
     state: 'SC',
   },
-  phone: '(48) 98826-2951 ',
-  email: 'winnetou@rkimoveis.com.br',
-  clientReview: {
-    review:
-      'Eu e meu marido adquirimos um imóvel através do corretor Winnetou Martins e fomos muito bem tratados do início até a conclusão da compra. Ele é hábil, competente e atencioso.',
-    client: 'Valzira Souza - Advogada',
-  },
+  phone: '(48) 99115.8971',
+  email: 'vera@rkimoveis.com.br',
   comments: [
     {
       id: crypto.randomUUID(),
