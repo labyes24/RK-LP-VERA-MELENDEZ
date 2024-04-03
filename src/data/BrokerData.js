@@ -72,7 +72,7 @@ const brokerProfile = {
     city: 'Florianópolis',
     state: 'SC',
   },
-  phone: '(48) 99115.8971',
+  phone: '(48) 99115-8971',
   email: 'vera@rkimoveis.com.br',
   comments: [
     {
