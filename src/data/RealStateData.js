@@ -22,34 +22,11 @@ const properties = [
   {
     id: crypto.randomUUID(),
     brokerId: BROKER_ID,
-    RKCode: '9861',
-    title: 'Ravena',
-    region: 'Ingleses',
-    description:
-      'IMÓVEL COM MATRÍCULA! Ótima oportunidade de investimento! Apartamento de 2 dorm, sendo a 1 suíte, 80m e vaga de garagem, além de ser mobiliado, a 300m do Mar, condomínio muito lindo, completo com piscina, quadra poliesportiva, quadra de tênis, academia, bicicletário, salão de festas. Possibilidade de financiamento. Venha conhecer esse excelente imóvel e se permitir o melhor que a vida oferece. Aceita financiamento bancário. Quer saber mais detalhes sobre este imóvel? Fale com a gente, estamos sempre conectados pelo celular, whats, e-mail, ou se preferir venha tomar um café!',
-    price: 'R$ 620.000,00',
-    details: {
-      square: '82 m²',
-      rooms: '2',
-      bathrooms: '2',
-      garage: '1',
-    },
-    pictures: [
-      './properties/ravena-f01.jpg',
-      './properties/ravena-f02.jpg',
-      './properties/ravena-f03.jpg',
-      './properties/ravena-f04.jpg',
-      './properties/ravena-f05.jpg',
-    ],
-  },
-  {
-    id: crypto.randomUUID(),
-    brokerId: BROKER_ID,
     RKCode: '9855',
     title: 'Vila dos Açores',
     region: 'Ingleses',
     description:
-      'IMÓVEL COM MATRÍCULA. Amplo apartamento 3 dormitórios, próximo ao mar, cozinha com móveis planejados, armário nos dormitórios, sacada com churrasqueira a carvão, garagem e hobby box. Condomínio com piscina, elevador, salão de festas e jardim. Fale com um de nossos corretores e visite este imóvel. Estamos sempre conectados pelo celular, whats e e-mail. Se preferir, venha tomar um café. Estamos localizados próximo à praia, na região das gaivotas, nos Ingleses - Florianópolis/SC',
+      'IMÓVEL COM MATRÍCULA. Amplo apartamento 3 dormitórios, próximo ao mar, cozinha com móveis planejados, armário nos dormitórios, sacada com churrasqueira a carvão, garagem e hobby box. Condomínio com piscina, elevador, salão de festas e jardim.',
     price: 'R$ 850.000,00',
     details: {
       square: '96,32 m²',
@@ -72,7 +49,7 @@ const properties = [
     title: 'Jardim dos Cedros',
     region: 'Ingleses',
     description:
-      'PROJETO MODERNO Sobrado geminado alto padrão construtivo e fino acabamento. Em ótima localização na Praia dos Ingleses - Florianópolis, SC. Imóvel com 3 dormitórios, sendo 1 suíte master com closet, são 144m2 de área construída em rua com excelente estrutura, próximo a praça e a Igreja Santa Catarina de Alexandria, junto à rua Dário Manoel Cardoso. Fale com um de nossos corretores e visite este imóvel. Estamos sempre conectados pelo celular, whats e e-mail. Se preferir, venha tomar um café. Estamos localizados próximo à praia, na região das Gaivotas, nos Ingleses - Florianópolis/SC.',
+      'PROJETO MODERNO. Sobrado geminado alto padrão construtivo e fino acabamento. Em ótima localização na Praia dos Ingleses - Florianópolis, SC. Imóvel com 3 dormitórios, sendo 1 suíte master com closet, são 144m2 de área construída em rua com excelente estrutura, próximo a praça e a Igreja Santa Catarina de Alexandria, junto à rua Dário Manoel Cardoso.',
     price: 'R$ 949.000,00',
     details: {
       square: '144 m²',
