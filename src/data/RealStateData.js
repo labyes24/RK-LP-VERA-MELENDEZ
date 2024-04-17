@@ -26,7 +26,7 @@ const properties = [
     title: 'Vila dos Açores',
     region: 'Ingleses',
     description:
-      'IMÓVEL COM MATRÍCULA. Amplo apartamento 3 dormitórios, próximo ao mar, cozinha com móveis planejados, armário nos dormitórios, sacada com churrasqueira a carvão, garagem e hobby box. Condomínio com piscina, elevador, salão de festas e jardim.',
+      '**IMÓVEL COM MATRÍCULA**\n\n Amplo apartamento 3 dormitórios, próximo ao mar, cozinha com móveis planejados, armário nos dormitórios, sacada com churrasqueira a carvão, garagem e hobby box. Condomínio com piscina, elevador, salão de festas e jardim.',
     price: 'R$ 850.000,00',
     details: {
       square: '96,32 m²',
@@ -49,7 +49,7 @@ const properties = [
     title: 'Jardim dos Cedros',
     region: 'Ingleses',
     description:
-      'PROJETO MODERNO. Sobrado geminado alto padrão construtivo e fino acabamento. Em ótima localização na Praia dos Ingleses - Florianópolis, SC. Imóvel com 3 dormitórios, sendo 1 suíte master com closet, são 144m2 de área construída em rua com excelente estrutura, próximo a praça e a Igreja Santa Catarina de Alexandria, junto à rua Dário Manoel Cardoso.',
+      '**PROJETO MODERNO**\n\n Sobrado geminado alto padrão construtivo e fino acabamento. Em ótima localização na Praia dos Ingleses - Florianópolis, SC.\n\n Imóvel com 3 dormitórios, sendo 1 suíte master com closet, são 144m2 de área construída em rua com excelente estrutura, próximo a praça e a Igreja Santa Catarina de Alexandria, junto à rua Dário Manoel Cardoso.',
     price: 'R$ 949.000,00',
     details: {
       square: '144 m²',
