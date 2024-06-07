@@ -95,7 +95,75 @@ const propertiesPT = [
 
 /**  @type {Array<Property>} The Portuguese properties data */
 const propertiesES = [
-  // TODO: Add Spanish properties text
+  {
+    id: crypto.randomUUID(),
+    brokerId: BROKER_ID,
+    RKCode: '9987',
+    title: 'Cruzeiro do Sul',
+    region: 'Ingleses',
+    description:
+      '**PROPIEDAD CON REGISTRO**\n\n APARTAMENTO SEMIAMUEBLADO en condominio en Rua das GAIVOTAS. Excelente OPORTUNIDAD de inversión para alquiler por temporada, alquiler anual!!!\n Condominio frente al mar, ubicado en la privilegiada región de Praia dos Ingleses. Cerca de mercado, parada de bus, restaurantes, heladería, pilates, entre otros.\n Departamento de 01 dormitorio, sala, comedor, cocina, balcón con asador. No hay plaza de aparcamiento.\n RESIDENCIAL CRUZEIRO DO SUL - Condominio con ascensor, conserjería 24 horas y completa zona de ocio.',
+    price: 'R$ 480.000,00',
+    details: {
+      square: '42,33 m²',
+      rooms: '1',
+      bathrooms: '1',
+      garage: '0',
+    },
+    pictures: [
+      './properties/cruzeiro-sul-f01.jpg',
+      './properties/cruzeiro-sul-f02.jpg',
+      './properties/cruzeiro-sul-f03.jpg',
+      './properties/cruzeiro-sul-f04.jpg',
+      './properties/cruzeiro-sul-f05.jpg',
+    ],
+  },
+  {
+    id: crypto.randomUUID(),
+    brokerId: BROKER_ID,
+    RKCode: '10060',
+    title: 'Pajuçara',
+    region: 'Ingleses',
+    description:
+      '**PROPIEDAD CON REGISTRO**\n\n Apartamento bellamente decorado con 02 dormitorios, 01 suite, baño de visitas más toilette, amplio salón con cocina, área de lavado, balcón con asador y dos estacionamientos.\n Posición solar NORTE.\ n Condominio PAJUÇARA ubicado en zona privilegiada, a unos 300 metros del mar, cuenta con área de ocio en la terraza residencial, con piscina, salón de fiestas y conserje, ascensor, intercomunicador y portón electrónico.',
+    price: 'R$ 750.000,00',
+    details: {
+      square: '83,29 m²',
+      rooms: '2',
+      bathrooms: '2',
+      garage: '2',
+    },
+    pictures: [
+      './properties/pajucara-f01.jpg',
+      './properties/pajucara-f02.jpg',
+      './properties/pajucara-f03.jpg',
+      './properties/pajucara-f04.jpg',
+      './properties/pajucara-f05.jpg',
+    ],
+  },
+  {
+    id: crypto.randomUUID(),
+    brokerId: BROKER_ID,
+    RKCode: '10005',
+    title: 'Mares do Sul',
+    region: 'Ingleses',
+    description:
+      '**PROPIEDAD CON REGISTRO**\n\n ¿Siempre has querido vivir cerca del MAR? ¡Esta es tu gran oportunidad!\n Increíble iluminación natural, con derecho a ver salir el sol desde el balcón y pasar hasta el final de la tarde.\n Estructura de seguridad completa: portero con reconocimiento facial, circuito interno de cámaras de seguridad y cerca eléctrica.\n La ubicación no podría ser mejor: el apartamento está a 5 minutos del mejor lugar de Praia dos Ingleses, a 7 minutos del centro del barrio. Podrás contar con dos paradas de autobús, el colectivo y el ejecutivo, además de una farmacia cercana y dos supermercados a tan sólo 10 minutos.',
+    price: 'R$ 1.250.000,00',
+    details: {
+      square: '108,95 m²',
+      rooms: '3',
+      bathrooms: '4',
+      garage: '2',
+    },
+    pictures: [
+      './properties/mares-sul-f01.jpg',
+      './properties/mares-sul-f02.jpg',
+      './properties/mares-sul-f03.jpg',
+      './properties/mares-sul-f04.jpg',
+      './properties/mares-sul-f05.jpg',
+    ],
+  },
 ]
 
 /**
@@ -108,7 +176,7 @@ const propertiesES = [
 /** @type {PropertiesData} The properties data */
 const properties = {
   pt: propertiesPT,
-  // es: propertiesES,
+  es: propertiesES,
 }
 
 /**
